@@ -1,0 +1,50 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.PriorityQueue;
+
+public class Main {
+	static int N;
+	static PriorityQueue<Point> pq;
+
+	static class Point implements Comparable<Point> {
+		int index;
+		int value;
+
+		public Point(int index, int value) {
+			super();
+			this.index = index;
+			this.value = value;
+		}
+
+		@Override
+		public int compareTo(Point o) {
+			if (this.value - o.value == 0) // 같은 숫자(value 값이 같을 때)
+				return this.index - o.index; // index가 큰게 뒤로
+			else
+				return this.value - o.value; // 다른 숫자 일 때 작은 값이 앞으로
+		}
+	}
+
+	public static void main(String[] args) throws NumberFormatException, IOException {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		// 입력
+		N = Integer.parseInt(br.readLine());
+		pq = new PriorityQueue<Point>();
+		for (int i = 0; i < N; i++) {
+			int x = Integer.parseInt(br.readLine());
+			pq.add(new Point(i, x));
+		}
+
+		int max = 0;
+		int index = 0;
+		while (!pq.isEmpty()) {
+			Point points = pq.poll(); // value가 작은 것부터 poll()
+			if (max < points.index - index) {// idea!!! (기존 순서의 인덱스 - 정렬 후 인덱스)이 가장 큰 거 + 1 출력
+				max = points.index - index; // index가 이동한 횟수가 swap한 횟수!!
+			}
+			index++;
+		}
+		System.out.println(max + 1);
+	}
+}
