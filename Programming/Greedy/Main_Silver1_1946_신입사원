@@ -1,0 +1,71 @@
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.PriorityQueue;
+import java.util.StringTokenizer;
+
+public class Main {
+	static int T, N, Ans;
+	static ArrayList<Node> list;
+
+	static class Node {
+		int test1;
+		int test2;
+
+		public Node(int test1, int test2) {
+			super();
+			this.test1 = test1;
+			this.test2 = test2;
+		}
+
+		@Override
+		public String toString() {
+			return "Node [test1=" + test1 + ", test2=" + test2 + "]";
+		}
+	}
+
+	public static void main(String[] args) throws IOException {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+		StringBuilder sb = new StringBuilder();
+		StringTokenizer st = null;
+
+		T = Integer.parseInt(br.readLine());
+		for (int t = 1; t <= T; t++) {
+			N = Integer.parseInt(br.readLine()); // 신입사원 수
+			list = new ArrayList<>();
+			for (int i = 0; i < N; i++) {
+				st = new StringTokenizer(br.readLine());
+				int t1 = Integer.parseInt(st.nextToken());
+				int t2 = Integer.parseInt(st.nextToken());
+				list.add(new Node(t1, t2));
+			}
+
+			Collections.sort(list, new Comparator<Node>() {
+				@Override
+				public int compare(Node o1, Node o2) {
+					return o1.test1 - o2.test1; // 1차 서류심사 점수로 정렬(오름차순)
+				}
+			});
+
+			// 서류심사 1등부터(오름차순으로 정렬되어있음) 검사
+			Ans = 1; // 무조건 합격
+			int standard = list.get(0).test2; // 기준점 설정 test2보다 낮으면 탈락!
+			for (int i = 1; i < N; i++) {
+				if (standard > list.get(i).test2) { // 기준값보다 작으면 합격가능 수 + 1
+					Ans++;
+					standard = list.get(i).test2;
+				}
+			}
+			sb.append(Ans).append('\n');
+		} // end T
+		bw.write(sb.toString());
+		bw.close();
+		br.close();
+	} // end main
+}
