@@ -1,0 +1,26 @@
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+
+public class Main_Silver4_10989_수정렬하기3 {
+	public static void main(String[] args) throws Exception {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+
+		// 입력
+		int n = Integer.parseInt(br.readLine());
+		int[] input = new int[10001];
+		for (int i = 0; i < n; i++) {
+			input[Integer.parseInt(br.readLine())]++; // 입력값 == 인덱스로 활용
+		}
+
+		for (int i = 1; i < 10001; i++) {
+			while (0 < input[i]--) { // 배열이 0이 아니면 값을 출력해야한다.
+				bw.write(Integer.toString(i) + "\n");
+			}
+		}
+		br.close();
+		bw.close();
+	}
+}
