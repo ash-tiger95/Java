@@ -1,0 +1,52 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.PriorityQueue;
+import java.util.StringTokenizer;
+
+// 1377 버블소트와 같은 문제
+public class Main {
+	static int N;
+	static PriorityQueue<Point> pq;
+
+	private static class Point implements Comparable<Point> {
+		int index;
+		int value;
+
+		public Point(int index, int value) {
+			super();
+			this.index = index;
+			this.value = value;
+		}
+
+		@Override
+		public int compareTo(Point o) {
+			if (this.value - o.value == 0) // 같은 숫자(value 값이 같을 때)
+				return this.index - o.index; // index가 큰게 뒤로
+			else
+				return this.value - o.value; // 다른 숫자 일 때 작은 값이 앞으로 간다.
+		}
+	}
+
+	public static void main(String[] args) throws NumberFormatException, IOException {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		// 입력
+		N = Integer.parseInt(br.readLine());
+		StringTokenizer st = new StringTokenizer(br.readLine());
+		pq = new PriorityQueue<Point>();
+		for (int i = 0; i < N; i++) {
+			int x = Integer.parseInt(st.nextToken());
+			pq.add(new Point(i, x));
+		}
+		int max = 0;
+		int index = 0;
+		while (!pq.isEmpty()) {
+			Point points = pq.poll();
+			if (max < points.index - index) {
+				max = points.index - index;
+			}
+			index++;
+		}
+		System.out.println(max);
+	}
+}
