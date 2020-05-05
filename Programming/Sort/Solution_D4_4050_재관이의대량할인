@@ -1,0 +1,39 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.Arrays;
+import java.util.StringTokenizer;
+
+public class Solution_D4_4050_재관이의대량할인 {
+	static int N, T, max;
+	static int[] prod;
+
+	public static void main(String[] args) throws IOException {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		StringTokenizer st = null;
+		T = Integer.parseInt(br.readLine()); // 테스트 케이스
+
+		for (int t = 1; t <= T; t++) {
+			N = Integer.parseInt(br.readLine()); // 옷의 벌수, 1 <= N <= 100,000
+			prod = new int[N]; // 옷 가격, 1 <= prod <= 100,000
+			st = new StringTokenizer(br.readLine());
+			for (int i = 0; i < N; i++) {
+				prod[i] = Integer.parseInt(st.nextToken());
+			}
+
+			Arrays.sort(prod); // 오름차순으로 정렬 시킨다.
+			max = 0;
+
+			int cnt = 1;
+			for (int i = N - 1; i >= 0; i--) { // 맨 뒤(제일 비싼 옷)에서 시작하여 3칸씩 끊어낸다.
+				if (cnt % 3 == 0) { // 3번째 옷일 경우
+					cnt++;
+					continue; // 패스
+				}
+				max += prod[i]; // 나머지 옷의 가격을 합친다.
+				cnt++;
+			}
+			System.out.println("#" + t + " " + max);
+		} // T
+	} // main
+}
