@@ -1,0 +1,45 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.Arrays;
+import java.util.StringTokenizer;
+
+public class Main_Silver2_1965_상자넣기 {
+	static int N;
+	static int[] box;
+
+	public static void main(String[] args) throws NumberFormatException, IOException {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		N = Integer.parseInt(br.readLine()); // 상자개수, 1<= N <= 1,000
+		StringTokenizer st = new StringTokenizer(br.readLine());
+		box = new int[N];
+		for (int i = 0; i < N; i++) {
+			box[i] = Integer.parseInt(st.nextToken()); // 1,000을 넘지 않는 자연수
+		}
+
+		int LIS[] = new int[N];
+		int size = 0;
+
+		LIS[size++] = box[0]; // 첫번째값으로 시작
+		for (int i = 1; i < box.length; i++) {
+			// LIS 마지막 값과 비교
+			if (LIS[size - 1] < box[i]) { // box의 다음값이 더 크면
+				LIS[size++] = box[i]; // 맨 뒤에 붙인다.
+			} else { // box의 다음값이 더 작으면
+				int temp = Arrays.binarySearch(LIS, 0, size, box[i]); // LIS배열 0부터 size-1에서 box[i]가 있는지 검사를 한다.
+				if (temp < 0) { // 못 찾으면 배열에 삽입할 위치(음수 -1) 리턴, (찾으면 찾은 위치 인덱스(양수) 리턴)
+					temp = -temp - 1;
+				}
+				LIS[temp] = box[i];
+			}
+		}
+
+		int Ans = 0;
+		for (int i = 0; i < N; i++) {
+			if (LIS[i] == 0)
+				break;
+			Ans++;
+		}
+		System.out.println(Ans);
+	} // main
+}
