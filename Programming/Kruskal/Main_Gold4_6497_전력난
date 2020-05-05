@@ -1,0 +1,97 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.Arrays;
+import java.util.Comparator;
+import java.util.StringTokenizer;
+
+public class Main_Gold4_6497_전력난 {
+	static int M, N, cost;
+	static int[][] map;
+	static int[] parents, rank;
+
+	public static void main(String[] args) throws IOException {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		while (true) {
+
+			StringTokenizer st = new StringTokenizer(br.readLine());
+			M = Integer.parseInt(st.nextToken()); // 집의 수
+			N = Integer.parseInt(st.nextToken()); // 길의 수
+			if (M == 0 && N == 0)
+				break;
+
+			cost = 0; // 아 이거 조심;;;;
+			map = new int[N][3];
+			for (int i = 0; i < N; i++) {
+				st = new StringTokenizer(br.readLine());
+				map[i][0] = Integer.parseInt(st.nextToken());
+				map[i][1] = Integer.parseInt(st.nextToken());
+				map[i][2] = Integer.parseInt(st.nextToken()); // 가중치
+				cost += map[i][2]; // 전체 비용 구하기
+			}
+
+			Arrays.sort(map, new Comparator<int[]>() { // 가중치에 대해 오름차순
+				@Override
+				public int compare(int[] o1, int[] o2) {
+					return Integer.compare(o1[2], o2[2]);
+				}
+			});
+
+			parents = new int[M]; // 부모 노드
+			rank = new int[M]; // 연결된 개수
+
+			for (int i = 0; i < M; i++) { // 자기 자신을 부모노드로 초기화
+				makeSet(i);
+			}
+
+			int cnt = 0; // 방문한 집 개수 세기위함.
+			int result = 0; // 간선의 합을 구하기 위함.
+
+			for (int i = 0; i < N; i++) {
+				int a = findSet(map[i][0]); // 부모 노드를 찾는다.
+				int b = findSet(map[i][1]); // 부모 노드를 찾는다.
+
+				if (a == b) // 집합이 같으면 continue
+					continue;
+
+				union(a, b); // 집합이 다르면 합친다.
+
+				result += map[i][2]; // 간선 더하기
+				cnt++; // 방문한 집 개수 증가
+				if (cnt == M - 1) {
+					break;
+				}
+			}
+			System.out.println(cost - result); // 절약할 수 있는 최대비용
+
+		} // while
+	}
+
+	private static void union(int a, int b) {
+		// 랭크가 큰 수가 부모가 된다.
+		if (rank[a] > rank[b]) {
+			parents[b] = a;
+		} else {
+			// 랭크가 큰 수가 부모가 된다.
+			parents[a] = b;
+			// 랭크가 같으면 증가
+			if (rank[a] == rank[b]) {
+				rank[b]++;
+			}
+		}
+	}
+
+	private static int findSet(int i) { // 최상위 부모 노드 리턴
+		if (i == parents[i])
+			return i;
+		else {
+			parents[i] = findSet(parents[i]);
+			return parents[i];
+		}
+	}
+
+	private static void makeSet(int i) { // 부모 노드를 자기 자신으로 초기화하기 위함.
+		parents[i] = i;
+	}
+
+}
