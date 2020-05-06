@@ -1,0 +1,114 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.LinkedList;
+import java.util.Queue;
+import java.util.StringTokenizer;
+
+public class Main_Gold3_2146_다리만들기 {
+	static int N, min;
+	static int[][] map;
+	static boolean[][] visited;
+	static int[] dy = { 1, -1, 0, 0 };
+	static int[] dx = { 0, 0, 1, -1 };
+	static Queue<int[]> queue;
+
+	public static void main(String[] args) throws IOException {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		StringTokenizer st = new StringTokenizer(br.readLine());
+		N = Integer.parseInt(st.nextToken());
+
+		map = new int[N][N];
+		for (int i = 0; i < N; i++) {
+			st = new StringTokenizer(br.readLine());
+			for (int j = 0; j < N; j++) {
+				map[i][j] = Integer.parseInt(st.nextToken());
+			}
+		}
+
+		visited = new boolean[N][N];
+		int cnt = 2;
+		for (int i = 0; i < N; i++) {
+			for (int j = 0; j < N; j++) {
+				if (map[i][j] == 1) {
+					islandBFS(i, j, cnt++);
+				}
+			}
+		}
+
+		min = Integer.MAX_VALUE;
+		for (int i = 0; i < N; i++) {
+			for (int j = 0; j < N; j++) {
+				if (map[i][j] != 0) {
+					visited = new boolean[N][N];
+					queue.clear();
+					int val = findIsland(i, j, map[i][j]);
+					if (val == -1) { // 잘못된 경우
+						continue;
+					} else {
+						min = Math.min(val, min);
+					}
+				}
+			}
+		}
+		System.out.println(min);
+	}
+
+	private static int findIsland(int i, int j, int islandNo) { // 섬과 섬 이어주기
+		queue.offer(new int[] { i, j, 0 });
+
+		while (!queue.isEmpty()) {
+			int[] c = queue.poll();
+			visited[c[0]][c[1]] = true;
+
+			if (min < c[2]) // min보다 도로가 길어지면 굳이 돌을 필요없다.
+				break;
+
+			for (int d = 0; d < 4; d++) {
+				int ny = c[0] + dy[d];
+				int nx = c[1] + dx[d];
+				if (!boundary(ny, nx)) {
+					continue;
+				}
+				if (map[ny][nx] != 0 && map[ny][nx] != islandNo) { // 출발한 섬과 번호가 달라야된다.
+					return c[2];
+				}
+				if (!visited[ny][nx] && map[ny][nx] == 0) { // 방문처리하고 큐에 추가
+					queue.offer(new int[] { ny, nx, c[2] + 1 });
+					visited[ny][nx] = true;
+				}
+			}
+		} // while
+		return -1;
+	}
+
+	private static void islandBFS(int i, int j, int cnt) { // 섬의 번호 매기기
+		queue = new LinkedList<>();
+		queue.offer(new int[] { i, j });
+
+		while (!queue.isEmpty()) {
+			int[] c = queue.poll();
+			visited[c[0]][c[1]] = true;
+			map[c[0]][c[1]] = cnt;
+
+			for (int d = 0; d < 4; d++) {
+				int ny = c[0] + dy[d];
+				int nx = c[1] + dx[d];
+				if (!boundary(ny, nx)) {
+					continue;
+				}
+				if (!visited[ny][nx] && map[ny][nx] == 1) {
+					queue.offer(new int[] { ny, nx });
+					visited[ny][nx] = true;
+				}
+			}
+		} // while
+	}
+
+	private static boolean boundary(int ny, int nx) { // 외곽 검사
+		return ny >= 0 && ny < N && nx >= 0 && nx < N;
+	}
+}
+/*
+ * 실수! 1. 큐에서 뺄 때 방문처리하니깐 메모리초과! -> 큐에 넣을 때 방문처리하자! 2. 큐 초기화 시켜줄 것!
+ */
