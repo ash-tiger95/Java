@@ -1,0 +1,74 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.StringTokenizer;
+
+public class Main_Silver3_6987_월드컵 {
+	static int Ans;
+	static int[][] map;
+	// 게임 경우의 수
+	static int[] g1 = { 0, 0, 0, 0, 0, 1, 1, 1, 1, 2, 2, 2, 3, 3, 4 };
+	static int[] g2 = { 1, 2, 3, 4, 5, 2, 3, 4, 5, 3, 4, 5, 4, 5, 5 };
+
+	public static void main(String[] args) throws IOException {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		StringBuilder sb = new StringBuilder();
+
+		for (int t = 0; t < 4; t++) { // 4번 실행
+			StringTokenizer st = new StringTokenizer(br.readLine());
+			map = new int[6][3];
+			int win = 0, lose = 0, draw = 0;
+			for (int i = 0; i < 6; i++) { // 6개국
+				win += map[i][0] = Integer.parseInt(st.nextToken());
+				draw += map[i][1] = Integer.parseInt(st.nextToken());
+				lose += map[i][2] = Integer.parseInt(st.nextToken());
+			}
+			Ans = 0;
+			if (win + draw + lose != 30) { // 게임숫자가 안 맞으면
+				Ans = 0;
+			} else {
+				recur(0);
+			}
+			sb.append(Ans).append(" ");
+		} // for T
+		System.out.println(sb.toString());
+	}
+
+	private static void recur(int cnt) {
+		if (Ans == 1) // 가능한 경우가 나오면 더 이상 돌릴 필요가 없다.
+			return;
+		if (cnt == 15) { // 경우의 수가 맞으면
+			Ans = 1;
+			return;
+		}
+
+		int t1 = g1[cnt];
+		int t2 = g2[cnt];
+
+		// 승, 패
+		if (map[t1][0] > 0 && map[t2][2] > 0) {
+			map[t1][0]--;
+			map[t2][2]--;
+			recur(cnt + 1);
+			map[t1][0]++;
+			map[t2][2]++;
+		}
+		// 패, 승
+		if (map[t1][2] > 0 && map[t2][0] > 0) {
+			map[t1][2]--;
+			map[t2][0]--;
+			recur(cnt + 1);
+			map[t1][2]++;
+			map[t2][0]++;
+		}
+		// 무
+		if (map[t1][1] > 0 && map[t2][1] > 0) {
+			map[t1][1]--;
+			map[t2][1]--;
+			recur(cnt + 1);
+			map[t1][1]++;
+			map[t2][1]++;
+		}
+	}
+
+}
