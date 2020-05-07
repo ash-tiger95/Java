@@ -1,0 +1,126 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.Arrays;
+import java.util.LinkedList;
+import java.util.Queue;
+import java.util.StringTokenizer;
+
+public class Main_Gold5_16236_아기상어 {
+	static int N, sy, sx, size, time, eat;
+	static int[][] map;
+	static int[] dy = { -1, 0, 0, 1 };
+	static int[] dx = { 0, -1, 1, 0 }; // 위 왼 우 하
+	static boolean[][] visited;
+
+	public static void main(String[] args) throws NumberFormatException, IOException {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		StringTokenizer st = null;
+		N = Integer.parseInt(br.readLine());
+		size = 2;
+		map = new int[N][N];
+		for (int i = 0; i < N; i++) {
+			st = new StringTokenizer(br.readLine());
+			for (int j = 0; j < N; j++) {
+				map[i][j] = Integer.parseInt(st.nextToken());
+				if (map[i][j] == 9) { // 시작점
+					sy = i;
+					sx = j;
+					map[i][j] = 0;
+				}
+			}
+		}
+
+		time = 0;
+		eat = 0;
+		while (true) {
+			visited = new boolean[N][N];
+			int result = move(sy, sx);
+			if (result == 1) { // 먹은게 있다.
+				eat++;
+			} else { // 먹은게 없다.
+				break;
+			}
+			if (eat == size) {
+				size++;
+				eat = 0;
+			}
+		}
+
+		System.out.println(time);
+
+	}
+
+	private static int move(int i, int j) {
+		Queue<int[]> queue = new LinkedList<>();
+		queue.offer(new int[] { i, j, 0 });
+		while (!queue.isEmpty()) {
+			int[] c = queue.poll();
+			visited[c[0]][c[1]] = true;
+
+			for (int d = 0; d < 4; d++) {
+				int ny = c[0] + dy[d];
+				int nx = c[1] + dx[d];
+
+				if (!boundary(ny, nx)) {
+					continue;
+				}
+
+				if (!visited[ny][nx] && map[ny][nx] <= size) { // 방문한 적이 없으면
+					if (map[ny][nx] == 0 || map[ny][nx] == size) {
+						queue.offer(new int[] { ny, nx, c[2] + 1 });
+						visited[ny][nx] = true;
+					} else { // 먹이감을 발견하면 우선순위를 고려해야된다.
+						while (!queue.isEmpty()) { // 큐에 들어있는 나머지 좌표를 빼낸다.
+							int[] rest = queue.poll();
+							if (rest[2] != c[2]) { // bfs아직 못 돈 애들이니깐 거리가 1 작다.
+								continue;
+							}
+							for (int dd = 0; dd < 4; dd++) {
+								int ry = rest[0] + dy[dd];
+								int rx = rest[1] + dx[dd];
+								if (!boundary(ry, rx))
+									continue;
+								if (!visited[ry][rx] && map[ry][rx] <= size) {
+									if (map[ry][rx] == 0 || map[ry][rx] == size)
+										continue;
+									else {
+										if (ry < ny) { // 더 위에 있을 때
+											ny = ry;
+											nx = rx;
+										} else if (ry == ny) { // 높이가 같을 때
+											if (rx < nx) { // 왼쪽이 더 빠른 것
+												ny = ry;
+												nx = rx;
+											}
+										}
+									}
+								}
+							}
+
+						}
+						time += c[2] + 1;
+						map[ny][nx] = 0;
+						sy = ny;
+						sx = nx;
+//						System.out.println("(" + ny + "," + nx + ") size: " + size + " eat: " + (eat + 1)+" time: "+time);
+//						for (int a = 0; a < N; a++) {
+//							for (int b = 0; b < N; b++) {
+//								System.out.print(map[a][b] + " ");
+//							}
+//							System.out.println();
+//						}
+						queue.clear();
+						return 1; // 먹은게 있다.
+					}
+
+				}
+			}
+		}
+		return -1; // 먹은게 없다.
+	}
+
+	private static boolean boundary(int i, int j) {
+		return i >= 0 && i < N && j >= 0 && j < N;
+	}
+}
