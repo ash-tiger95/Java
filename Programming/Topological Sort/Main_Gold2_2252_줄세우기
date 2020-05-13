@@ -1,0 +1,101 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.LinkedHashSet;
+import java.util.PriorityQueue;
+import java.util.Set;
+import java.util.StringTokenizer;
+
+public class Main_Gold2_2252_줄세우기 {
+	static int N, M;
+	static Set<Integer> inputOrder;
+	static ArrayList<Integer>[] nodeArray;
+
+	static class Point implements Comparable<Point> {
+		int value;
+		int priority; // 현재 이어진 간선이 마지막 간선이고 이를 지우면 pq의 맨 앞으로 가야한다.
+
+		public Point(int value, int priority) {
+			super();
+			this.value = value;
+			this.priority = priority;
+		}
+
+		@Override
+		public String toString() {
+			return "Point [value=" + value + ", priority=" + priority + "]";
+		}
+
+		@Override
+		public int compareTo(Point o) {
+			if (this.priority < o.priority) {
+				return -1;
+			} else {
+				return 1;
+			}
+		}
+	}
+
+	public static void main(String[] args) throws IOException {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		StringTokenizer st = new StringTokenizer(br.readLine());
+		N = Integer.parseInt(st.nextToken()); // 정점 개수
+		M = Integer.parseInt(st.nextToken()); // 간선 개수
+
+		nodeArray = new ArrayList[N]; // 자기노드 -> 상대노드
+		for (int i = 0; i < N; i++) {
+			nodeArray[i] = new ArrayList<>();
+		}
+		int[] connectNodeCount = new int[N]; // 자기랑 연결된 노드 개수 저장
+
+		
+		inputOrder = new LinkedHashSet<>(); // 시작점을 중복없이 순서있게 저장하기 위함.
+		for (int i = 0; i < M; i++) {
+			st = new StringTokenizer(br.readLine());
+			int a = Integer.parseInt(st.nextToken()) - 1;
+			int b = Integer.parseInt(st.nextToken()) - 1;
+			nodeArray[a].add(b); // a -> b로 연결
+			connectNodeCount[b]++; // -> b로 연결된 개수
+			inputOrder.add(a);
+		}
+
+		// 자신에게 연결되지 않은 경우만 큐에 넣는다.
+//		Queue<Integer> que = new LinkedList<>();
+		PriorityQueue<Point> pq = new PriorityQueue<>();
+		Iterator<Integer> it = inputOrder.iterator();
+		int v = 0; // 우선순위: 입력 순
+		while (it.hasNext()) {
+			int index = it.next();
+			if (connectNodeCount[index] == 0) {
+				pq.offer(new Point(index, v++));
+			}
+		}
+
+		ArrayList<Integer> order = new ArrayList<>(); // 정답 저장하기 위함.
+		while (!pq.isEmpty()) {
+			Point currentNode = pq.poll();
+			order.add(currentNode.value); // 먼저 정답에 저장하고
+			for (int i = 0; i < nodeArray[currentNode.value].size(); i++) {
+				int getNode = nodeArray[currentNode.value].get(i); // 해당 점이랑 이어진 부분을
+				connectNodeCount[getNode]--; // 지워준다.
+				if (connectNodeCount[getNode] == 0) { // 더이상 연결된 간선이 없으면
+					pq.offer(new Point(getNode, 0)); // 우선순위를 맨 앞으로 저장.
+				}
+			}
+		}
+		
+		boolean[] visited = new boolean[N]; // 입력을 받을 때 입력을 받지않은 경우를 체크하기 위함.
+		for (int i = 0; i < order.size(); i++) {
+			System.out.print((order.get(i) + 1) + " "); // 먼저 정답리스트에 정보를 빼내고
+			visited[order.get(i)] = true; // 방문 처리한다.
+		}
+		for (int i = 0; i < N; i++) {
+			if (!visited[i]) { // 방문하지 않은 정점은
+				System.out.println((i + 1) + " "); // 번호 순서대로 출력한다.
+			}
+		}
+		
+	} // main
+}
