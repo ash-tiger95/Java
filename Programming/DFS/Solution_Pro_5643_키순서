@@ -1,0 +1,84 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.Arrays;
+import java.util.StringTokenizer;
+
+public class Solution_Pro_5643_키순서 {
+	static int T, N, M, result;
+	static int[][] map;
+	static int cnt;
+	static boolean[] v;
+
+	public static void main(String[] args) throws NumberFormatException, IOException {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		StringTokenizer st = null;
+		T = Integer.parseInt(br.readLine());
+		for (int t = 1; t <= T; t++) {
+			N = Integer.parseInt(br.readLine()); // 학생 수
+			M = Integer.parseInt(br.readLine()); // 비교 횟수
+
+			map = new int[N + 1][N + 1];
+			for (int i = 0; i < M; i++) {
+				st = new StringTokenizer(br.readLine());
+				int x = Integer.parseInt(st.nextToken());
+				int y = Integer.parseInt(st.nextToken());
+				map[x][y] = 1;
+			}
+			for (int i = 0; i < N + 1; i++) {
+				System.out.println(Arrays.toString(map[i]));
+			}
+
+			result = 0;
+
+			// 구현 모든 정점에서 나보다 큰 사람 세고 나보다 작은 사람 세고
+			// 그 합이 N-1이면 알 수 있다.
+			for (int i = 1; i < N + 1; i++) {
+				cnt = 0; // N번 검사
+
+				// 나보다 큰 사람 세기
+				v = new boolean[N + 1];
+				dfs(i);
+
+				// 나보다 작은 사람 세기
+				v = new boolean[N + 1];
+				dfs1(i);
+
+				if (cnt == N - 1) { // (전체 - 나) == 순서를 알 수 있다.
+					result++;
+				}
+			}
+
+			System.out.println("#" + t + " " + result);
+		}
+	}
+
+	private static void dfs1(int idx) { // 나보다 작은 사람 세기
+		v[idx] = true;
+		for (int i = 1; i < N + 1; i++) {
+			if (v[i]) {
+				continue;
+			}
+			if (map[i][idx] == 0) { // 나를 가진애들 dfs로 보내기
+				continue;
+			}
+			cnt++;
+			dfs1(i); // 계속 보내
+		}
+	}
+
+	private static void dfs(int idx) { // 나보다 큰 사람 세기
+		v[idx] = true;
+		for (int i = 1; i < N + 1; i++) {
+			if (v[i]) {
+				continue;
+			}
+			if (map[idx][i] == 0) { // 내가 가진 애들 dfs로 보내기
+				continue;
+			}
+			cnt++;
+			dfs(i); // 계속 보내
+		}
+	}
+
+}
