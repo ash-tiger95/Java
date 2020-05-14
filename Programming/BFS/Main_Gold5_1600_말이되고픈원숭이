@@ -1,0 +1,111 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.Arrays;
+import java.util.LinkedList;
+import java.util.Queue;
+import java.util.StringTokenizer;
+
+public class Main_Gold5_1600_말이되고픈원숭이 {
+	static int K, W, H, time;
+	static int[][] map;
+	static int[][] dirs1 = { { 1, 0 }, { -1, 0 }, { 0, -1 }, { 0, 1 } };
+	static int[][] dirs2 = { { -2, -1 }, { -1, -2 }, { -2, 1 }, { -1, 2 }, { 1, -2 }, { 2, -1 }, { 2, 1 }, { 1, 2 } };
+	static boolean[][][] visited;
+
+	static class Point {
+		int y;
+		int x;
+		int useK; // K처럼 움직인 횟수를 세기 위함
+
+		public Point(int y, int x, int useK) {
+			super();
+			this.y = y;
+			this.x = x;
+			this.useK = useK;
+		}
+	}
+
+	public static void main(String[] args) throws IOException {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		StringTokenizer st = null;
+		K = Integer.parseInt(br.readLine());
+		st = new StringTokenizer(br.readLine());
+		W = Integer.parseInt(st.nextToken());
+		H = Integer.parseInt(st.nextToken());
+		map = new int[H][W];
+		for (int h = 0; h < H; h++) {
+			st = new StringTokenizer(br.readLine());
+			for (int w = 0; w < W; w++) {
+				map[h][w] = Integer.parseInt(st.nextToken());
+			}
+		}
+
+		visited = new boolean[H][W][K + 1]; // 핵심! K는 말 처럼 이동한 횟수 저장
+		time = 0;
+		System.out.println(bfs());
+
+	}
+
+	private static int bfs() {
+		Queue<Point> que = new LinkedList<>();
+		que.offer(new Point(0, 0, 0));
+		visited[0][0][0] = true;
+		while (!que.isEmpty()) {
+			int size = que.size();
+			for (int s = 0; s < size; s++) {
+				Point current = que.poll();
+				int cy = current.y;
+				int cx = current.x;
+				int ck = current.useK;
+
+				if (cy == H - 1 && cx == W - 1) { // 맨 왼쪽 아래에 도착하면 종료
+					return time;
+				}
+
+				// 말처럼 움직일 때,
+				if (ck < K) { // 최대 K번 말처럼 움직일 수 있다.
+					for (int d = 0; d < 8; d++) {
+						int ny = cy + dirs2[d][0];
+						int nx = cx + dirs2[d][1];
+						int nk = ck + 1; // 말처럼 이동하였으니 한 번 증가
+
+						if (!boundary(ny, nx)) {
+							continue;
+						}
+						if (map[ny][nx] != 0) {
+							continue;
+						}
+						if (!visited[ny][nx][nk]) {
+							que.offer(new Point(ny, nx, nk)); // 큐에 삽입
+							visited[ny][nx][nk] = true; // k의 횟수에 따라 방문처리
+						}
+
+					}
+				}
+
+				// 그냥 움직일 때
+				for (int d = 0; d < 4; d++) {
+					int ny = cy + dirs1[d][0];
+					int nx = cx + dirs1[d][1];
+					int nk = ck; // 말처럼 이동하지 않았으니 원래 값 삽입
+					if (!boundary(ny, nx)) {
+						continue;
+					}
+					if (!visited[ny][nx][nk] && map[ny][nx] == 0) {
+						que.offer(new Point(ny, nx, nk));
+						visited[ny][nx][nk] = true;
+					}
+				}
+			}
+			time++; // 시간 증가
+
+		}
+		return -1; // 끝까지 가지 못하면 -1 리턴
+	}
+
+	private static boolean boundary(int ny, int nx) {
+		return ny >= 0 && ny < H && nx >= 0 && nx < W;
+	}
+
+}
