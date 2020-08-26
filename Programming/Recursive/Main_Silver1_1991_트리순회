@@ -1,0 +1,79 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+import java.util.StringTokenizer;
+
+public class Main_Silver1_1991_트리순회 {
+	static int N;
+	static Map<Character, List<Character>> input;
+
+	public static void main(String[] args) throws NumberFormatException, IOException {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		N = Integer.parseInt(br.readLine());
+		input = new HashMap<>();
+
+		StringTokenizer st = null;
+		for (int n = 0; n < N; n++) {
+			st = new StringTokenizer(br.readLine());
+			char key = st.nextToken().charAt(0); // charAt(index): 문자열의 index번째를 char형으로 리턴
+			List<Character> value = new ArrayList<>();
+			value.add(st.nextToken().charAt(0));
+			value.add(st.nextToken().charAt(0));
+			input.put(key, value);
+		}
+
+		// 입력 확인 *********************************
+		// keySet메서드 이용, 저장된 모든 key값을 Set에 저장
+		Set<Character> keys = input.keySet();
+
+		// 반복자 생성
+		Iterator<Character> it = keys.iterator();
+		while (it.hasNext()) {
+			char key = it.next(); // Set의 key값을 하나씩 key에 대입
+			char value = input.get(key).get(0);
+			char value2 = input.get(key).get(1);
+			System.out.println(key + " : " + value + " " + value2);
+		}
+		// ****************************************
+
+		preOrder('A');
+		System.out.println();
+		inOrder('A');
+		System.out.println();
+		postOrder('A');
+	}
+
+	private static void preOrder(char root) { // 전위 순회: 루트 -> 왼쪽자식 -> 오른쪽자식
+		if (root == '.')
+			return;
+
+		System.out.print(root);
+		preOrder(input.get(root).get(0));
+		preOrder(input.get(root).get(1));
+	}
+
+	private static void inOrder(char root) { // 중위 순회: 왼쪽자식 -> 루트 -> 오른쪽자식
+		if (root == '.')
+			return;
+		
+		inOrder(input.get(root).get(0));
+		System.out.print(root);
+		inOrder(input.get(root).get(1));
+	}
+
+	private static void postOrder(char root) { // 후위 순회: 왼쪽자식 -> 오른쪽자식 -> 루트
+		if (root == '.')
+			return;
+		
+		postOrder(input.get(root).get(0));
+		postOrder(input.get(root).get(1));
+		System.out.print(root);
+	}
+
+}
