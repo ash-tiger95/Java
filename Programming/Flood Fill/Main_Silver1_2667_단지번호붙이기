@@ -1,0 +1,88 @@
+package FloodFill;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
+public class Main_Silver1_2667_단지번호붙이기 {
+	static int N, tot, count;
+	static List<Integer> list;
+	static int[][] map;
+	static int[][] dir = { { 1, 0 }, { -1, 0 }, { 0, 1 }, { 0, -1 } };
+	static boolean[][] visited;
+
+	public static void main(String[] args) throws NumberFormatException, IOException {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		// 입력
+		N = Integer.parseInt(br.readLine());
+		map = new int[N][N];
+		visited = new boolean[N][N];
+		for (int i = 0; i < N; i++) {
+			String str = br.readLine();
+			for (int j = 0; j < N; j++) {
+				map[i][j] = str.charAt(j) - '0';
+			}
+		}
+
+		// 초기화
+		tot = 0;
+		list = new ArrayList<>();
+		for (int i = 0; i < N; i++) {
+			for (int j = 0; j < N; j++) {
+				// 방문한 적이 없고 아파트인 경우
+				if (!visited[i][j] && map[i][j] == 1) {
+					count = 1; // 각 단지의 아파트 개수를 세기 위함
+					tot += 1; // 단지 개수 세기 위함
+					dfs(i, j); // 아파트를 만나면 DFS 탐색을 한다.
+					list.add(count); // 아파트 개수 저장
+				}
+			}
+		}
+
+//		print();
+		Collections.sort(list); // 아파트 개수 오름차순으로 정렬
+		System.out.println(tot);
+		for (int l : list) {
+			System.out.println(l);
+		}
+
+	}
+
+	private static void print() {
+		for (int i = 0; i < N; i++) {
+			for (int j = 0; j < N; j++) {
+				System.out.print(map[i][j]);
+			}
+			System.out.println();
+		}
+	}
+
+	private static void dfs(int y, int x) {
+		visited[y][x] = true;
+		map[y][x] = tot;
+		for (int d = 0; d < 4; d++) {
+			int ny = y + dir[d][0];
+			int nx = x + dir[d][1];
+			if (!boundary(ny, nx)) {
+				continue;
+			}
+			if (!visited[ny][nx] && map[ny][nx] == 1) {
+				// 방문 처리 후
+				visited[ny][nx] = true;
+				// 아파트 개수 증가
+				count++;
+
+				dfs(ny, nx);
+			}
+
+		}
+
+	}
+
+	private static boolean boundary(int ny, int nx) {
+		return ny >= 0 && ny < N && nx >= 0 && nx < N;
+	}
+}
