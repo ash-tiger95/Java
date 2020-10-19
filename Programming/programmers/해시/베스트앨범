@@ -1,0 +1,83 @@
+import java.util.*;
+
+class Solution {
+    static class Music implements Comparable<Music>{
+        int num;
+        int value;
+        public Music(int num, int value){
+            this.num = num;
+            this.value = value;
+        }
+        @Override
+        public int compareTo(Music music){
+            return music.value - this.value;
+        }
+    }
+    
+    
+    static Map<String,Integer> map = new TreeMap<>();
+    static List<Integer> list = new ArrayList<>();
+    static PriorityQueue<Music> pq = null;
+    
+    
+    public int[] solution(String[] genres, int[] plays) {
+        for(int i=0;i<genres.length;i++){
+           if(map.containsKey(genres[i])){
+               int value = map.get(genres[i]);
+               value = value + plays[i];
+               map.put(genres[i],value);
+           } else{
+               map.put(genres[i], plays[i]);
+           }
+        }
+        
+        Set<String> keys = map.keySet();
+        Iterator<String> its = sortByValue(map).iterator();
+        
+        while(its.hasNext()){
+            String key = its.next();
+            pq = new PriorityQueue<Music>();
+            for(int i=0;i<genres.length;i++){
+                
+                
+                if(genres[i].equals(key)){
+                    pq.offer(new Music(i, plays[i]));
+                }
+            }
+            int count = 0;
+            while(!pq.isEmpty()){
+                Music music = pq.poll();
+                list.add(music.num);
+                count++;
+                if(count == 2){
+                    break;
+                }
+            }
+            int value = map.get(key);
+        }
+        
+        
+        int[] answer = new int[list.size()];
+        
+        for(int i=0;i<list.size();i++ ){
+            answer[i] = list.get(i);
+        }
+       
+        return answer;
+    }
+
+    public static List sortByValue(final Map map) {
+        List<String> list = new ArrayList();
+        list.addAll(map.keySet());
+        
+        Collections.sort(list,new Comparator() {
+            public int compare(Object o1,Object o2) {
+                Object v1 = map.get(o1);
+                Object v2 = map.get(o2);
+                return ((Comparable) v2).compareTo(v1);
+            }
+        });
+        // Collections.reverse(list); 
+        return list;
+    }
+}
