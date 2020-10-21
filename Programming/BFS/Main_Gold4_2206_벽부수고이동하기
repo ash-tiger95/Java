@@ -1,0 +1,121 @@
+package BOJ;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.LinkedList;
+import java.util.Queue;
+import java.util.StringTokenizer;
+
+public class Main_Gold4_2206_벽부수고이동하기 {
+	static class Point {
+		int y;
+		int x;
+		int broken;
+		int dist;
+
+		public Point(int y, int x, int broken, int dist) {
+			super();
+			this.y = y;
+			this.x = x;
+			this.broken = broken;
+			this.dist = dist;
+		}
+
+		@Override
+		public String toString() {
+			return "Point [y=" + y + ", x=" + x + ", broken=" + broken + "]" + ", dist=" + dist;
+		}
+	}
+
+	static int N, M;
+	static int[][] map;
+
+	// bfs()
+	static int[][] directions = { { 1, 0 }, { -1, 0 }, { 0, 1 }, { 0, -1 } };
+	static Queue<Point> queue;
+	static boolean[][][] visited;
+
+	public static void main(String[] args) throws IOException {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		StringTokenizer st = new StringTokenizer(br.readLine());
+
+		// 입력
+		N = Integer.parseInt(st.nextToken());
+		M = Integer.parseInt(st.nextToken());
+
+		// 초기화
+		map = new int[N][M];
+
+		// map 입력
+		for (int i = 0; i < N; i++) {
+			String data = br.readLine();
+			for (int j = 0; j < M; j++) {
+				map[i][j] = data.charAt(j) - '0';
+			}
+		}
+
+		// bfs 초기화
+		queue = new LinkedList<>();
+		visited = new boolean[N][M][2]; // 0: 벽을 안 부셨을 때, 1: 벽을 부셨을 때
+		visited[0][0][0] = true;
+		queue.offer(new Point(0, 0, 0, 1));
+
+		bfs();
+	}
+
+	private static void bfs() {
+		
+		while (!queue.isEmpty()) {
+
+			Point cp = queue.poll();
+
+			int cy = cp.y;
+			int cx = cp.x;
+			int cb = cp.broken;
+			int cd = cp.dist;
+
+			if (cy == N - 1 && cx == M - 1) {
+				System.out.println(cd);
+				return;
+			}
+
+			for (int d = 0; d < 4; d++) {
+
+				int ny = cy + directions[d][0];
+				int nx = cx + directions[d][1];
+				if (!boundary(ny, nx)) {
+					continue;
+				}
+
+				if (map[ny][nx] == 1) {
+					if (cb == 0 && !visited[ny][nx][1]) { // 부순적이 없을 때
+						visited[ny][nx][1] = true;
+						queue.offer(new Point(ny, nx, 1, cd + 1));
+					}
+				} else {
+					if (!visited[ny][nx][cb]) {
+						queue.offer(new Point(ny, nx, cb, cd + 1));
+						visited[ny][nx][cb] = true;
+					}
+				}
+
+			}
+		}
+		System.out.println(-1);
+	}
+
+	private static boolean boundary(int ny, int nx) {
+		return ny >= 0 && ny < N && nx >= 0 && nx < M;
+	}
+
+	private static void print() {
+		for (int i = 0; i < N; i++) {
+			for (int j = 0; j < M; j++) {
+				System.out.print(visited[i][j] + " ");
+			}
+			System.out.println();
+		}
+	}
+
+}
