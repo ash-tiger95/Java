@@ -1,0 +1,65 @@
+import java.util.LinkedList;
+import java.util.Queue;
+
+public class 네트워크 {
+
+	public static void main(String[] args) {
+		int n = 3;
+		int[][] computers = { { 1, 1, 0 }, { 1, 1, 1 }, { 0, 1, 1 } };
+		System.out.println(solution(n, computers));
+	}
+
+	static public int solution(int n, int[][] computers) {
+		int answer = 0;
+
+		boolean[] visited = new boolean[n];
+		Queue<Integer> queue = new LinkedList<>();
+
+		for (int i = 0; i < n; i++) {
+			if (computers[0][i] == 1) { // 최초 1을 찾는다.
+				queue.offer(i);
+				break;
+			}
+		}
+
+		int cnt = 1; // 자기 자신은 선택했으니 1부터 시작
+		while (!queue.isEmpty()) {
+			int ci = queue.poll();
+			visited[ci] = true;
+
+			for (int j = 0; j < n; j++) {
+				if (ci == j) { // 자기 자신일 때는 제외
+					continue;
+				}
+				if (!visited[j] && computers[ci][j] == 1) { // 방문한 적 없고 연결되어 있을 때
+					queue.offer(j);
+					visited[j] = true;
+					cnt++;
+				}
+
+			}
+			if (cnt != n && queue.isEmpty()) { // 한 그룹 끝날 시, 다른 그룹으로 새출발
+				answer++; // 그룹 증가
+				for (int i = 0; i < visited.length; i++) {
+					if (visited[i] == false) {
+						queue.offer(i); // 그룹 하나 찾고 다시 처음부터 시작
+						break;
+					}
+				}
+			}
+		}
+		int count = 0;
+		if (answer == 0) { // 모두가 연결되어 있을 때도 0으로 나와서 한 번 검사해줘야한다.
+			for (int i = 0; i < visited.length; i++) {
+				if (visited[i]) {
+					count++;
+				}
+			}
+			if (count == n) {
+				answer = 1;
+			}
+		}
+
+		return answer;
+	}
+}
