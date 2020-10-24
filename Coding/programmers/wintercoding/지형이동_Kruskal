@@ -7,7 +7,7 @@ import java.util.Comparator;
 import java.util.LinkedList;
 import java.util.Queue;
 
-public class 지형이동solution {
+public class 지형이동_Kruskal {
 	static class Point{
 		int y,x;
 
@@ -24,7 +24,7 @@ public class 지형이동solution {
 		
 	}
 	
-	static class Edge implements Comparable<Edge>{
+	static class Edge {
 		int start, dest, cost;
 
 		@Override
@@ -39,10 +39,6 @@ public class 지형이동solution {
 			this.cost = cost;
 		}
 
-		@Override
-		public int compareTo(Edge o) {
-			return this.cost - o.cost;
-		}
 		
 	}
 	
