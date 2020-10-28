@@ -43,8 +43,8 @@ def draw_prediction(img, class_id, confidence, x, y, x_plus_w, y_plus_h, classes
 def en_to_kor(text):
     s = Session()
     headers = {
-        'X-Naver-Client-Id' : 'aoURwmtiLa5QHQde4DGy',
-        'X-Naver-Client-Secret' : 'rU9yb7cieh'
+        'X-Naver-Client-Id' : '',
+        'X-Naver-Client-Secret' : ''
     }
 
     payload = {

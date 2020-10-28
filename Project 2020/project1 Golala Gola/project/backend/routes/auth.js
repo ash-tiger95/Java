@@ -213,14 +213,14 @@ app.post("/find_pwd", async (req, res) => {
     })
       .then((user) => {
         // 인증코드 생성하기
-        var key_one = crypto.randomBytes(256).toString("hex").substr(100, 5);
-        var key_two = crypto.randomBytes(256).toString("base64").substr(50, 5);
+        var key_one = crypto.randomBytes(256).toString("").substr(100, 5);
+        var key_two = crypto.randomBytes(256).toString("").substr(50, 5);
         var key_for_verify = key_one + key_two;
 
         const encrypted = crypto
-          .createHmac("sha1", "ashtiger")
+          .createHmac("", "")
           .update(key_for_verify)
-          .digest("base64");
+          .digest("");
 
         db.User.update(
           {

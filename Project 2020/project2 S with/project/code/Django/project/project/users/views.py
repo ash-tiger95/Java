@@ -100,13 +100,13 @@ def send_message(request):
             phoneList.append(data['number'])
 
         convertList = ','.join(phoneList)
-        api_key = "NCSNGBQWYZ5HCGVO"
-        api_secret = "SB9XKOGN3IENMT8LMZZDSGMDZUBIBAHU"
+        api_key = ""
+        api_secret = ""
         ## 4 params(to, from, type, text) are mandatory. must be filled
         params = dict()
         params['type'] = 'sms'  # Message type ( sms, lms, mms, ata )
         params['to'] = convertList  # Recipients Number '01000000000,01000000001'
-        params['from'] = '01064103518'  # Sender number
+        params['from'] = ''  # Sender number
         params['text'] = nickname + '님이 "'+word+'"라고 보냈습니다. 도와주세요. S:with'  # Message
         cool = Message(api_key, api_secret)
         try:
