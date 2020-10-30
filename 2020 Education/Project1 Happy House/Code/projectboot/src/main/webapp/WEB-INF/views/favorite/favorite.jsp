@@ -3,7 +3,7 @@
 <%@ include file="/WEB-INF/views/template/header.jsp" %>
 
 <script src="https://unpkg.com/@google/markerclustererplus@4.0.1/dist/markerclustererplus.min.js"></script>
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCMXtnv5FOhNVw0q66dGzHxXIqFS_UUY3A&callback=initMap"></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap"></script>
 <style>
 <!--
 
@@ -166,7 +166,7 @@ function geocode(jsonData, flag) {
     clearMarkers();
 	$.each(jsonData, function(index, vo) {
 		$.get("https://maps.googleapis.com/maps/api/geocode/json"
-				,{	key:'AIzaSyCMXtnv5FOhNVw0q66dGzHxXIqFS_UUY3A'
+				,{	key:''
 					, address: vo.address
 				}
 				, function(data, status) {

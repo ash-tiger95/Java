@@ -3,7 +3,7 @@
 <%@ include file="/WEB-INF/views/template/header.jsp" %>
 
 <script src="https://unpkg.com/@google/markerclustererplus@4.0.1/dist/markerclustererplus.min.js"></script>
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCMXtnv5FOhNVw0q66dGzHxXIqFS_UUY3A&callback=initMap"></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap"></script>
 
 <script type="text/javascript">
 /* 페이징을 위한 전역변수 선언*/
