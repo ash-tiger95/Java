@@ -1,0 +1,34 @@
+**사용 코드**
+
+Arduino\sensor\sensor.ino
+아두이노에서 센서를 읽는 코드
+
+nCube\tas_sample\tas_co2\connect.py
+아두이노에서 얻은 센서 데이터를 SerialFromArduino()를 통해 파이썬에서 가져오고 데이터가 저장된 text.txt를 생성
+
+nCube\tas_sample\tas_co2\app.js
+connect.py에서 생성한 text.txt를 읽고 thyme으로 전달
+
+nCube\thyme.js
+app.js에서 전달된 데이터를 모비우스로 전달
+
+Mobius\mobius.js
+thyme에서 전달된 데이터 읽고 MySQL에 저장
+
+express-mysql\index.js
+MySQL에 저장된 데이터를 가지고 온다.
+
+express-mysql\views\a.ejs
+index.js에서 데이터를 받고 MySQL에서 con부분만 웹에 출력
+
+
+
+**실행 순서**
+Arduino\sensor\sensor.ino		아두이노 연결 후 업로드
+nCube\tas_sample\tas_co2\connect.py	코드에서 아두이노 포트 확인
+Mobius\mobius.js			node mobius.js
+nCube\thyme.js				node thyme.js
+nCube\tas_sample\tas_co2\app.js		node app.js
+nCube\tas_sample\tas_co2\connect.py	node python connect.py
+express-mysql\index.js			node index.js
+URL					localhost:3000
