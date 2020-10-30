@@ -1,4 +1,4 @@
-CREATE TABLE `ssafy_member` (
+CREATE TABLE `project_member` (
   `userid` varchar(20) NOT NULL,
   `username` varchar(20) NOT NULL,
   `userpwd` varchar(100) NOT NULL,
@@ -42,7 +42,7 @@ CREATE TABLE `housedeal` (
   `userid` varchar(20) DEFAULT NULL,
   PRIMARY KEY (`no`),
   KEY `userid` (`userid`),
-  CONSTRAINT `housedeal_ibfk_1` FOREIGN KEY (`userid`) REFERENCES `ssafy_member` (`userid`) ON DELETE CASCADE ON UPDATE CASCADE
+  CONSTRAINT `housedeal_ibfk_1` FOREIGN KEY (`userid`) REFERENCES `project_member` (`userid`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB AUTO_INCREMENT=68873 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 CREATE TABLE `saleimg` (
@@ -52,7 +52,7 @@ CREATE TABLE `saleimg` (
   `saleno` int DEFAULT NULL,
   PRIMARY KEY (`no`),
   KEY `userid` (`userid`),
-  CONSTRAINT `saleimg_ibfk_1` FOREIGN KEY (`userid`) REFERENCES `ssafy_member` (`userid`) ON DELETE CASCADE ON UPDATE CASCADE
+  CONSTRAINT `saleimg_ibfk_1` FOREIGN KEY (`userid`) REFERENCES `project_member` (`userid`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB AUTO_INCREMENT=147 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 CREATE TABLE `sidocode` (
@@ -147,8 +147,8 @@ CREATE TABLE `qna_board` (
   PRIMARY KEY (`qna_no`),
   KEY `qna_to_user_fk2` (`reply_userid`),
   KEY `qna_userid` (`qna_userid`),
-  CONSTRAINT `qna_board_ibfk_1` FOREIGN KEY (`qna_userid`) REFERENCES `ssafy_member` (`userid`) ON DELETE CASCADE ON UPDATE CASCADE,
-  CONSTRAINT `qna_to_user_fk2` FOREIGN KEY (`reply_userid`) REFERENCES `ssafy_member` (`userid`)
+  CONSTRAINT `qna_board_ibfk_1` FOREIGN KEY (`qna_userid`) REFERENCES `project_member` (`userid`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `qna_to_user_fk2` FOREIGN KEY (`reply_userid`) REFERENCES `project_member` (`userid`)
 ) ENGINE=InnoDB AUTO_INCREMENT=24 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='질문게시판';
 
 CREATE TABLE `reply_board` (
