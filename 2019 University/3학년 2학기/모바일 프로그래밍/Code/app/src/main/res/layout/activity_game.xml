@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_vertical">
+    <TextView
+        android:id="@+id/TextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="00:00:00"
+        android:textSize="80dp"
+        android:gravity="center"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"/>
+
+    <RelativeLayout
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_gravity="center">
+
+        <ImageButton
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:id="@+id/btn1"
+            android:onClick="click"/>
+        <ImageButton
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:id="@+id/btn2"
+            android:layout_centerInParent="true"
+            android:layout_above="@id/btn5"
+            android:onClick="click"/>
+        <ImageButton
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:id="@+id/btn3"
+            android:layout_toRightOf="@id/btn2"
+            android:onClick="click"/>
+
+        <ImageButton
+            android:id="@+id/btn4"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/btn5"
+            android:onClick="click"/>
+        <ImageButton
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:id="@+id/btn5"
+            android:layout_centerInParent="true"
+            android:onClick="click"/>
+        <ImageButton
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:id="@+id/btn6"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/btn5"
+            android:onClick="click"/>
+        <ImageButton
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:id="@+id/btn7"
+            android:layout_below="@id/btn4"
+            android:onClick="click"/>
+        <ImageButton
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:id="@+id/btn8"
+            android:layout_centerInParent="true"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/btn5"
+            android:onClick="click"/>
+        <ImageButton
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:id="@+id/btn9"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/btn6"
+            android:layout_toRightOf="@id/btn8"
+            android:onClick="click"/>
+
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/backButton"
+            android:layout_gravity="center"
+            android:text="BACK"
+            android:textSize="30dp"
+            android:onClick="myListener6"
+            android:visibility="visible"/>
+        <Button
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/rankButton"
+            android:layout_gravity="center"
+            android:text="RANKING"
+            android:textSize="30dp"
+            android:onClick="myListener7"
+            android:visibility="invisible"/>
+
+    </LinearLayout>
+
+
+
+
+</LinearLayout>

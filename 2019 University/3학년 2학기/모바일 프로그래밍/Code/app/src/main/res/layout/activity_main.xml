@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="300px"
+        android:text="Enjoy Puzzle Game"
+        android:gravity="center"
+        android:textSize="20pt"
+        android:textStyle="bold"
+        android:textColor="#ffffff"
+        android:background="#000000"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Select Image"
+        android:gravity="center"
+        android:textSize="20pt"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:layout_width="20dp"
+            android:layout_height="150dp"
+            android:id="@+id/imgbtn1"
+            android:src="@drawable/image3"
+            android:scaleType="fitCenter"
+            android:background="@android:color/transparent"
+            android:layout_weight="1"
+            android:onClick="myListener"/>
+        <ImageButton
+            android:layout_width="20dp"
+            android:layout_height="150dp"
+            android:id="@+id/imgbtn2"
+            android:src="@drawable/image1"
+            android:scaleType="fitCenter"
+            android:background="@android:color/transparent"
+            android:layout_weight="1"
+            android:onClick="myListener2"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <ImageButton
+            android:layout_width="20dp"
+            android:layout_height="150dp"
+            android:id="@+id/imgbtn3"
+            android:src="@drawable/image2"
+            android:scaleType="fitCenter"
+            android:background="@android:color/transparent"
+            android:layout_weight="1"
+            android:onClick="myListener3"/>
+        <ImageButton
+            android:layout_width="20dp"
+            android:layout_height="150dp"
+            android:id="@+id/imgbtn4"
+            android:src="@drawable/image4"
+            android:scaleType="fitCenter"
+            android:background="@android:color/transparent"
+            android:layout_weight="1"
+            android:onClick="myListener4"/>
+    </LinearLayout>
+
+
+</LinearLayout>

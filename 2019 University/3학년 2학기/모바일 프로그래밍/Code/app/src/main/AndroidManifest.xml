@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="kr.co.company.puzzlegame">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".StartActivity"
+            android:label="StartActivity">
+        </activity>
+        <activity
+            android:name=".StartActivity_2"
+            android:label="StartActivity_2">
+        </activity>
+        <activity
+            android:name=".StartActivity_3"
+            android:label="StartActivity_3">
+        </activity>
+        <activity
+            android:name=".StartActivity_4"
+            android:label="StartActivity_4">
+        </activity>
+        <activity
+            android:name=".GameActivity"
+            android:label="GameActivity">
+        </activity>
+        <activity
+            android:name=".GameActivity_2"
+            android:label="GameActivity_2">
+        </activity>
+        <activity
+            android:name=".GameActivity_3"
+            android:label="GameActivity_3">
+        </activity>
+        <activity
+            android:name=".GameActivity_4"
+            android:label="GameActivity_4">
+        </activity>
+        <activity
+            android:name=".RankActivity"
+            android:label="RankActivity">
+
+        </activity>
+    </application>
+
+</manifest>
