@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd" >
+
+<configuration>
+    
+    <typeAliases>
+        <typeAlias alias="memberDto" type="com.project.projectboot.dto.MemberDto"/>
+        <typeAlias alias="shopDto" type="com.project.projectboot.dto.ShopDto"/>
+        <typeAlias alias="pollutionDto" type="com.project.projectboot.dto.PollutionDto"/>
+        <typeAlias alias="noticeDto" type="com.project.projectboot.dto.NoticeDto"/>
+        <typeAlias alias="sidocodeDto" type="com.project.projectboot.dto.SiDoCodeDto"/>
+        <typeAlias alias="guguncodeDto" type="com.project.projectboot.dto.GuGunCodeDto"/>
+        <typeAlias alias="houseinfoDto" type="com.project.projectboot.dto.HouseInfoDto"/>
+        <typeAlias alias="housedealDto" type="com.project.projectboot.dto.HouseDealDto"/>
+   		<typeAlias alias="locationDto" type="com.project.projectboot.dto.LocationDto"/>
+   		<typeAlias alias="favoriteDto" type="com.project.projectboot.dto.FavoriteDto"/>
+   		<typeAlias alias="greenDto" type="com.project.projectboot.dto.GreenDto"/>
+   		<typeAlias alias="housedealinfo" type="com.project.projectboot.dto.HouseDealinfo"/>
+   		<typeAlias alias="subwayDto" type="com.project.projectboot.dto.SubwayDto"/>
+   		<typeAlias alias="zzimDto" type="com.project.projectboot.dto.ZzimDto"/>
+   		<typeAlias alias="saleimgDto" type="com.project.projectboot.dto.SaleImgDto"/>
+    </typeAliases>
+    
+    <mappers>
+    	<mapper resource="mappers/houseinfo.xml"/>
+    	<mapper resource="mappers/favorite.xml"/>
+		<mapper resource="mappers/member.xml" />
+		<mapper resource="mappers/shop.xml" />
+		<mapper resource="mappers/pollution.xml" />
+		<mapper resource="mappers/notice.xml" />
+		<mapper resource="mappers/selectbox.xml"/>
+		<mapper resource="mappers/green.xml"/>
+		<mapper resource="mappers/housedeal.xml"/>
+		<mapper resource="mappers/subway.xml"/>
+		<mapper resource="mappers/saleimg.xml"/>
+	</mappers>
+    
+</configuration>
