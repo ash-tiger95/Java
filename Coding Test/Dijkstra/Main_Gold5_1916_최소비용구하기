@@ -1,0 +1,87 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.PriorityQueue;
+import java.util.StringTokenizer;
+
+public class Main_Gold5_1916_최소비용구하기 {
+	static int N,M, start, end;
+	
+	// Dijkstra
+	static class Edge implements Comparable<Edge>{
+		int to, weight;
+		
+		public Edge(int to, int weight) {
+			super();
+			this.to = to;
+			this.weight = weight;
+		}
+
+		@Override
+		public String toString() {
+			return "Edge [to=" + to + ", weight=" + weight + "]";
+		}
+
+		@Override
+		public int compareTo(Edge o) {
+			return Integer.compare(this.weight, o.weight);
+		}
+	}
+	static List<Edge>[] adj;
+	static PriorityQueue<Edge> pq;
+	static boolean[] check;
+	static Edge[] dist;
+	
+	public static void main(String[] args) throws IOException {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		StringTokenizer st = null;
+		
+		N = Integer.parseInt(br.readLine());
+		M = Integer.parseInt(br.readLine());
+		
+		adj = new ArrayList[N];
+		for(int i=0;i<N;i++) {
+			adj[i] = new ArrayList<>();
+		}
+		
+		for(int i=0 ; i<M;i++) {
+			st = new StringTokenizer(br.readLine());
+			adj[Integer.parseInt(st.nextToken())-1].add(new Edge(Integer.parseInt(st.nextToken())-1,Integer.parseInt(st.nextToken())));
+		}
+		st = new StringTokenizer(br.readLine());
+		start = Integer.parseInt(st.nextToken())-1;
+		end = Integer.parseInt(st.nextToken())-1;
+		
+		// Dijkstra
+		pq = new PriorityQueue<>();
+		check = new boolean[N];
+		dist = new Edge[N];
+		
+		for(int i=0 ; i<N;i++) {
+			if(i == start) {
+				dist[i] = new Edge(i,0);
+			} else {
+				dist[i] = new Edge(i, Integer.MAX_VALUE);
+			}
+			pq.add(dist[i]);
+		}
+		
+		while(!pq.isEmpty()) {
+			Edge ce = pq.poll();
+			for(Edge next : adj[ce.to]) {
+				if(!check[next.to] && dist[next.to].weight > dist[ce.to].weight + next.weight) {
+					dist[next.to].weight = dist[ce.to].weight + next.weight;
+					
+					pq.remove(dist[next.to]);
+					pq.add(dist[next.to]);
+				}
+			}
+			check[ce.to] = true;
+		}
+		System.out.println(dist[end].weight);
+		
+	}
+
+}
