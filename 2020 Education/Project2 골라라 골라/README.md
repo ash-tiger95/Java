@@ -95,7 +95,7 @@ Tech 안성호
 
 
 
-#### 폴더 구조![gif_image_1](C:\Users\multicampus\Desktop\git\github\NewStart\2020 Education\Project2 골라라 골라\Asset\gif_image_1.gif)
+#### 폴더 구조![gif_image_1](Asset\gif_image_1.gif)
 
 * Front
 
