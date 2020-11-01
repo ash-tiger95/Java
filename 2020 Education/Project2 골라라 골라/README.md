@@ -95,7 +95,7 @@ Tech 안성호
 
 
 
-#### 폴더 구조![gif_image_1](Asset\gif_image_1.gif)
+#### ![gif_image_1](Asset\gif_image_1.gif)
 
 * Front
 
