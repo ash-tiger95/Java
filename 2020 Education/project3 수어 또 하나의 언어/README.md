@@ -1,45 +1,35 @@
-# :call_me_hand: 수어번역기 : 또 하나의 언어
+![gif_image_1](./Asset/Readme Asset/logo.png)
 
-- 팀명 : S:WITH 🍓 (B105)
-
-- 팀원 소개
-
-  팀장 : 박세훈(딥러닝)
-
-  팀원 : 김낙현(딥러닝), 김재은(FE), 류혜명(FE), 안성호(BE)
-
-- 역할
-
-  - Tech Leader - 김낙현
-  - QA - 김재은
-  - 개발자 - 안성호, 박세훈
-  - 기획자 - 류혜명
-
-## ☝ 주제
-
-- 프로젝트명 : 수어번역기 - 또 하나의 언어
-- 수어(영상)를 텍스트로 번역
-- 사진(글, 물체)을 수어로 번역
+UCC 주소: https://youtu.be/p6Ccgq0pd8o
 
 
 
-## ✌ 기술스택
+## 1. 프로젝트 소개
 
-- Frontend
+### 1-1. 주제
 
-  Vue.js, Vuetify
-
-- Backend
-
-  Django
-
-- Machine Learning
-
-  Python, TensorFlow, OpenCV, YOLO
+- 수어를 번역하기
+- 수어로 번역하기
 
 
 
-## 🖐 기능
+### 1-2. 문제인식
+
+- 청각장애인
+  - 수어를 모르는 사람과 소통하기가 불편하다.
+  - 청각장애인의 30%는 농인으로 글씨조차 읽을 수 없는 불편함이 있다.
+
+
+
+### 1-3. 기획의도
+
+
+
+### 1-4. 주요대상 및 타겟
+
+
+
+## 2. 주요기능
 
 - 주요 기능
 
@@ -66,55 +56,42 @@
   - 건의 게시판
   - 수어 자신이 만들어서 올리기
 
-## :apple: 개발규칙 
-
-#### 공통
-
-- 특수문자는 _ 만 허용한다.
-- ex) Is_Select(클래스), get_Value(함수), is_Select(변수)
-
-#### 클래스명
-
-- 클래스명은 대문자의 명사로 시작한다.
-- ex) IsSelect
-
-#### 함수명
-
-- 소문자의 동사로 시작한다.
-- ex) getValue
-
-#### 변수명
-
-- 소문자로 시작하며 여러 단어로 이루어진 경우 각 단어의 첫글자를 대문자로 한다.(카멜표기법)
-- ex) isSelect
 
 
+## 3. 프로젝트 시연
 
+### 3-1. 수어를 번역
 
-## :star: Git 규칙
+> Ai hub(https://www.aihub.or.kr/)의 수어 데이터를 학습시켜 촬영한 영상이 무슨 수어인지 찾아낸다.
 
-**branch**
+![gif_image_1](./Asset/Readme Asset/1.gif)
 
-``` 
-master -> develop -> feature/fe(김재은, 류혜명) or feature/be(안성호)
-```
+### 3-2. 번역 후 TTS 및 문자 메시지 보내기
 
-**merge**
+> 음성 버튼을 누르면 TTS로 해당 단어가 읽어지고 문자 메시지를 보내어 긴급한 상황을 알릴 수 있다.
 
-```
-- 코딩하기 전 develop 가져오기
-git checkout develop 
-git pull origin develop
+![gif_image_1](./Asset/Readme Asset/2.gif)
 
-- merge 하기 전 서로 코드 리뷰하기
-- merge 후 branch 지우기
-```
+### 3-3. 수어로 번역하기 - 수어 사전
 
-**commit**
+> 수어를 검색하면 국립국어원 한국수어사전(http://sldict.korean.go.kr/front/main/main.do)의 데이터를 크롤링하여 검색한 단어를 보여준다.
 
-```
-1 day 1 commit
-커밋 메시지는 => 이슈번호 /(Add/Updata/Delete) 작업 내용 <= 의 구조로 작성
-ex) S123301 /Add Login
-이슈번호가 없을경우 None 으로 대체
-```
+![gif_image_1](./Asset/Readme Asset/3.gif)
+
+### 3-4. 단어장 추가
+
+> 검색한 단어를 내 단어장에 추가할 수 있다.(단, 로그인 할 시, 참고적으로 로그인은 카카오 로그인으로 구현)
+
+![gif_image_1](./Asset/Readme Asset/4.gif)
+
+### 3-5. 수어로 번역하기 - 수어찾기
+
+> 사진을 촬영하면 text/object detection을 통해 해당 단어를 크롤링한 데이터로 보여준다.
+
+![gif_image_1](./Asset/Readme Asset/5.gif)
+
+### 3-6. 문의 게시판
+
+> 문의 게시판에 동영상을 업로드 할 수 있어 장애인들도 영상으로 문의를 할 수 있는 게시판을 만들었다.
+
+![gif_image_1](./Asset/Readme Asset/6.gif)
