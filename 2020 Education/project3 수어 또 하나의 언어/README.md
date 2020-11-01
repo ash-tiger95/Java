@@ -2,6 +2,8 @@
 
 UCC 주소: https://youtu.be/p6Ccgq0pd8o
 
+성과: UCC 전국 1등, 대전 2등
+
 
 
 ## 1. 프로젝트 소개

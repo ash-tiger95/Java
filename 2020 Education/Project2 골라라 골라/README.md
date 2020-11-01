@@ -6,6 +6,8 @@
 
 UCC 주소: https://youtu.be/3XjU52B_XtM
 
+성과: UCC 전국 3등
+
 
 
 ## 1. 프로젝트 소개
