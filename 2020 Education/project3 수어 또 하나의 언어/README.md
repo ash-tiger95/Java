@@ -1,4 +1,4 @@
-![gif_image_1](./Asset/Readme Asset/logo.png)
+![logo](./Asset/Readme_Asset/logo.png)
 
 UCC 주소: https://youtu.be/p6Ccgq0pd8o
 
@@ -64,34 +64,34 @@ UCC 주소: https://youtu.be/p6Ccgq0pd8o
 
 > Ai hub(https://www.aihub.or.kr/)의 수어 데이터를 학습시켜 촬영한 영상이 무슨 수어인지 찾아낸다.
 
-![gif_image_1](./Asset/Readme Asset/1.gif)
+![1](./Asset/Readme_Asset/1.gif)
 
 ### 3-2. 번역 후 TTS 및 문자 메시지 보내기
 
 > 음성 버튼을 누르면 TTS로 해당 단어가 읽어지고 문자 메시지를 보내어 긴급한 상황을 알릴 수 있다.
 
-![gif_image_1](./Asset/Readme Asset/2.gif)
+![2](./Asset/Readme_Asset/2.gif)
 
 ### 3-3. 수어로 번역하기 - 수어 사전
 
 > 수어를 검색하면 국립국어원 한국수어사전(http://sldict.korean.go.kr/front/main/main.do)의 데이터를 크롤링하여 검색한 단어를 보여준다.
 
-![gif_image_1](./Asset/Readme Asset/3.gif)
+![3](./Asset/Readme_Asset/3.gif)
 
 ### 3-4. 단어장 추가
 
 > 검색한 단어를 내 단어장에 추가할 수 있다.(단, 로그인 할 시, 참고적으로 로그인은 카카오 로그인으로 구현)
 
-![gif_image_1](./Asset/Readme Asset/4.gif)
+![4](./Asset/Readme_Asset/4.gif)
 
 ### 3-5. 수어로 번역하기 - 수어찾기
 
 > 사진을 촬영하면 text/object detection을 통해 해당 단어를 크롤링한 데이터로 보여준다.
 
-![gif_image_1](./Asset/Readme Asset/5.gif)
+![5](./Asset/Readme_Asset/5.gif)
 
 ### 3-6. 문의 게시판
 
 > 문의 게시판에 동영상을 업로드 할 수 있어 장애인들도 영상으로 문의를 할 수 있는 게시판을 만들었다.
 
-![gif_image_1](./Asset/Readme Asset/6.gif)
+![6](./Asset/Readme_Asset/6.gif)

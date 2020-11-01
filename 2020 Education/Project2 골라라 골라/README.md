@@ -72,7 +72,7 @@ UCC 주소: https://youtu.be/3XjU52B_XtM
 
 > 매장에 존재하는 재고 정보를 확인, 검색할 수 있습니다.
 
-![1](Asset/Readme_Asset/1.gif)
+![1](./Asset/Readme_Asset/1.gif)
 
 ### 3-2. 디테일 페이지
 
