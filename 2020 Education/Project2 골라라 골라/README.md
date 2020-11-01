@@ -1,4 +1,4 @@
-![gif_image_1](./Asset/Readme Asset/logo.png)
+![logo](./Asset/logo.png)
 
 
 
