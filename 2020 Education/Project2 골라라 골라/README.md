@@ -78,31 +78,31 @@ UCC 주소: https://youtu.be/3XjU52B_XtM
 
 > 재고 상품에 대한 2가지 쿠폰을 발급받을 수 있습니다.
 
-![gif_image_1](./Asset/Readme Asset/gif_image_4.gif)
+![2](./Asset/Readme Asset/2.gif)
 
 ### 3-3. VS 이벤트 모아보기
 
 > VS 이벤트를 진행중인 상품들을 모아보고, 한번에 쿠폰을 발급받을 수 있습니다.
 
-![gif_image_1](./Asset/Readme Asset/gif_image_3.gif)
+![3](./Asset/Readme Asset/3.gif)
 
 ### 3-4. 결제하기
 
 > 발급받은 쿠폰을 사용하여 할인된 가격으로 결제합니다.
 
-![gif_image_1](./Asset/Readme Asset/gif_image_6.gif)
+![4](./Asset/Readme Asset/4.gif)
 
 ### 3-5. 키오스크
 
 > 매장의 키오스크에서 할인쿠폰을 발급받을 수 있고, 골라라 골라 서비스의 홈페이지로 접속할수 있는 QR코드를 제공합니다.
 
-#### ![gif_image_1](./Asset/Readme Asset/gif_image_1.gif)
+#### ![5](./Asset/Readme Asset/5.gif)
 
 ### 3-6. 관리자 페이지
 
 > 매장의 매출, 재고, 이벤트 참여현황 등을 확인할 수 있습니다.
 
-![gif_image_1](./Asset/Readme Asset/gif_image_2.gif)
+![6](./Asset/Readme Asset/6.gif)
 
 
 
