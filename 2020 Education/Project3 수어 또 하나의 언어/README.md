@@ -95,3 +95,9 @@ UCC 주소: https://youtu.be/p6Ccgq0pd8o
 > 문의 게시판에 동영상을 업로드 할 수 있어 장애인들도 영상으로 문의를 할 수 있는 게시판을 만들었다.
 
 ![6](./Asset/Readme_Asset/6.gif)
+
+
+
+## 기술 스택
+
+![skill](./Asset/Readme_Asset/skill.PNG)

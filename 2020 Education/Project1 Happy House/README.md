@@ -61,3 +61,9 @@ UCC 주소: https://youtu.be/KJ1Mx305sRU
 > 관리자는 회원정보, 공지사항에 대한 권한을 가질 수 있다.
 
 ![10](./Asset/Readme_Asset/10.gif)
+
+
+
+## 기술 스택
+
+![skill](./Asset/Readme_Asset/skill.PNG)

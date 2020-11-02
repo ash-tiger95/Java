@@ -133,7 +133,7 @@ UCC 주소: https://youtu.be/3XjU52B_XtM
 
 ### 기술스택
 
-![image](https://user-images.githubusercontent.com/44697835/91255493-dbb35200-e79f-11ea-9180-a6dd1d5011bc.png)
+![skill](./Asset/Readme_Asset/skill.PNG)
 
 ### 시스템 구조도
 
