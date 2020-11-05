@@ -1,0 +1,52 @@
+package com.ssafy.백준.dp;
+
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+import java.util.Arrays;
+import java.util.StringTokenizer;
+
+public class Main_Silver1_1932_정수삼각형 {
+	static int N;
+	static int[][] input, memo;
+	public static void main(String[] args) throws IOException {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+		StringBuilder sb = new StringBuilder();
+		StringTokenizer st = new StringTokenizer(br.readLine());
+		N = Integer.parseInt(st.nextToken());
+		
+		input = new int[N][N];
+		memo = new int[N][N];
+		
+		for(int i=0;i<N;i++) {
+			st = new StringTokenizer(br.readLine());
+			int line = i;
+			for(int j=0;j<=line;j++) {
+				input[i][j] = Integer.parseInt(st.nextToken());
+			}
+		}
+		memo[0][0] = input[0][0];
+		for(int i=1;i<N;i++) {
+			for(int j=0;j<=i;j++) {
+				if(j==0) {
+					memo[i][j] = memo[i-1][j] + input[i][j];
+				}else if(j == i){
+					memo[i][j] = memo[i-1][i-1] + input[i][j];
+				}else {
+					memo[i][j] = Math.max(memo[i-1][j-1]+input[i][j], memo[i-1][j]+input[i][j]);
+				}
+			}
+		}
+		
+		int max = 0;
+		for(int i=0;i<N;i++) {
+			if(max < memo[N-1][i])
+				max = memo[N-1][i];
+		}
+		System.out.println(max);
+	}
+
+}
