@@ -1,0 +1,110 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.StringReader;
+import java.util.Arrays;
+import java.util.LinkedList;
+import java.util.Queue;
+import java.util.StringTokenizer;
+
+
+public class Solution_D5_7793_오나의여신님2_큐1개 {
+	// 출력을 모아서!
+	static StringBuilder sb = new StringBuilder();
+	// 사방 탐색
+	static int[][] dirs = { { -1, 0 }, { 1, 0 }, { 0, -1 }, { 0, 1 } };
+
+	static int T, R, C, Ans;
+	static char[][] map;
+	static Queue<Point> points;
+
+	public static void main(String[] args) throws NumberFormatException, IOException {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+//		br = new BufferedReader(new StringReader(src));
+
+		T = Integer.parseInt(br.readLine());
+		for (int t = 1; t <= T; t++) {
+			sb.append("#").append(t).append(" ");
+
+			StringTokenizer st = new StringTokenizer(br.readLine());
+			R = Integer.parseInt(st.nextToken());
+			C = Integer.parseInt(st.nextToken());
+			Ans = Integer.MAX_VALUE;
+			
+			map = new char[R][C];
+			points = new LinkedList<>();
+			Point player = null;
+			for (int r = 0; r < R; r++) {
+				map[r] = br.readLine().toCharArray();
+				for (int c = 0; c < C; c++) {
+					if (map[r][c] == '*') {
+						points.offer(new Point(r, c, 0, true));
+					} else if (map[r][c] == 'S') {
+						player = new Point(r,c,0,false); // devil 다 넣고 수연이 넣기위해
+					}
+				}
+			}
+			points.offer(player); // 마지막에 넣기 위해
+
+			outer: while (!points.isEmpty()) {
+				Point front = points.poll();
+				
+				// 자식 탐색 - 사방 탐색
+				for (int d = 0; d < dirs.length; d++) {
+					int nr = front.row + dirs[d][0];
+					int nc = front.col + dirs[d][1];
+
+					if (isIn(nr, nc)) { // 범위에 있다면 수연이는 .으로 이동, D를 만나면 종료
+						if(front.isDevil) {
+							if (map[nr][nc] == '.' || map[nr][nc] == 'S') {
+								// 지도의 상태를 변경한 것 자체가 방문처리.
+								map[nr][nc] = '*';
+								// 큐에 새로 들어가긴 하지만 빠지지는 않는다.
+								points.offer(new Point(nr, nc, front.depth + 1, true));
+							}
+						} else { // 수연이라면
+							if (map[nr][nc] == 'D') {
+								Ans = front.depth + 1;
+								break outer; // outer라는 라벨을 벗어나라
+							}
+							else if(map[nr][nc] == '.') {
+								map[nr][nc] = 'S';
+								points.offer(new Point(nr,nc,front.depth+1, false));
+							}
+						}
+						
+					}
+				}
+			}
+			sb.append(Ans == Integer.MAX_VALUE ? "GAME OVER" : Ans);
+			sb.append("\n");
+		}
+		System.out.println(sb);
+	}
+
+	
+
+	private static boolean isIn(int r, int c) {
+		return 0 <= r && 0 <= c && r < R && c < C;
+	}
+
+	static class Point {
+		int row, col, depth; // 행, 열, 깊이(단계)
+		boolean isDevil; // 수연인지 악마인지 구분하기 위해
+
+		public Point(int row, int col, int depth, boolean isDevil) {
+			super();
+			this.row = row;
+			this.col = col;
+			this.depth = depth;
+			this.isDevil = isDevil;
+		}
+
+		@Override
+		public String toString() {
+			return "Point [row=" + row + ", col=" + col + ", depth=" + depth + "]";
+		}
+
+	}
+
+}
