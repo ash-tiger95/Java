@@ -8,7 +8,7 @@ import java.util.Queue;
 import java.util.StringTokenizer;
 
 
-public class Solution_D5_7793_오나의여신님2_큐1개 {
+public class Solution {
 	// 출력을 모아서!
 	static StringBuilder sb = new StringBuilder();
 	// 사방 탐색
