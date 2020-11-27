@@ -25,7 +25,7 @@
             android:id="@+id/email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="아이디 (SSAFY@ssafy.com)"
+            android:hint="아이디 (example@example.com)"
             android:imeOptions="actionSend"
             android:inputType="textEmailAddress"
             android:layout_weight="3" />
