@@ -1,4 +1,4 @@
-![logo](./Asset/Readme_Asset/logo.png)
+![logo](./Asset/Readme_Asset/logo.PNG)
 
 UCC 주소: https://youtu.be/-2_TJjFjgzM
 
