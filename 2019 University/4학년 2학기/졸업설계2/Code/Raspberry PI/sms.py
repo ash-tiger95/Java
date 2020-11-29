@@ -3,7 +3,7 @@ import sys
 from sdk.api.message import Message
 from sdk.exceptions import CoolsmsException
  
-connection = pymysql.connect(host='172.20.10.4', user='subin', password='1234', db='phone')
+connection = pymysql.connect(host='', user='', password='', db='')
      
 if __name__ == "__main__":
     
@@ -30,15 +30,15 @@ if __name__ == "__main__":
     finally:
         connection.close()
     
-    api_key = "NCSYJ8OCL6ZIFUFQ"
-    api_secret = "OAXHBOR9ZEXYAMAXY6PG798L8BNIR936"
+    api_key = ""
+    api_secret = ""
     str2 = "\"" + str1 +"\""
-    #phone = "01035950104"
+    #phone = ""
     params = dict()
     params['type'] = 'sms'
     params['to'] = str2
-    params['from'] = '01024601866'
-    params['text'] = '172.20.10.4/PWDI/index.php collision!!'
+    params['from'] = ''
+    params['text'] = ''
     
     cool = Message(api_key, api_secret)
     
