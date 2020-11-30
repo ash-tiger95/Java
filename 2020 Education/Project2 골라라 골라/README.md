@@ -62,7 +62,7 @@ UCC 주소: https://youtu.be/3XjU52B_XtM
 | VS 이벤트 쿠폰   | 유사한 두가지 재고상품에 대한 행사를 진행할 수 있습니다. <br />두가지 상품 중 한가지 상품을 골라 큰폭의 할인을 받을 수 있습니다. | 선택한 재고 상품 | 50% ~ 60%                      |
 | 퀴즈 이벤트 쿠폰 | 매장에 관련된 퀴즈를 풀고 전체 재고상품을 할인받을 수 있습니다. | 전체 재고 상품   | 30%                            |
 
-![gif_image_1](./Asset/Readme Asset/image_1.jpg)
+![gif_image_1](./Asset/Readme_Asset/image_1.jpg)
 
 -------------
 
