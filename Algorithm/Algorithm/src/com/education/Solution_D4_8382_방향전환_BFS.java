@@ -1,4 +1,5 @@
-package com.education.BFS;
+package com.education;
+
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -9,7 +10,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.StringTokenizer;
 
-public class Solution_D4_8382_방향전환 {
+public class Solution_D4_8382_방향전환_BFS {
 	static class Point{
 		int x,y,cnt;
 		boolean dir; // false면 가로 이동, true면 세로 이동
