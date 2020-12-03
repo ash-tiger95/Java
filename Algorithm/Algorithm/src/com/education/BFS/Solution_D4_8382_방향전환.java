@@ -1,0 +1,110 @@
+package com.education.BFS;
+
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+import java.util.LinkedList;
+import java.util.Queue;
+import java.util.StringTokenizer;
+
+public class Solution_D4_8382_방향전환 {
+	static class Point{
+		int x,y,cnt;
+		boolean dir; // false면 가로 이동, true면 세로 이동
+		public Point(int y, int x, int cnt, boolean dir) {
+			super();
+			this.x = x;
+			this.y = y;
+			this.cnt = cnt;
+			this.dir = dir;
+		}
+		@Override
+		public String toString() {
+			return "Point [x=" + x + ", y=" + y + ", cnt=" + cnt + ", dir=" + dir + "]";
+		}
+	}
+	
+	static int T,x1,y1,x2,y2;
+	static int[][] dir = {{1,0},{-1,0},{0,1},{0,-1}};
+	static Queue<Point> queue;
+	static boolean[][][] visited;
+	
+	public static void main(String[] args) throws NumberFormatException, IOException {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+		StringBuilder sb = new StringBuilder();
+		StringTokenizer st = null;
+		
+		T = Integer.parseInt(br.readLine());
+		
+		for(int t=1; t<=T;t++) {
+			sb.append("#").append(t).append(" ");
+			
+			st = new StringTokenizer(br.readLine());
+			
+			// -100 <= x1,y1,x2,y2 <= 100, (x1,y1) -> (x2,y2)로 이동
+			x1 = Integer.parseInt(st.nextToken()) + 100;
+			y1 = Integer.parseInt(st.nextToken()) + 100;
+			x2 = Integer.parseInt(st.nextToken()) + 100;
+			y2 = Integer.parseInt(st.nextToken()) + 100;
+			
+			queue = new LinkedList<Point>();
+			visited = new boolean[201][201][2];
+			
+			queue.offer(new Point(y1,x1,0,false)); // 가로 먼저 이동
+			visited[y1][x1][0] = true;
+			queue.offer(new Point(y1,x1,0,true)); // 세로 먼저 이동
+			visited[y1][x1][1] = true;
+			
+			// BFS
+			while(!queue.isEmpty()) {
+				Point cp = queue.poll();
+				if(cp.x == x2 && cp.y == y2) {
+					sb.append(cp.cnt).append("\n");
+					break;
+				}
+				
+				if(cp.dir) { // true이면 이전에 세로이동했으니 이번에는 가로이동
+					for(int d=2;d<4;d++) { // 가로 이동
+						int ny = cp.y + dir[d][0];
+						int nx = cp.x + dir[d][1];
+						if(!boundary(ny,nx)) {
+							continue;
+						}
+						if(visited[ny][nx][0]) {
+							continue;
+						}
+						queue.offer(new Point(ny,nx,cp.cnt+1,!cp.dir));
+						visited[ny][nx][0] = true;
+					}
+					
+				} else { // false이면 이전에 가로이동했으니 이번에는 세로이동
+					for(int d=0;d<2;d++) { // 가로 이동
+						int ny = cp.y + dir[d][0];
+						int nx = cp.x + dir[d][1];
+						if(!boundary(ny,nx)) {
+							continue;
+						}
+						if(visited[ny][nx][1]) {
+							continue;
+						}
+						queue.offer(new Point(ny,nx,cp.cnt+1,!cp.dir));
+						visited[ny][nx][1] = true;
+					}
+				}
+			}
+			
+			
+		}
+		
+		bw.write(sb.toString());
+		bw.close();
+		br.close();
+	}
+
+	private static boolean boundary(int ny, int nx) {
+		return ny >= 0 && nx>=0 && ny<201 && nx<201;
+	}
+}
