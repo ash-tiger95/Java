@@ -2,8 +2,6 @@
 
 ## :family_man_woman_girl_girl: Git Brach
 
-### Git Flow 사용
-
 ### **git flow 설치**
 
 - wget 설치
