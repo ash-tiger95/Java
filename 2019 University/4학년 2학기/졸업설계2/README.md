@@ -4,6 +4,12 @@ UCC 주소: https://youtu.be/bBkeLyy_fOs
 
 성과: 학부 내 상위팀으로 선정, 학교 전체 16팀이 참가하는 졸업작품 경진대회 참가. 장려상
 
+
+
+## 기술 스택
+
+![logo](./Asset/Readme_Asset/skill.jpg)
+
 ## 프로젝트 시연
 
 ### 1. 긴급연락망 추가

@@ -4,7 +4,7 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class Solution_D4_8382_방향전환_Role {
+public class Solution_D4_8382_방향전환_Greedy {
 	static int T, x1, y1, x2, y2, answer;
 
 	public static void main(String[] args) throws Exception {
