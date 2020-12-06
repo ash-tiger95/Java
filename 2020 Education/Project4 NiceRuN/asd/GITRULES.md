@@ -187,6 +187,3 @@ Commit 예시 :fire: S03P31B201 start project
 
 \- :wrench:(wrench): 충돌해결
 
----------------------
-
-git test
