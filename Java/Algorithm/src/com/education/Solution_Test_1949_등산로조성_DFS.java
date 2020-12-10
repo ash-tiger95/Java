@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class Solution_Test_1949_등산로조성 {
+public class Solution_Test_1949_등산로조성_DFS {
 	static int T, N, K, Ans;
 	static int[][] map;
 	static boolean[][] visited;
