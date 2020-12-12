@@ -8,8 +8,6 @@ import java.util.PriorityQueue;
 import java.util.Queue;
 import java.util.StringTokenizer;
 
-import com.education.Solution.Pair;
-
 public class Solution_Test_5648_원자소멸시뮬레이션_Simulation {
 
 	static int T;
