@@ -8,135 +8,85 @@ import java.util.PriorityQueue;
 import java.util.Queue;
 import java.util.StringTokenizer;
 
+import com.education.Solution.Pair;
+
 public class Solution_Test_5648_원자소멸시뮬레이션_Simulation {
-	static class Point implements Comparable<Point> {
-		int y, x, d, k;
 
-		public Point(int y, int x, int d, int k) {
-			super();
-			this.y = y;
-			this.x = x;
-			this.d = d;
-			this.k = k;
-		}
+	static int T;
+    static int N;
+ 
+    static class Pair {
+    	int x;
+        int y;
+        int d;
+        int k;
+ 
+        public Pair(int x, int y, int d, int k) {
+            this.x = x;
+            this.y = y;
+            this.d = d;
+            this.k = k;
+        }
+ 
+    }
+ 
+    static final int stand = 1000;
+    static final int MAX_LEN = 4000;
+ 
+    static int dy[] = { 1, -1, 0, 0 };
+    static int dx[] = { 0, 0, -1, 1 };
+    static int score[][] = new int[MAX_LEN + 2][MAX_LEN + 2];
+    static Queue<Pair> q;
+ 
+    public static void main(String[] args) throws NumberFormatException, IOException {
+        StringBuilder sb = new StringBuilder();
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        StringTokenizer st;
+ 
+        T = Integer.parseInt(br.readLine().trim());
+         
+ 
+        for (int t = 1; t <= T; t++) {
+            sb.append('#').append(t).append(' ');
+ 
+            N = Integer.parseInt(br.readLine().trim());
+            q = new LinkedList<Pair>();
+ 
+            for (int i = 0; i < N; i++) {
+                st = new StringTokenizer(br.readLine().trim());
+                int x = Integer.parseInt(st.nextToken()) + stand;
+                int y = Integer.parseInt(st.nextToken()) + stand;
+                int d = Integer.parseInt(st.nextToken());
+                int k = Integer.parseInt(st.nextToken());
+                q.add(new Pair(x * 2, y * 2, d, k));
+                score[y * 2][x * 2] = k;
+            }
+            int ans = 0;
+ 
+            while (!q.isEmpty()) {
+                Pair cur = q.poll();
+                int x = cur.x; // x * 2
+                int y = cur.y; // y * 2
+                int d = cur.d;
+                int k = cur.k;
+ 
+                if (score[y][x] != k) {
+                    ans += score[y][x];
+                } else {
+                    int ny = y + dy[d];
+                    int nx = x + dx[d];
+                    if (ny >= 0 && nx >= 0 && ny <= MAX_LEN+1 && nx <= MAX_LEN+1) {
+                        score[ny][nx] += k;
+                        q.add(new Pair(nx,ny,d,k));
+                    }
+                }
+                score[y][x] = 0;
+            }
+ 
+            sb.append(ans).append('\n');
+ 
+        }
+        System.out.print(sb.toString());
+    }
 
-		@Override
-		public String toString() {
-			return "Point [y=" + y + ", x=" + x + ", d=" + d + ", k=" + k + "]";
-		}
-
-		@Override
-		public int compareTo(Point o) {
-			if (this.y > o.y) {
-				return 1;
-			} else if (this.y < o.y) {
-				return -1;
-			} else {
-				if (this.x > o.x) {
-					return 1;
-				} else if (this.x < o.x) {
-					return -1;
-				} else {
-					return 0;
-				}
-			}
-		}
-
-	}
-	
-	static class MatchPoint{
-		int y,x;
-
-		public MatchPoint(int y, int x) {
-			super();
-			this.y = y;
-			this.x = x;
-		}
-		
-	}
-
-	static int T, N, Ans;
-	static int[][] map;
-	static PriorityQueue<Point> pq;
-	static Queue<Point> tempQueue;
-	static Queue<MatchPoint> matchQueue;
-	static int[][] dirs = { { -1, 0 }, { 1, 0 }, { 0, -1 }, { 0, 1 } }; // 상 하 좌 우
-
-	public static void main(String[] args) throws NumberFormatException, IOException {
-		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		StringBuilder sb = new StringBuilder();
-		StringTokenizer st = null;
-
-		T = Integer.parseInt(br.readLine());
-
-		for (int t = 1; t <= T; t++) {
-			sb.append("#").append(t).append(" ");
-			N = Integer.parseInt(br.readLine());
-			Ans = 0;
-			pq = new PriorityQueue<>();
-			for (int i = 0; i < N; i++) {
-				st = new StringTokenizer(br.readLine());
-				pq.add(new Point(Integer.parseInt(st.nextToken()) + 1000, Integer.parseInt(st.nextToken()) + 1000,
-						Integer.parseInt(st.nextToken()), Integer.parseInt(st.nextToken())));
-			}
-			tempQueue = new LinkedList<>();
-			matchQueue = new LinkedList<>();
-
-			while (!pq.isEmpty()) {
-				tempQueue.clear();
-				Point cp = pq.poll();
-				int size = pq.size();
-				int count = 0;
-				
-				
-
-				for (int s = 0; s < size ; s++) {
-
-
-					Point np = pq.poll();
-
-					if (cp.y == np.y || cp.x == np.x) {
-
-						if (checkDirection(cp.d, np.d)) {
-							Ans += cp.k + np.k;
-							// 만났을 때, 반례 => 3점이나 4점이 동시에 만날 때
-							
-							
-							break;
-						} 
-					} else {
-						count++;
-						tempQueue.add(np);
-					}
-						
-				}
-				int tSize = tempQueue.size();
-				for(int i=0;i<tSize;i++) {
-					pq.offer(tempQueue.poll());
-				}
-
-				if (count == size) {
-					break;
-				}
-			}
-
-			sb.append(Ans).append("\n");
-		}
-		System.out.println(sb);
-	}
-
-	private static boolean checkDirection(int cd, int nd) { // 상 하 좌 우
-		if (cd == 0 && nd == 1) {
-			return true;
-		} else if (cd == 1 && nd == 0) {
-			return true;
-		} else if (cd == 2 && nd == 3) {
-			return true;
-		} else if (cd == 3 && nd == 2) {
-			return true;
-		} else {
-			return false;
-		}
-
-	}
 }
