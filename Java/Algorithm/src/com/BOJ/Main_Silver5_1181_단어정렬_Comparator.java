@@ -1,4 +1,4 @@
-package com.BOJ.DFS;
+package com.BOJ;
 
 import java.io.BufferedReader;
 import java.io.IOException;

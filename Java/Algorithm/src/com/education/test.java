@@ -44,6 +44,35 @@ public class test {
 			}
 			System.out.printf("\n");
 		}
+		
+		// 논리연산자 && ||
+		int x= 1;
+		int y=2;
+		int z = 3;
+		if(x == 1 && y == 2 || z == 4) {
+			System.out.println("true");
+		}
+		if(x == 1 && y == 3 || z == 4) {
+			System.out.println("true");
+		} else {
+			System.out.println("false");
+		}
+		if(x == 0 || y == 2 && z == 4) {
+			System.out.println("true");
+		} else {
+			System.out.println("false");
+		}
+		
+		if(x == 0 || y == 2 && z == 4 || y==2 && z==3) {
+			System.out.println("true");
+		} else {
+			System.out.println("false");
+		}
+		
+		//DFS
+		dfs2(0,0,0,false);
+		
+		
 	}
 
 	private static int dfs(int i) {
@@ -51,6 +80,17 @@ public class test {
 			i = 2;
 		}
 		return i;
+	}
+	
+	private static void dfs2(int time, int y,int x,boolean b) {
+		System.out.println(time+" "+y+" "+x+ " "+b);
+		if(time == 5) {
+			System.out.println(time+" "+y+" "+x+ " "+b);
+			return;
+		}
+		if(time<5) {
+			dfs2(++time, ++y,++x,!b);
+		}
 	}
 
 }

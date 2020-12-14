@@ -1,0 +1,60 @@
+package com.BOJ;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.Arrays;
+import java.util.StringTokenizer;
+
+public class Main_Gold3_2352_반도체설계 {
+	static int N;
+	static Node[] arr;
+
+	static class Node implements Comparable<Node> {
+		int a; // 왼쪽 반도체
+		int b; // 오른쪽 반도체
+
+		public Node(int a, int b) {
+			super();
+			this.a = a;
+			this.b = b;
+		}
+
+		@Override
+		public String toString() {
+			return "Node [a=" + a + ", b=" + b + "]";
+		}
+
+		@Override
+		public int compareTo(Node o) { // 왼쪽 반도체 기준으로 오름차순으로 정렬
+			return Integer.compare(this.a, o.a);
+		}
+	}
+
+	public static void main(String[] args) throws NumberFormatException, IOException {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		StringTokenizer st = null;
+		N = Integer.parseInt(br.readLine());
+
+		arr = new Node[N];
+		st = new StringTokenizer(br.readLine());
+		for (int i = 0; i < N; i++) {
+			arr[i] = new Node(i, Integer.parseInt(st.nextToken())-1);
+		}
+		Arrays.sort(arr); // 왼쪽 반도체 기준으로 오름차순으로 정렬
+
+		int Ans = 1;
+		
+		int[] dp = new int[N];
+		for (int i = 0; i < N; i++) {
+			dp[i] = 1; // 초기값은 1
+			for (int j = 0; j < i; j++) { // 현재 반도체에서 앞에 있는 반도체를 탐색한다.
+				if (arr[i].b > arr[j].b) { // 앞에 반도체의 오른쪽 반도체보다 숫자가 커야 연결가능!
+					dp[i] = Math.max(dp[i], dp[j] + 1); // 현재 반도체의 반도체연결 가능 수를 업데이트해준다.
+				}
+			}
+			Ans = Math.max(dp[i], Ans);
+		}
+		System.out.println(Ans); // 최대 연결 개수 출력
+	}
+}
