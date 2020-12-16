@@ -69,10 +69,18 @@ public class test {
 			System.out.println("false");
 		}
 		
+		
+		
 		//DFS
 		dfs2(0,0,0,false);
 		
-		
+		int[][] map = new int[3][3];
+		for(int i=0;i<3;i++) {
+			for(int j=0;j<3;j++){
+				map[i][j] = 1;
+			}
+		}
+		dfs3(0,0,map);
 	}
 
 	private static int dfs(int i) {
@@ -91,6 +99,29 @@ public class test {
 		if(time<5) {
 			dfs2(++time, ++y,++x,!b);
 		}
+	}
+	
+	private static void dfs3(int y, int x, int[][] map) {
+		System.out.println(y+" "+x);
+		for(int i=0;i<3;i++) {
+			for(int j=0;j<3;j++) {
+				System.out.print(map[i][j]+" ");
+			}
+			System.out.println();
+		}
+		if(x == 3 || y == 3) {
+			return;
+		}
+		map[y][x]++;
+		dfs3(y+1,x+1,map);
+		
+		for(int i=0;i<3;i++) {
+			for(int j=0;j<3;j++) {
+				System.out.print(map[i][j]+" ");
+			}
+			System.out.println();
+		}
+		System.out.println("============");
 	}
 
 }
