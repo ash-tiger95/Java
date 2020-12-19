@@ -25,7 +25,7 @@ public class Main_Gold4_2412_암벽등반 {
 		for (int i = 0; i < N; i++) {
 			st = new StringTokenizer(br.readLine());
 			map[i][0] = Integer.parseInt(st.nextToken()); // x
-			map[i][1] = Integer.parseInt(st.nextToken()); // y  
+			map[i][1] = Integer.parseInt(st.nextToken()); // y    
 		}
 		dfs(0,0,0);
 		if(Ans == Integer.MAX_VALUE)
