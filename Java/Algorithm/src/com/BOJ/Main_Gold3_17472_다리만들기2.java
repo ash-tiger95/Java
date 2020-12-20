@@ -11,7 +11,7 @@ import java.util.StringTokenizer;
 
 public class Main_Gold3_17472_다리만들기2 {
 	static int R, C;
-	static int[][] map;
+	static int[][] map;   // test
 	static int isLandIdx;
 	static Queue<int[]> queue;
 	static boolean[][] visited;
