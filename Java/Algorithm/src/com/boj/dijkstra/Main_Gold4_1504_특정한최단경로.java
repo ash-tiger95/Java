@@ -1,0 +1,107 @@
+package com.boj.dijkstra;
+
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.PriorityQueue;
+import java.util.StringTokenizer;
+
+public class Main_Gold4_1504_특정한최단경로{
+	static int N,E;
+	static int R1,R2; // 반드시 지나야하는 두 정점
+	static ArrayList<Node>[] list;
+	static PriorityQueue<Node> pq;
+	static final int INF = 200_000_000;
+	
+	static class Node implements Comparable<Node>{
+		int end;
+		int value;
+		public Node(int end, int value) {
+			super();
+			this.end = end;
+			this.value = value;
+		}
+		@Override
+		public int compareTo(Node o) {
+			return this.value - o.value;
+		}
+		@Override
+		public String toString() {
+			return "Node [end=" + end + ", value=" + value + "]";
+		}
+		
+	}
+	public static void main(String[] args) throws IOException {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+		StringTokenizer st = new StringTokenizer(br.readLine());
+		N = Integer.parseInt(st.nextToken());
+		E = Integer.parseInt(st.nextToken());
+		
+		list = new ArrayList[N];
+		for(int i=0;i<N;i++) {
+			list[i] = new ArrayList<Node>();
+		}
+		for(int i=0;i<E;i++) {
+			st = new StringTokenizer(br.readLine());
+			int a = Integer.parseInt(st.nextToken()) - 1;
+			int b = Integer.parseInt(st.nextToken()) - 1;
+			int c = Integer.parseInt(st.nextToken());
+			list[a].add(new Node(b,c));
+			list[b].add(new Node(a,c));
+		}
+		st = new StringTokenizer(br.readLine());
+		R1 = Integer.parseInt(st.nextToken())-1;
+		R2 = Integer.parseInt(st.nextToken())-1;
+		
+		// 0 -> R1 -> R2 -> N-1
+		// 0 -> R2 -> R1 -> N-1 
+		// 두 가지 경우 비교
+		int case1 = 0, case2 = 0;;
+		case1 += dijkstra(0,R1);
+		case1 += dijkstra(R1,R2);
+		case1 += dijkstra(R2,N-1);
+		
+		
+		case2 += dijkstra(0,R2);
+		case2 += dijkstra(R2,R1);
+		case2 += dijkstra(R1,N-1);
+		
+		if(case1 >= INF || case2 >= INF)
+			System.out.println(-1);
+		else
+			System.out.println(Math.min(case1, case2));
+		
+		
+	}
+	private static int dijkstra(int start, int end) {
+		int[] distance = new int[N];
+		Arrays.fill(distance, INF);
+		boolean[] visited = new boolean[N];
+		
+		pq = new PriorityQueue<Node>();
+		pq.add(new Node(start,0)); 
+		distance[start] = 0;
+		
+		while(!pq.isEmpty()) {
+			Node current = pq.poll();
+			int cur_end = current.end;
+			
+			if(visited[cur_end]) continue;
+			visited[cur_end] = true;
+			
+			for(Node node : list[cur_end]) {
+				if(!visited[node.end] &&distance[node.end] > distance[cur_end] + node.value) {
+					distance[node.end]= distance[cur_end] + node.value;
+					pq.add(new Node(node.end,distance[node.end]));
+				}
+			}
+		}
+		return distance[end];
+	}
+
+}

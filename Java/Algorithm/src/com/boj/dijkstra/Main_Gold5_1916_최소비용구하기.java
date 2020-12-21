@@ -1,4 +1,4 @@
-package com.BOJ;
+package com.boj.dijkstra;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.PriorityQueue;
 import java.util.StringTokenizer;
 
-public class Main_Gold5_1916_최소비용구하기_Dijkstra {
+public class Main_Gold5_1916_최소비용구하기 {
 	static class Edge implements Comparable<Edge>{
 		int dest, cost;
 
