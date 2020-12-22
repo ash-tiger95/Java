@@ -106,7 +106,7 @@ public class Main_Gold4_1719_택배 {
 		
 		for(int i=0;i<N;i++) {
 			if(i==start) {
-				Ans[start][i] = '-';
+				Ans[start][i] = '-'; // test
 			}
 			else {
 				
