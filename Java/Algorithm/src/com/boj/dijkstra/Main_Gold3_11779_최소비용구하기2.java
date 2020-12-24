@@ -11,26 +11,27 @@ import java.util.PriorityQueue;
 import java.util.StringTokenizer;
 
 public class Main_Gold3_11779_최소비용구하기2 {
+	
 	static class Edge implements Comparable<Edge>{
-		int to, cost;
+		int v, weight;
 
-		public Edge(int to, int cost) {
+		public Edge(int v, int weight) {
 			super();
-			this.to = to;
-			this.cost = cost;
+			this.v = v;
+			this.weight = weight;
 		}
 
 		@Override
 		public String toString() {
-			return "Edge [to=" + to + ", cost=" + cost + "]";
+			return "Edge [v=" + v + ", weight=" + weight + "]";
 		}
 
 		@Override
 		public int compareTo(Edge o) {
-			return Integer.compare(this.cost, o.cost);
+			return Integer.compare(this.weight, o.weight);
 		}
-		
 	}
+	
 	static int N,M,start,end;
 	static ArrayList<Edge>[] adj;
 	
@@ -57,76 +58,41 @@ public class Main_Gold3_11779_최소비용구하기2 {
 		start = Integer.parseInt(st.nextToken()) - 1;
 		end = Integer.parseInt(st.nextToken()) - 1;
 		
-		// Dijkstra
+		
+		dijkstra();
+		
+	}
+
+	private static void dijkstra() {
 		PriorityQueue<Edge> pq = new PriorityQueue<>();
-		boolean[] check = new boolean[N];
-		Edge[] D = new Edge[N];
+		boolean[] visited = new boolean[N];
+		int[] distance = new int[N];
 		int[] parents = new int[N];
 		
-		for(int n=0;n<N;n++) {
-			if(n == start) {
-				D[n] = new Edge(n,0);
-				parents[n] = n;
-			} else {
-				D[n] = new Edge(n,Integer.MAX_VALUE);
-			}
-			pq.add(D[n]);
-		}
+		pq.offer(new Edge(start,0));
+		Arrays.fill(distance, Integer.MAX_VALUE);
+		distance[start] = 0;
 		
 		while(!pq.isEmpty()) {
-//			System.out.println("PQ: "+pq.toString());
-			Edge cur = pq.poll();
-//			System.out.println("start: "+cur.toString());
+			Edge ce = pq.poll();
 			
-			for(Edge next : adj[cur.to]) { // 현재좌표와 연결되어 있는 모든 간선 검사
-				if(!check[next.to] && D[next.to].cost > D[cur.to].cost + next.cost) {
-					D[next.to].cost = D[cur.to].cost + next.cost;
-					
-//					System.out.println("--------------");
-//					System.out.println(pq.toString());
-//					System.out.println(D[next.to].toString());
-					pq.remove(D[next.to]);
-//					System.out.println(pq.toString());
-					pq.add(D[next.to]);
-//					System.out.println(pq.toString());
-					parents[next.to] = cur.to;
+			if(visited[ce.v]) {
+				continue;
+			}
+			
+			for(Edge next : adj[ce.v]) {
+				if(distance[next.v] > distance[ce.v] + next.weight) {
+					distance[next.v] = distance[ce.v] + next.weight;
+					parents[next.v] = ce.v;
+					pq.offer(new Edge(next.v, distance[next.v]));
 				}
 			}
-			check[cur.to] = true;
-//			System.out.println("check: "+Arrays.toString(check));
 			
-			
-		}
-//		System.out.println(Arrays.toString(D));
-//		System.out.println(Arrays.toString(parents));
-		
-		
-		
-		int count = 1; // 경로에 포함된 도시개수
-		ArrayList<Integer> city = new ArrayList<>(); // 방문한 도시 순서대로
-		int s = end;
-		city.add(s);
-		int index=  1;
-		
-		while(true) {
-			city.add(parents[s]);
-			if(parents[s] == start) {
-				count++;
-				break;
-			}
-			s = city.get(index);
-			count++;
-			index++;
-			
-			
-		}
-		System.out.println(D[end].cost);
-		System.out.println(count);
-		for(int i=city.size()-1;i>=0;i--) {
-			System.out.print((city.get(i)+1)+" ");
+			visited[ce.v] = true;
 		}
 		
 		
 		
 	}
+
 }
