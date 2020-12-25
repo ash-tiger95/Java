@@ -32,6 +32,7 @@ public class Main_Gold4_1719_택배 {
 
 	static int N, M;
 	static ArrayList<Edge>[] adj;
+	static int[] parents;
 	static StringBuilder sb;
 
 	public static void main(String[] args) throws IOException {
@@ -68,7 +69,7 @@ public class Main_Gold4_1719_택배 {
 		PriorityQueue<Edge> pq = new PriorityQueue<>();
 		boolean[] visited = new boolean[N];
 		int[] distance = new int[N]; // 최단 길이
-		int[] parents = new int[N]; // 최단 길이의 부모 노드
+		parents = new int[N]; // 최단 길이의 부모 노드
 
 		pq.offer(new Edge(start, 0)); // 최초 시작점
 		Arrays.fill(distance, Integer.MAX_VALUE); // 시작점을 제외한 모든 길이는 무한대
@@ -91,22 +92,26 @@ public class Main_Gold4_1719_택배 {
 
 			visited[ce.v] = true;
 		}
+		
+//		System.out.println("parents: "+Arrays.toString(parents));
 
 		for (int i = 0; i < N; i++) {
 			if (i == start) {
 				sb.append("- ");
 			} else {
-				int ans = find(i, start, parents);
-				sb.append(ans+" ");
+				int ans = searchPath(i, start);
+				sb.append((ans+1)+" ");
 			}
 		}
 		sb.append("\n");
 	}
 
-	private static int find(int i, int start, int[] parents) {
+	private static int searchPath(int i, int start) { // 역추적
+//		System.out.println(i +" "+parents[i]+" "+start);
 		if (parents[i] == start)
 			return i;
-		return find(parents[i], start, parents);
+		
+		return searchPath(parents[i], start);
 	}
 
 }
