@@ -86,7 +86,7 @@ public class Main_Gold4_5427_불 {
 					continue;
 				}
 				
-
+				// TEST
 				if (cp.isFire) {
 					if (!visited[ny][nx] && (map[ny][nx] == '.' || map[ny][nx] == '@')) {
 						queue.offer(new Point(ny,nx,true,0));
