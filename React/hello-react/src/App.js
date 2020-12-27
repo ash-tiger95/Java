@@ -4,6 +4,7 @@ import MyClassComponent from './MyClassComponent';
 import CounterClass from './CounterClass';
 import CounterFunc from './CounterFunc';
 import EventClass from './EventClass';
+import ValidationSampleClass from './ValidationSampleClass';
 import './App.css';
 
 const App = () => {
@@ -18,6 +19,9 @@ const App = () => {
       <br></br>
       <br></br>
       <EventClass/>
+      <br></br>
+      <br></br>
+      <ValidationSampleClass />
     </div>
   );
 }
