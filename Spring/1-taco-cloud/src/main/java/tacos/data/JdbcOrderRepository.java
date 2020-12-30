@@ -8,12 +8,14 @@ import java.util.Map;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.simple.SimpleJdbcInsert;
+import org.springframework.stereotype.Repository;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import tacos.Order;
 import tacos.Taco;
 
+@Repository
 public class JdbcOrderRepository implements OrderRepository {
 
 	private SimpleJdbcInsert orderInserter;

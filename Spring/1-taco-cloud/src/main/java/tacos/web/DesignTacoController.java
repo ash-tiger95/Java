@@ -1,4 +1,4 @@
-package tacos;
+package tacos.web;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -17,7 +17,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.SessionAttributes;
 
 import lombok.extern.slf4j.Slf4j;
+import tacos.Ingredient;
 import tacos.Ingredient.Type;
+import tacos.Order;
+import tacos.Taco;
 import tacos.data.IngredientRepository;
 import tacos.data.TacoRepository;
 
@@ -76,7 +79,7 @@ public class DesignTacoController {
 		return new Order();
 	}
 	
-	@ModelAttribute(name="tace")
+	@ModelAttribute(name="taco")
 	public Taco taco() {
 		return new Taco();
 	}
