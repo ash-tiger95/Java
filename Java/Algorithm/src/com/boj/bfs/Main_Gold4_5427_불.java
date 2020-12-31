@@ -27,6 +27,7 @@ public class Main_Gold4_5427_불 {
 	static char[][] map;
 	static Queue<Point> queue;
 	static boolean[][] visited;
+	static boolean[][] sanggeun;
 	static int[][] dirs = { { 1, 0 }, { -1, 0 }, { 0, 1 }, { 0, -1 } };
 
 	public static void main(String[] args) throws NumberFormatException, IOException {
@@ -42,6 +43,7 @@ public class Main_Gold4_5427_불 {
 			map = new char[N][M];
 			queue = new LinkedList<Point>();
 			visited = new boolean[N][M];
+			sanggeun = new boolean[N][M];
 			Ans = 0;
 			int startX = 0, startY = 0;
 
@@ -53,18 +55,27 @@ public class Main_Gold4_5427_불 {
 						startY = i;
 						startX = j;
 					} else if (map[i][j] == '*') { // 불을 모두 입력받고
-						queue.offer(new Point(i, j, true,0));
+						queue.offer(new Point(i, j, true, 0));
+						visited[i][j] = true;
 					} else if (map[i][j] == '#') {
 						visited[i][j] = true;
 					}
 				}
 			}
+			
+//			for(int i=0;i<N;i++) {
+//				for(int j=0;j<M;j++) {
+//					System.out.print(visited[i][j]+" ");
+//				}
+//				System.out.println();
+//			}
 			// 마지막에 상근이 위치를 입력한다.
-			queue.offer(new Point(startY, startX, false,1));
+			queue.offer(new Point(startY, startX, false, 1));
+			sanggeun[startY][startX] = true;
 
 			bfs();
-			
-			if(Ans == 0) {
+
+			if (Ans == 0) {
 				System.out.println("IMPOSSIBLE");
 			} else {
 				System.out.println(Ans);
@@ -76,6 +87,7 @@ public class Main_Gold4_5427_불 {
 	private static void bfs() {
 
 		while (!queue.isEmpty()) {
+			
 			Point cp = queue.poll();
 
 			for (int d = 0; d < 4; d++) {
@@ -85,23 +97,27 @@ public class Main_Gold4_5427_불 {
 				if (!boundary(ny, nx)) {
 					continue;
 				}
-				
-				// TEST TEST
+				if(visited[ny][nx]) {
+					continue;
+				}
+
 				if (cp.isFire) {
-					if (!visited[ny][nx] && (map[ny][nx] == '.' || map[ny][nx] == '@')) {
-						queue.offer(new Point(ny,nx,true,0));
+					if ( (map[ny][nx] == '.' || map[ny][nx] == '@')) {
+						queue.offer(new Point(ny, nx, true, 0));
 						visited[ny][nx] = true;
 					}
 				} else {
-					if(!visited[ny][nx] && (map[ny][nx] == '.' || map[ny][nx] == '@')) {
-						queue.offer(new Point(ny,nx,false,cp.dist+1));
+					if (!sanggeun[ny][nx]&& (map[ny][nx] == '.')) {
+						queue.offer(new Point(ny, nx, false, cp.dist + 1));
+						sanggeun[ny][nx] = true;
+						
+						if (ny == 0 || nx == 0 || ny == N - 1 || nx == M - 1) {
+							Ans = cp.dist + 1;
+							return;
+						}
+
 					}
-					
-					if(ny == 0 || nx == 0 || ny == N-1 || nx == M-1) {
-						Ans = cp.dist+1;
-						return;
-					}
-					
+
 					
 				}
 			}
