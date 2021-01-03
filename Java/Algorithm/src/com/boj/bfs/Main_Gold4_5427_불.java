@@ -63,12 +63,6 @@ public class Main_Gold4_5427_불 {
 				}
 			}
 			
-//			for(int i=0;i<N;i++) {
-//				for(int j=0;j<M;j++) {
-//					System.out.print(visited[i][j]+" ");
-//				}
-//				System.out.println();
-//			}
 			// 마지막에 상근이 위치를 입력한다.
 			queue.offer(new Point(startY, startX, false, 1));
 			sanggeun[startY][startX] = true;
