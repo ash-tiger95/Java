@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const MyFuncComponent = ({name,favoriteNumber, children}) => { // 비구조할당
+const AAMyFuncComponent = ({name,favoriteNumber, children}) => { // 비구조할당
     return (
     <div>
         안녕하세요, 제 이름은 {name} 입니다.<br/>
@@ -13,13 +13,13 @@ const MyFuncComponent = ({name,favoriteNumber, children}) => { // 비구조할�
     );
 }
 
-MyFuncComponent.defaultProps = {
+AAMyFuncComponent.defaultProps = {
     name:"기본 이름"
 }
 
-MyFuncComponent.propTypes = {
+AAMyFuncComponent.propTypes = {
     name:PropTypes.string,
     favoriteNumber:PropTypes.number.isRequired
 }
 
-export default MyFuncComponent;
+export default AAMyFuncComponent;

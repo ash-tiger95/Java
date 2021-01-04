@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
-import MyFuncComponent from './MyFuncComponent';
-import MyClassComponent from './MyClassComponent';
+import AAMyFuncComponent from './AAMyFuncComponent';
+import AAMyClassComponent from './AAMyClassComponent';
 import CounterClass from './CounterClass';
 import CounterFunc from './CounterFunc';
 import EventClass from './EventClass';
@@ -14,8 +14,8 @@ class App extends Component {
   render(){
     return (
       <div>
-        <MyFuncComponent name="MyFuncComponent" favoriteNumber={1}>리엑트</MyFuncComponent>
-        <MyClassComponent name="MyClassComponent" favoriteNumber={1}>리엑트</MyClassComponent>
+        <AAMyFuncComponent name="AAMyFuncComponent" favoriteNumber={1}>리엑트</AAMyFuncComponent>
+        <AAMyClassComponent name="AAMyClassComponent" favoriteNumber={1}>리엑트</AAMyClassComponent>
         <br></br>
         <br></br>
         <CounterClass/>

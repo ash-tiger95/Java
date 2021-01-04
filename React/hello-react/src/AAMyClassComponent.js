@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-class MyClassComponent extends Component {
+class AAMyClassComponent extends Component {
     render() {
         const {name, favoriteNumber, children} = this.props; // 비구조할당
         return (
@@ -16,13 +16,13 @@ class MyClassComponent extends Component {
     }
 }
 
-MyClassComponent.defaultProps = {
+AAMyClassComponent.defaultProps = {
     name:"기본 이름"
 }
 
-MyClassComponent.propTypes = {
+AAMyClassComponent.propTypes = {
     name:PropTypes.string,
     favoriteNumber:PropTypes.number.isRequired
 }
 
-export default MyClassComponent;
+export default AAMyClassComponent;
