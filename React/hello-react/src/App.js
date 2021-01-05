@@ -8,9 +8,24 @@ import ValidationSampleClass from './ValidationSampleClass';
 import AEScrollBox from './AEScrollBox';
 import AFIterationSample from './AFIterationSample';
 import AFIterationSample2 from './AFIterationSample2';
+import AGLifeCycleSample from './AGLifeCycleSample';
+import ErrorBoundary from './ErrorBoundary';
 import './App.css';
 
+function getRandomColor(){
+  return '#' + Math.floor(Math.random() * 16777215).toString(16);
+}
+
 class App extends Component {
+  state = {
+    color: '#000000'
+  }
+
+  handleClick = () => {
+    this.setState({
+      color:getRandomColor()
+    });
+  }
   render(){
     return (
       <div>
@@ -35,6 +50,12 @@ class App extends Component {
         <h1>6장 컴포넌트 반복</h1>
         <AFIterationSample />
         <AFIterationSample2 />
+        <h1>7장 라이프사이클</h1>
+        <button onClick={this.handleClick}>랜덤 색상</button>
+        <ErrorBoundary>
+          <AGLifeCycleSample color={this.state.color} />
+        </ErrorBoundary>
+        
       </div>
     );
   }
