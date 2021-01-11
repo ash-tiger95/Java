@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import A81Counter from './A81Counter'; //useState
 import A82Info from './A82Info'; // useEffect
 import A83Counter from './A83Counter'; // useReducer
+import A84Average from './A84Average'; //useMemo
 
 const App = () => {
   const [visible, setVisible] = useState(false);
@@ -14,6 +15,7 @@ const App = () => {
       <hr></hr>
       {visible && <A81Counter /> && <A82Info />}
       <A83Counter />
+      <A84Average />
     </div>
   );
 };
