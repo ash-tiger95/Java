@@ -23,8 +23,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 				.access("hasRole('ROLE_USER')")
 			.antMatchers("/", "/**")
 				.access("permitAll")
-		.and()
-			.httpBasic();
+			.and() // 인증 구성이 끝나서 추가적인 HTTP 구성을 적용할 준비가 되었다는 것을 의미
+	          .formLogin() // 우리의 커스텀 로그인 폼을 구성하기 위해 호출
+	  	        .loginPage("/login"); // 커스텀 로그인 페이지의 경로를 지정
 	}
 	
 	@Autowired
