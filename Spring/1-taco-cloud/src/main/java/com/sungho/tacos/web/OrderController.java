@@ -1,7 +1,10 @@
 package com.sungho.tacos.web;
 
+import java.awt.print.Pageable;
+
 import javax.validation.Valid;
 
+import org.springframework.data.domain.PageRequest;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -25,10 +28,13 @@ import lombok.extern.slf4j.Slf4j;
 @SessionAttributes("order")
 public class OrderController {
 	
+	private OrderProps props;
+	
 	private OrderRepository orderRepo;
 	
-	public OrderController(OrderRepository orderRepo) {
+	public OrderController(OrderRepository orderRepo, OrderProps props) {
 		this.orderRepo = orderRepo;
+		this.props = props;
 	}
 
 	@GetMapping("/current")
@@ -65,6 +71,18 @@ public class OrderController {
 		orderRepo.save(order);
 		sessionStatus.setComplete();
 		return "redirect:/"; // home으로 이동
+	}
+	
+	@GetMapping
+	public String ordersForUser(
+	    @AuthenticationPrincipal User user, Model model) {
+
+		Pageable pageable = (Pageable) PageRequest.of(0, props.getPageSize());
+		
+		model.addAttribute("orders",
+	      orderRepo.findByUserOrderByPlacedAtDesc(user, pageable));
+	  
+		return "orderList";
 	}
 
 }
