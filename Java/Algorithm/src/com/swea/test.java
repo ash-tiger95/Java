@@ -1,4 +1,4 @@
-package com.education;
+package com.swea;
 
 import java.util.ArrayList;
 
