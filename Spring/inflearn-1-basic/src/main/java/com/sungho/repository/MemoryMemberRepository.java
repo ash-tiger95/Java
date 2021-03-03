@@ -6,6 +6,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 
+import org.springframework.stereotype.Repository;
+
 import com.sungho.domain.Member;
 
 public class MemoryMemberRepository implements MemberRepository{
@@ -35,6 +37,10 @@ public class MemoryMemberRepository implements MemberRepository{
 	@Override
 	public List<Member> findAll() {
 		return new ArrayList<>(store.values()); // store.values는 Member들
+	}
+	
+	public void clearStore() {
+		store.clear(); // Test에서 store 비워주는 역할
 	}
 
 }

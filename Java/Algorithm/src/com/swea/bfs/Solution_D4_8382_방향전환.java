@@ -9,7 +9,7 @@ import java.util.Queue;
 import java.util.StringTokenizer;
 
 public class Solution_D4_8382_방향전환 {
-	
+
 	static class Point {
 		int row, col, depth;
 		boolean dir;
@@ -30,8 +30,9 @@ public class Solution_D4_8382_방향전환 {
 	static int[][] dirs = { { 1, 0 }, { -1, 0 }, { 0, 1 }, { 0, -1 } };
 
 	public static void main(String[] args) throws NumberFormatException, IOException {
-		BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream("src\\com\\swea\\bfs\\swea8382.txt")));
-		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		BufferedReader br = new BufferedReader(
+				new InputStreamReader(new FileInputStream("src\\com\\swea\\bfs\\8382.txt")));
+//		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		StringBuilder sb = new StringBuilder();
 		T = Integer.parseInt(br.readLine());
 
