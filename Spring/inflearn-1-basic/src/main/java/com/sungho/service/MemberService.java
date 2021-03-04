@@ -5,11 +5,13 @@ import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.sungho.domain.Member;
 import com.sungho.repository.MemberRepository;
 import com.sungho.repository.MemoryMemberRepository;
 
+@Transactional // jpa는 무조건 transactional 필수
 public class MemberService { // service: 비지니스에 가까운 이름으로 메서드를 작성한다. repo: 개발스럽게 작성
 	private final MemberRepository memberRepository;
 	

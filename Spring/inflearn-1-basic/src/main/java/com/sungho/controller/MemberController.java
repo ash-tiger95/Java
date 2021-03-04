@@ -60,4 +60,5 @@ public class MemberController {
 		model.addAttribute("members",members); // model에 담아서 view로 넘긴다.
 		return "members/memberList";
 	}
+	
 }
