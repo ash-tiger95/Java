@@ -1,4 +1,4 @@
-package com.boj.string;
+package com.boj.compare;
 
 import java.io.BufferedReader;
 import java.io.IOException;
