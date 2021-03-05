@@ -19,7 +19,16 @@ public class Solution_level1_신규아이디추천 {
 		// 65 <= 대문자 <= 90 
 		// 97 <= 소문자 <= 122
 		String tmp = "";
+		
 		int count = 0;
+		for(int i=0;i<new_id.length();i++) {
+			if(new_id.charAt(i) == '.') {
+				
+			}
+		}
+		
+		
+		
 		for(int i=0;i<new_id.length();i++) {
 			if(i == 0 && new_id.charAt(i) == '.') {
 				continue;
@@ -41,7 +50,6 @@ public class Solution_level1_신규아이디추천 {
 		}
 		System.out.println(tmp);
 		
-		// 3. 맞침표(.)가 두 번 이상 연속이면 하나의 맞침표로 치환
 		
 
 		return answer;
