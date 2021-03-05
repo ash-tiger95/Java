@@ -1,4 +1,4 @@
-package com.boj;
+package com.boj.string;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 import java.util.Comparator;
 import java.util.TreeSet;
 
-public class Main_Silver5_1181_단어정렬_Comparator {
+public class Main_Silver5_1181_단어정렬 {
 	static int N;
 	static TreeSet<String> ts;
 	public static void main(String[] args) throws IOException {
@@ -18,12 +18,14 @@ public class Main_Silver5_1181_단어정렬_Comparator {
 		ts = new TreeSet<String>(new Comparator<String>() {
 
 			@Override
-			public int compare(String pre, String next) {
+			public int compare(String pre, String next) { // 들어오는 값이 pre
 				if(pre.length() != next.length()) {
-					return pre.length() - next.length();
+					System.out.println("길이 비교: " + pre +" "+next + " "+ (pre.length() - next.length()));
+					return pre.length() - next.length(); // 양수면 pre가 뒤로(오름차순)
 				}
 				else {
-					return pre.compareTo(next);
+					System.out.println("길이 같아: " + pre +" "+next + " " + pre.compareTo(next));
+					return pre.compareTo(next); // 양수면 pre가 뒤로(오름차순)
 				}
 			}
 			
@@ -31,6 +33,7 @@ public class Main_Silver5_1181_단어정렬_Comparator {
 		
 		for(int i=0;i<N;i++) {
 			ts.add(br.readLine());
+			System.out.println(ts);
 		}
 		
 		for(String name : ts) {
@@ -38,3 +41,19 @@ public class Main_Silver5_1181_단어정렬_Comparator {
 		}
 	}
 }
+/* testcase
+13
+but
+i
+wont
+hesitate
+no
+more
+no
+more
+it
+cannot
+wait
+im
+yours
+*/
