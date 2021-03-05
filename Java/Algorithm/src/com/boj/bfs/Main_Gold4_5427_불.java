@@ -20,7 +20,6 @@ public class Main_Gold4_5427_불 {
 			this.isFire = isFire;
 			this.dist = dist;
 		}
-
 	}
 
 	static int T, N, M, Ans;
@@ -62,7 +61,7 @@ public class Main_Gold4_5427_불 {
 					}
 				}
 			}
-			
+
 			// 마지막에 상근이 위치를 입력한다.
 			queue.offer(new Point(startY, startX, false, 1));
 			sanggeun[startY][startX] = true;
@@ -81,7 +80,7 @@ public class Main_Gold4_5427_불 {
 	private static void bfs() {
 
 		while (!queue.isEmpty()) {
-			
+
 			Point cp = queue.poll();
 
 			for (int d = 0; d < 4; d++) {
@@ -91,20 +90,20 @@ public class Main_Gold4_5427_불 {
 				if (!boundary(ny, nx)) {
 					continue;
 				}
-				if(visited[ny][nx]) {
+				if (visited[ny][nx]) {
 					continue;
 				}
 
 				if (cp.isFire) {
-					if ( (map[ny][nx] == '.' || map[ny][nx] == '@')) {
+					if ((map[ny][nx] == '.' || map[ny][nx] == '@')) {
 						queue.offer(new Point(ny, nx, true, 0));
 						visited[ny][nx] = true;
 					}
 				} else {
-					if (!sanggeun[ny][nx]&& (map[ny][nx] == '.')) {
+					if (!sanggeun[ny][nx] && (map[ny][nx] == '.')) {
 						queue.offer(new Point(ny, nx, false, cp.dist + 1));
 						sanggeun[ny][nx] = true;
-						
+
 						if (ny == 0 || nx == 0 || ny == N - 1 || nx == M - 1) {
 							Ans = cp.dist + 1;
 							return;
@@ -112,7 +111,6 @@ public class Main_Gold4_5427_불 {
 
 					}
 
-					
 				}
 			}
 		}
