@@ -1,8 +1,8 @@
-package com.programmers;
+package com.programmers.level1;
 
 import java.util.HashMap;
 
-public class Solution_level1_완주하지못한선수 {
+public class Solution_완주하지못한선수 {
 	public static void main(String[] args) {
 		String[] participant = {"mislav", "stanko", "mislav", "ana"};
 		String[] completion = { "stanko", "ana", "mislav"};

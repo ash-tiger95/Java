@@ -1,6 +1,6 @@
-package com.programmers;
+package com.programmers.level1;
 
-public class Solution_level1_신규아이디추천 {
+public class Solution_신규아이디추천 {
 	public static void main(String[] args) {
 
 		String input = "...!@BaT#*..y.abcdefghijklm";

@@ -1,8 +1,8 @@
-package com.programmers;
+package com.programmers.level1;
 
 import java.util.ArrayList;
 
-public class Solution_level1_두개뽑아서더하기 {
+public class Solution_두개뽑아서더하기 {
 	public static void main(String[] args) {
 		int[] numbers = { 2, 1, 3, 4, 1 }; // 5,0,2,7
 

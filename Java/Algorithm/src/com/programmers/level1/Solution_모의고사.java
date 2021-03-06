@@ -1,8 +1,8 @@
-package com.programmers;
+package com.programmers.level1;
 
 import java.util.ArrayList;
 
-public class Solution_level1_모의고사 {
+public class Solution_모의고사 {
 	public static void main(String[] args) {
 		int[] answers = {1,2,3,4,5};
 		
