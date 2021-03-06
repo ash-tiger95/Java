@@ -34,7 +34,7 @@ public class Main_Gold5_2636_치즈 {
 		while (true) {
 			visited = new boolean[N][M];
 
-			air();
+			air(); // 공기 부분을 -1로 바꾼다.
 
 			for (int i = 0; i < N; i++) {
 				for (int j = 0; j < M; j++) {
