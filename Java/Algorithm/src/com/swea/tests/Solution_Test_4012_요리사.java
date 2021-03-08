@@ -12,7 +12,7 @@ public class Solution_Test_4012_요리사 {
 
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(
-				new InputStreamReader(new FileInputStream("src\\com\\swea\\test\\4012.txt")));
+				new InputStreamReader(new FileInputStream("src\\com\\swea\\testcase\\4012.txt")));
 		StringTokenizer st = null;
 		T = Integer.parseInt(br.readLine());
 		for (int t = 1; t <= T; t++) {

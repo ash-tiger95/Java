@@ -16,7 +16,7 @@ public class Solution_D5_1907_모래성쌓기 {
 
 	public static void main(String[] args) throws NumberFormatException, IOException {
 		BufferedReader br = new BufferedReader(
-				new InputStreamReader(new FileInputStream("src\\com\\swea\\bfs\\1907.txt")));
+				new InputStreamReader(new FileInputStream("src\\com\\swea\\testcase\\1907.txt")));
 //		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		StringBuilder sb = new StringBuilder();
 

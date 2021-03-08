@@ -30,7 +30,7 @@ public class Solution_D5_7793_오나의여신님 {
 
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(
-				new InputStreamReader(new FileInputStream("src\\com\\swea\\bfs\\7793.txt")));
+				new InputStreamReader(new FileInputStream("src\\com\\swea\\testcase\\7793.txt")));
 		StringBuilder sb = new StringBuilder();
 
 		T = Integer.parseInt(br.readLine());

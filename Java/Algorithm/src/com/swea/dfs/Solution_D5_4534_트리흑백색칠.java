@@ -18,7 +18,7 @@ public class Solution_D5_4534_트리흑백색칠 {
 
 	public static void main(String[] args) throws NumberFormatException, IOException {
 		BufferedReader br = new BufferedReader(
-				new InputStreamReader(new FileInputStream("src\\com\\swea\\dfs\\4534.txt")));
+				new InputStreamReader(new FileInputStream("src\\com\\swea\\testcase\\4534.txt")));
 		
 //		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		StringBuilder sb = new StringBuilder();

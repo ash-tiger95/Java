@@ -31,7 +31,7 @@ public class Solution_D4_8382_방향전환 {
 
 	public static void main(String[] args) throws NumberFormatException, IOException {
 		BufferedReader br = new BufferedReader(
-				new InputStreamReader(new FileInputStream("src\\com\\swea\\bfs\\8382.txt")));
+				new InputStreamReader(new FileInputStream("src\\com\\swea\\testcase\\8382.txt")));
 //		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		StringBuilder sb = new StringBuilder();
 		T = Integer.parseInt(br.readLine());

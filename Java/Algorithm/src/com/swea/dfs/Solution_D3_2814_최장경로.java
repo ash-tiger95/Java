@@ -14,7 +14,7 @@ public class Solution_D3_2814_최장경로 {
 
 	public static void main(String[] args) throws NumberFormatException, IOException {
 		BufferedReader br = new BufferedReader(
-				new InputStreamReader(new FileInputStream("src\\com\\swea\\dfs\\2814.txt")));
+				new InputStreamReader(new FileInputStream("src\\com\\swea\\testcase\\2814.txt")));
 //		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		StringBuilder sb = new StringBuilder();
 
