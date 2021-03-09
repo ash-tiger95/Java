@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 import java.util.Arrays;
 import java.util.StringTokenizer;
 
-public class Main_Gold4_1197_최소스패닝트리 { // 메모리초과, 런타임에러
+public class Main_Gold4_1197_최소스패닝트리_Arr { // 메모리초과, 런타임에러
 	static int V, E;
 	static int[][] adj; // 인접행렬
 	static int Ans;
