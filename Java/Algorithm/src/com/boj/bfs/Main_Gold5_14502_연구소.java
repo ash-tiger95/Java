@@ -20,7 +20,7 @@ public class Main_Gold5_14502_연구소 {
 
 		N = Integer.parseInt(st.nextToken());
 		M = Integer.parseInt(st.nextToken());
-		Ans = Integer.MAX_VALUE; // 안전 영역 크기의 최댓값
+		Ans = Integer.MAX_VALUE; // 안전 영역 크기의 최댓값 구하기
 
 		map = new int[N][M];
 		int wallCnt = 0;
@@ -31,13 +31,13 @@ public class Main_Gold5_14502_연구소 {
 				map[i][j] = Integer.parseInt(st.nextToken());
 				if (map[i][j] == 2) {
 					virusList.add(new int[] { i, j });
-				} else if(map[i][j] == 1) {
+				} else if (map[i][j] == 1) {
 					wallCnt++;
 				}
 			}
 		}
-		makeWall(map,0);
-		System.out.println(N*M-wallCnt-Ans-3);
+		makeWall(map, 0);
+		System.out.println(N * M - wallCnt - Ans - 3);
 
 	}
 
@@ -68,7 +68,6 @@ public class Main_Gold5_14502_연구소 {
 			q.offer(virusList.get(i));
 			visited[virusList.get(i)[0]][virusList.get(i)[1]] = true;
 		}
-		
 
 		while (!q.isEmpty()) {
 			int[] cp = q.poll();
@@ -88,7 +87,7 @@ public class Main_Gold5_14502_연구소 {
 				}
 			}
 		}
-		
+
 //		for(int i=0;i<N;i++) {
 //			for(int j=0;j<M;j++) {
 //				System.out.print(visited[i][j] +" ");
