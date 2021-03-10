@@ -66,9 +66,9 @@ public class Main_Gold4_5427_불 {
 			queue.offer(new Point(startY, startX, false, 1));
 			sanggeun[startY][startX] = true;
 
-			bfs();
+			int Ans = bfs();
 
-			if (Ans == 0) {
+			if (Ans == -1) {
 				System.out.println("IMPOSSIBLE");
 			} else {
 				System.out.println(Ans);
@@ -77,11 +77,17 @@ public class Main_Gold4_5427_불 {
 
 	}
 
-	private static void bfs() {
+	private static int bfs() {
 
 		while (!queue.isEmpty()) {
 
 			Point cp = queue.poll();
+			if(!cp.isFire) {
+				if (cp.y == 0 || cp.x == 0 || cp.y == N - 1 || cp.x == M - 1) {
+					return  cp.dist;
+				}
+				
+			}
 
 			for (int d = 0; d < 4; d++) {
 				int ny = cp.y + dirs[d][0];
@@ -95,25 +101,23 @@ public class Main_Gold4_5427_불 {
 				}
 
 				if (cp.isFire) {
-					if ((map[ny][nx] == '.' || map[ny][nx] == '@')) {
+					if (map[ny][nx] != '#') {
 						queue.offer(new Point(ny, nx, true, 0));
 						visited[ny][nx] = true;
+						map[ny][nx] = '#';
 					}
 				} else {
-					if (!sanggeun[ny][nx] && (map[ny][nx] == '.')) {
+					if (!sanggeun[ny][nx] && map[ny][nx] == '.') {
 						queue.offer(new Point(ny, nx, false, cp.dist + 1));
 						sanggeun[ny][nx] = true;
 
-						if (ny == 0 || nx == 0 || ny == N - 1 || nx == M - 1) {
-							Ans = cp.dist + 1;
-							return;
-						}
 
 					}
 
 				}
 			}
 		}
+		return -1;
 	}
 
 	private static boolean boundary(int ny, int nx) {
