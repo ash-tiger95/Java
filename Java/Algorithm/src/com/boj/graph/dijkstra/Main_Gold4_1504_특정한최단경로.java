@@ -1,4 +1,4 @@
-package com.boj.dijkstra;
+package com.boj.graph.dijkstra;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;

@@ -1,4 +1,4 @@
-package com.boj.kmp;
+package com.boj.string.kmp;
 
 public class Basic {
 	// 모든 경우를 다 비교하지 않아도 부분 문자열을 찾을 수 있는 알고리즘

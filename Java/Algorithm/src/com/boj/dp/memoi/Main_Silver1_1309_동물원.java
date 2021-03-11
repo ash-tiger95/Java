@@ -1,4 +1,4 @@
-package com.boj.memoi;
+package com.boj.dp.memoi;
 
 import java.io.BufferedReader;
 import java.io.IOException;

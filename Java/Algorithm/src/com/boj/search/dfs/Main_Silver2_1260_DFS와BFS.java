@@ -1,4 +1,4 @@
-package com.boj.dfs;
+package com.boj.search.dfs;
 
 import java.io.BufferedReader;
 import java.io.IOException;

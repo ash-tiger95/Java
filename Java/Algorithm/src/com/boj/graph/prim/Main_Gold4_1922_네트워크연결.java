@@ -1,4 +1,4 @@
-package com.boj.prim;
+package com.boj.graph.prim;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;

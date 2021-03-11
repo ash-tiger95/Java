@@ -1,4 +1,4 @@
-package com.boj.topologysort;
+package com.boj.sort.topologysort;
 
 import java.io.BufferedReader;
 import java.io.IOException;
