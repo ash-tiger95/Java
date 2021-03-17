@@ -83,7 +83,7 @@ public class Main_Gold5_1753_최단경로 {
 		boolean[] visited = new boolean[V];
 		int[] distance = new int[V];
 
-		pq.offer(new Edge(K, 0));
+		pq.offer(new Edge(K, 0)); // 시작점
 		Arrays.fill(distance, Integer.MAX_VALUE);
 		distance[K] = 0;
 
