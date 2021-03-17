@@ -15,9 +15,11 @@ public class Basic1_이진탐색 {
 			// c배열의 마지막 숫자와 수열값을 비교
 			if (c[size - 1] < a[i]) {
 				c[size++] = a[i]; // 맨 뒤에 붙인다.
-			} else { // 알고리즘의 시간을 줄이는 핵심! LIS의 마지막 숫자보다 크지 않으면 LIS 값을 업데이트 한다.(이진탐색: O(logn))
-						// 찾으면 배열에서 찾은 위치 음수-1로 리턴, 못 찾으면 삽입할 위치를 리턴
+			} else { // c[size - 1] >= a[i]
+				// 알고리즘의 시간을 줄이는 핵심! LIS의 마지막 숫자보다 크지 않으면 LIS 값을 업데이트 한다.(이진탐색: O(logn))
+				// 찾으면 배열에서 찾은 위치 음수-1로 리턴, 못 찾으면 삽입할 위치를 리턴
 				int temp = binarySearch0(c, 0, size, a[i]); // c배열에서 0번부터 size-1까지 a[i]가 있는지 검사를 한다.
+				System.out.println("temp: "+temp);
 				if (temp < 0) {
 					temp = -temp - 1;
 				}
