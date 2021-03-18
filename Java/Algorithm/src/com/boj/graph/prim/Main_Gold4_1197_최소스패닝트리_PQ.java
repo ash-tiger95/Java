@@ -26,6 +26,13 @@ public class Main_Gold4_1197_최소스패닝트리_PQ {
 			return Integer.compare(this.cost, o.cost); // 오름차순
 		}
 
+		@Override
+		public String toString() {
+			return "Edge [start=" + start + ", dest=" + dest + ", cost=" + cost + "]";
+		}
+		
+		
+
 	}
 
 	public static void main(String[] args) throws IOException {
