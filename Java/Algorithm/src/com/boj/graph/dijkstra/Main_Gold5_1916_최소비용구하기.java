@@ -21,7 +21,7 @@ public class Main_Gold5_1916_최소비용구하기 {
 
 		@Override
 		public String toString() {
-			return "Edge [v=" + v + ", weight=" + weight + "]";
+			return  v + ", " + weight +" ";
 		}
 
 		@Override
@@ -82,6 +82,7 @@ public class Main_Gold5_1916_최소비용구하기 {
 				if (distance[next.v] > distance[ce.v] + next.weight) { // 거리 계산
 					distance[next.v] = distance[ce.v] + next.weight; // 최소 거리로 업데이트
 					pq.offer(new Edge(next.v, distance[next.v]));
+					System.out.println(pq);
 				}
 			}
 
