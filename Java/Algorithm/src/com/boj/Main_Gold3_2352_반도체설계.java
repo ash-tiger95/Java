@@ -42,7 +42,7 @@ public class Main_Gold3_2352_반도체설계 {
 			arr[i] = new Node(i, Integer.parseInt(st.nextToken())-1);
 		}
 		Arrays.sort(arr); // 왼쪽 반도체 기준으로 오름차순으로 정렬
-
+		
 		int Ans = 1;
 		
 		int[] dp = new int[N];
