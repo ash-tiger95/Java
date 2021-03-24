@@ -1,4 +1,4 @@
-package com.boj;
+package com.boj.simulation;
 
 import java.io.BufferedReader;
 import java.io.IOException;
