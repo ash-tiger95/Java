@@ -126,7 +126,6 @@ public class Solution_합승택시요금 { // 효율성 2개 시간초과....
 			adj[i][i] = 0;
 		}
 		
-		int[][] distance = new int[n+1][n+1];
 		
 		for(int i=0;i<fares.length;i++) {
 			adj[fares[i][0]][fares[i][1]] = fares[i][2];
