@@ -1,4 +1,4 @@
-package com.swea.tests;
+package com.swea.test;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;
