@@ -1,4 +1,4 @@
-package com.swea;
+package com.swea.tests;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -8,7 +8,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.StringTokenizer;
 
-public class Solution_Test_5653_줄기세포배양 {
+public class Solution_Test_5653_줄기세포배양_해설 {
 	static class Cell {
 		int y, x, type, life, wait;
 

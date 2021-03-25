@@ -3,11 +3,29 @@ package com.programmers;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
-import java.util.Comparator;
+import java.util.LinkedList;
+import java.util.Queue;
 import java.util.TreeMap;
 import java.util.TreeSet;
 
 public class 문법 {
+	
+	static class Node{
+		int y,x,z;
+
+		public Node(int y, int x, int z) {
+			super();
+			this.y = y;
+			this.x = x;
+			this.z = z;
+		}
+
+		@Override
+		public String toString() {
+			return "Node [y=" + y + ", x=" + x + ", z=" + z + "]";
+		}
+		
+	}
 
 	public static void main(String[] args) {
 		char a = 'A';
@@ -86,6 +104,16 @@ public class 문법 {
 		ts1.add("BBC");
 		ts1.add("AAA");
 		System.out.println(ts1);
+		
+		System.out.println("--------------------");
+		Queue<Node> q = new LinkedList<>();
+		q.offer(new Node(1,2,3));
+		System.out.println(q);
+		
+		Node cn = q.poll();
+		if(--cn.y >0)
+			q.offer(cn);
+		System.out.println(cn);
 	}
 
 }
