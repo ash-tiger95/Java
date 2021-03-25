@@ -11,15 +11,15 @@ public class Main_Silver2_1541_잃어버린괄호 {
 		String[] input = br.readLine().split("-");
 		int Ans = 0;
 		boolean first = true;
-		
-		for(int i=0;i<input.length;i++) {
+
+		for (int i = 0; i < input.length; i++) {
 			int sum = 0;
 			String[] plus = input[i].split("\\+");
-			for(int j=0;j<plus.length;j++) {
+			for (int j = 0; j < plus.length; j++) {
 				sum += Integer.parseInt(plus[j]);
 			}
-			
-			if(first) {
+
+			if (first) {
 				Ans += sum;
 				first = false;
 			} else {
