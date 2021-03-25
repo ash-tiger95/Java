@@ -1,4 +1,4 @@
-package test.kakao;
+package com.programmers.test.kakao;
 
 import java.util.ArrayList;
 import java.util.Arrays;

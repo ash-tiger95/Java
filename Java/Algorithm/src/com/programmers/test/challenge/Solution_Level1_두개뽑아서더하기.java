@@ -1,4 +1,4 @@
-package test.challenge;
+package com.programmers.test.challenge;
 
 import java.util.ArrayList;
 
