@@ -1,10 +1,10 @@
-package com.programmers.kakao;
+package test.kakao;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.PriorityQueue;
 
-public class Solution_합승택시요금 { // 효율성 2개 시간초과....
+public class Solution_Level3_합승택시요금 { // 효율성 2개 시간초과....
 
 	/*
 	static int Ans;

@@ -1,8 +1,8 @@
-package com.programmers.level2;
+package com.programmers.hash;
 
 import java.util.HashMap;
 
-public class Solution_전화번호목록 {
+public class Solution_Level2_전화번호목록 {
 	public static void main(String[] args) {
 		String[] phone_book = { "119", "97674223", "1195524421" };
 		System.out.println(solution(phone_book));

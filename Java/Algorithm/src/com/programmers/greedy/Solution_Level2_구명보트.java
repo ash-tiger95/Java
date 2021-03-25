@@ -1,8 +1,8 @@
-package com.programmers.level2;
+package com.programmers.greedy;
 
 import java.util.Arrays;
 
-public class Solution_구명보트 {
+public class Solution_Level2_구명보트 {
 	public static void main(String[] args) {
 		int[] people = {70,50,80,50};
 		int limit = 100;

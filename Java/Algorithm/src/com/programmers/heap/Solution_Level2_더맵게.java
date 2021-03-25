@@ -1,10 +1,10 @@
-package com.programmers.level2;
+package com.programmers.heap;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.PriorityQueue;
 
-public class Solution_더맵게 {
+public class Solution_Level2_더맵게 {
 	// 내 풀이: Collection.sort 때문에 효율성을 통과하지 못한다.
 	public int solution1(int[] scoville, int K) {
         int answer = 0;

@@ -1,9 +1,9 @@
-package com.programmers.level2;
+package com.programmers.stackqueue;
 
 import java.util.LinkedList;
 import java.util.Queue;
 
-public class Solution_프린터 {
+public class Solution_Level2_프린터 {
 	public static void main(String[] args) {
 		int[] priorities = { 2, 1, 3, 2 };
 		int location = 0; // 앞에서부터 0, 1, 2, ...

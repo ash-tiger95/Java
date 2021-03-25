@@ -1,6 +1,6 @@
-package com.programmers.level2;
+package com.programmers.dfsbfs;
 
-public class Solution_타겟넘버 {
+public class Solution_Level2_타겟넘버 {
 	public int solution(int[] numbers, int target) {
         int answer = 0;
         answer = dfs(numbers, 0, 0, target);

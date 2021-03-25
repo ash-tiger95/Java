@@ -1,8 +1,8 @@
-package com.programmers.level2;
+package com.programmers.hash;
 
 import java.util.HashMap;
 
-public class Solution_위장 {
+public class Solution_Level2_위장 {
 	public static void main(String[] args) {
 		String[][] clothes = { { "yellowhat", "headgear" }, { "bluesunglasses", "eyewear" },
 				{ "green_turban", "headgear" } };

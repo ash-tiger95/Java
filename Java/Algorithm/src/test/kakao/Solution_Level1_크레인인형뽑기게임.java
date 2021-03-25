@@ -1,8 +1,8 @@
-package com.programmers.level1;
+package test.kakao;
 
 import java.util.Stack;
 
-public class Solution_크레인인형뽑기게임 {
+public class Solution_Level1_크레인인형뽑기게임 {
 	public static void main(String[] args) {
 
 		int n = 3;

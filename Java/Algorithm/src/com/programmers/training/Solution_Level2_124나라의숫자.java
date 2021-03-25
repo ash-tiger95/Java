@@ -1,6 +1,6 @@
-package com.programmers.level2;
+package com.programmers.training;
 
-public class Solution_124나라의숫자 {
+public class Solution_Level2_124나라의숫자 {
 	public static void main(String[] args) {
 		int n =1;
 		System.out.println(solution(n));

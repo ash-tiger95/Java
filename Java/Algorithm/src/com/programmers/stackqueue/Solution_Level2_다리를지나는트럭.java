@@ -1,9 +1,9 @@
-package com.programmers.level2;
+package com.programmers.stackqueue;
 
 import java.util.LinkedList;
 import java.util.Queue;
 
-public class Solution_다리를지나는트럭 {
+public class Solution_Level2_다리를지나는트럭 {
 
 	public static void main(String[] args) {
 		int bridge_length = 2;

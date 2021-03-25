@@ -1,6 +1,6 @@
-package com.programmers.level2;
+package com.programmers.stackqueue;
 
-public class Solution_주식가격 {
+public class Solution_Level2_주식가격 {
 
 	public static void main(String[] args) {
 		int[] prices = { 1, 2, 3, 2, 3 };

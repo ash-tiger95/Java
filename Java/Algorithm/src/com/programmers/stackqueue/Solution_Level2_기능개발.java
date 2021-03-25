@@ -1,11 +1,11 @@
-package com.programmers.level2;
+package com.programmers.stackqueue;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
 
-public class Solution_기능개발 {
+public class Solution_Level2_기능개발 {
 	public static void main(String[] args) {
 		int[] progresses = { 93, 30, 55 };
 		int[] speeds = { 1, 30, 5 };
