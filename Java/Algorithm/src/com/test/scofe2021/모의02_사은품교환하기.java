@@ -19,7 +19,7 @@ public class 모의02_사은품교환하기 {
 			StringTokenizer st = new StringTokenizer(br.readLine());
 			N = Long.parseLong(st.nextToken()); // 시즌 한정 음료 쿠폰 개수
 			M = Long.parseLong(st.nextToken()); // 일반 음료 쿠폰 개수
-			answer = 0;
+			answer = -1;
 
 			// 조건1. 하나의 상품으로 교환하기 위해서는 12장의 쿠폰 필요
 			if (N < 5 || N + M < 12) {
@@ -28,23 +28,43 @@ public class 모의02_사은품교환하기 {
 			}
 
 			// 조건2. 이 쿠폰들 중 최소 5개는 시즌 한정 음료 쿠폰
-			while (true) {
-				N = N - 5;
-				M = M - 7;
-				if (N < 0) {
-					break;
-				}
+			for (int i = 5; i <= 12; i++) {
+				// M먼저 처리
+				long m = M / i;
+				
+				
 
-				if (M < 0) { // M이 0보다 작을 때, N이 채워줄 수 있는지 검사
-					if (N + M >= 0) {
-						answer++;
-						break;
-					} else {
-						break;
-					}
-				}
-
-				answer++;
+//				if (i == 12) {
+//
+//					if (N % i + M >= 12) {
+//						if (N % i >= 5) {
+//							n++;
+//						}
+//					}
+//
+//					answer = Math.max(answer, n);
+//
+//				} else {
+//					long m = M / (12 - i);
+//					long temp = 0;
+//					
+//					if (n > m) {
+//						temp = m;
+//					} else {
+//						temp = n;
+//					}
+//
+//					long nn = N % i;
+//					long mm = M % (12 - i);
+//
+//					if (nn + mm >= 12) {
+//						if (nn >= 5) {
+//							temp++;
+//						}
+//					}
+//
+//					answer = Math.max(answer, temp);
+//				}
 
 			}
 
