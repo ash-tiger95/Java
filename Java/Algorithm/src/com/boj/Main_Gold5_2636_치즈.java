@@ -59,6 +59,7 @@ public class Main_Gold5_2636_치즈 {
 //				}
 //				System.out.println();
 //			}
+			
 
 			time++;
 		}
