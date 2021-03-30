@@ -38,7 +38,7 @@ public class Main_Gold5_3020_개똥벌레2 {
 		
 		
 		
-		// 1. 가장 왼쪽 지점 최기화
+		// 1. 가장 왼쪽 지점 최기화zz
 		
 		
 		count = 0;
