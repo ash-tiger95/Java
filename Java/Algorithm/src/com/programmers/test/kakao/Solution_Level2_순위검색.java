@@ -76,6 +76,7 @@ public class Solution_Level2_순위검색 {
 
 		}
 //		System.out.println(Arrays.toString(answer));
+		// test
 
 		return answer;
 	}
