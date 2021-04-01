@@ -1,4 +1,4 @@
-package com.boj.dp;
+package com.boj.dp.memoi;
 
 import java.util.Scanner;
 
