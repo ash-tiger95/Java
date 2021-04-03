@@ -1,4 +1,4 @@
-package com.test.Day0403_카카오커머스;
+package com.test.kakaocommerce;
 
 import java.util.Arrays;
 
@@ -43,9 +43,9 @@ public class Solution_2번 {
 				}
 			}
 
+			// 카운트 개수와 needs[i]의 1 개수랑 같으면 answer 추가
 			answer = Math.max(answer, temp);
 
-			// 카운트 개수와 needs[i]의 1 개수랑 같으면 answer 추가
 
 			return;
 		}

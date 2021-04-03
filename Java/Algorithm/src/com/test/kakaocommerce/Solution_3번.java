@@ -1,4 +1,4 @@
-package com.test.Day0403_카카오커머스;
+package com.test.kakaocommerce;
 
 import java.util.Arrays;
 import java.util.LinkedList;
