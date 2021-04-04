@@ -5,7 +5,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 
-public class Solution_3번 {
+public class Solution03_역 {
 
 	static int N,idx,max;
 	static int[][] adj;

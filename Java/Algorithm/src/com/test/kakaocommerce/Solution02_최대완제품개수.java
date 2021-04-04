@@ -1,8 +1,7 @@
 package com.test.kakaocommerce;
 
-import java.util.Arrays;
 
-public class Solution_2번 {
+public class Solution02_최대완제품개수 {
 
 	static int M, N, answer;
 	static int[] output;
@@ -60,7 +59,6 @@ public class Solution_2번 {
 
 	public static void main(String[] args) {
 		int[][] needs = { { 1, 0, 0 }, { 1, 1, 0 }, { 1, 1, 0 }, { 1, 0, 1 }, { 1, 1, 0 }, { 0, 1, 1 } }; // 세로(완제품 개수),
-																											// 1 <= i <=
 																											// 1,000
 		int r = 2;
 		System.out.println(solution(needs, r));
