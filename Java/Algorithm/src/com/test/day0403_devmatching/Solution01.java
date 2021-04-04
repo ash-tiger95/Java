@@ -15,7 +15,7 @@ import java.util.Arrays;
 	최고 순위 번호	31	0→10	44	1	0→6	25	4개 번호 일치, 3등
 	최저 순위 번호	31	0→11	44	1	0→7	25	2개 번호 일치, 5등
  */
-public class Solution01_로또순위 { // 성공
+public class Solution01 { // 성공
 
 	public static int[] solution(int[] lottos, int[] win_nums) {
 		int[] answer = new int[2];

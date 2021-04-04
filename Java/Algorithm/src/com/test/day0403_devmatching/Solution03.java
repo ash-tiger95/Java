@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 
-public class Solution03_판매수익분할 { // 성공
+public class Solution03 { // 성공
 
 	static HashMap<String, Integer> hm;
 

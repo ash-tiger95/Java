@@ -2,7 +2,7 @@ package com.test.day0403_kakaocommerce;
 
 import java.util.TreeSet;
 
-public class Solution01_기프트카드 {
+public class Solution01 {
 	public int solution(int[] gift_cards, int[] wants) {
         int answer = 0; // 최소
 

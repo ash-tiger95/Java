@@ -2,7 +2,7 @@ package com.test.day0403_devmatching;
 
 import java.util.Arrays;
 
-public class Solution02_숫자회전 { // 성공
+public class Solution02 { // 성공
 
 	static int[][] map;
 	static int[] answer;

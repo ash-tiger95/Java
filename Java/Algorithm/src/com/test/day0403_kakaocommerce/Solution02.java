@@ -1,7 +1,7 @@
 package com.test.day0403_kakaocommerce;
 
 
-public class Solution02_최대완제품개수 {
+public class Solution02 {
 
 	static int M, N, answer;
 	static int[] output;
