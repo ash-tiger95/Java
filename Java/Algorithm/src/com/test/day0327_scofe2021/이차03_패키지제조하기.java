@@ -1,4 +1,4 @@
-package com.test.scofe2021;
+package com.test.day0327_scofe2021;
 
 import java.io.BufferedReader;
 import java.io.IOException;

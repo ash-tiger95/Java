@@ -1,4 +1,4 @@
-package com.test.kakaocommerce;
+package com.test.day0403_kakaocommerce;
 
 
 public class Solution02_최대완제품개수 {
