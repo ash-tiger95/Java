@@ -80,6 +80,7 @@ public class Solution03 {
 	}
 	
 
+	// 이거 다시 풀자
 	public static void main(String[] args) {
 		// testcase 1.
 		int n = 6;
