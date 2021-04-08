@@ -17,29 +17,26 @@ import javax.persistence.TemporalType;
 import javax.persistence.Transient;
 
 @Entity
-@SequenceGenerator(name = "member_seq_generator", sequenceName = "member_seq")
 public class Member {
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator="member_seq_generator")
+	@GeneratedValue
+	@Column(name = "MEMBER_ID")
 	private Long id;
 
-	@Column(name = "name")
+	@Column(name = "USERNAME")
 	private String username;
 	
-	public Member() {
-		
-	}
+	@Column(name = "TEAM_ID")
+	private Long teamId;
 
 	public Long getId() {
 		return id;
 	}
 
-
 	public void setId(Long id) {
 		this.id = id;
 	}
-
 
 	public String getUsername() {
 		return username;
@@ -48,7 +45,14 @@ public class Member {
 	public void setUsername(String username) {
 		this.username = username;
 	}
-	
-	
 
+	public Long getTeamId() {
+		return teamId;
+	}
+
+	public void setTeamId(Long teamId) {
+		this.teamId = teamId;
+	}
+	
+	
 }
