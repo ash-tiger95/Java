@@ -1,14 +1,3 @@
-/**
- * 데이터베이스 사용하기
- * 
- * 몽고디비에 연결하고 클라이언트에서 로그인할 때 데이터베이스 연결하도록 만들기
- 
- * 웹브라우저에서 아래 주소의 페이지를 열고 웹페이지에서 요청
- *    http://localhost:3000/public/login.html
- *
- * @date 2016-11-10
- * @author Mike
- */
 
 // Express 기본 모듈 불러오기
 var express = require('express')
@@ -72,15 +61,13 @@ function connectDB() {
 	MongoClient.connect(databaseUrl, function(err, db) {
 		if (err) throw err;
 		
-		console.log('데이터베이스에 연결되었습니다. : ' + databaseUrl);
+		console.log('데이터베이스에 연결되었습니다.  asdf : ' + databaseUrl);
 		
 		// database 변수에 할당
 		database = db;
 	});
 }
 
-
-//===== 라우팅 함수 등록 =====//
 
 // 라우터 객체 참조
 var router = express.Router();
