@@ -1,3 +1,14 @@
+/**
+ * cookie parser 미들웨어 사용하기
+ * 
+ * 웹브라우저에서 아래 주소로 요청
+ *    http://localhost:3000/process/showCookie
+ *    http://localhost:3000/process/setUserCookie
+ *
+ * @date 2016-10-25
+ * @author Mike
+ */
+
 // Express 기본 모듈 불러오기
 var express = require('express')
   , http = require('http')
@@ -5,11 +16,13 @@ var express = require('express')
 
 // Express의 미들웨어 불러오기
 var bodyParser = require('body-parser')
+  , cookieParser = require('cookie-parser')
   , static = require('serve-static')
   , errorHandler = require('errorhandler');
 
 // 에러 핸들러 모듈 사용
 var expressErrorHandler = require('express-error-handler');
+
 
 // 익스프레스 객체 생성
 var app = express();
@@ -25,25 +38,32 @@ app.use(bodyParser.json())
 
 app.use('/public', static(path.join(__dirname, 'public')));
 
+// cookie-parser 설정
+app.use(cookieParser());
 
-// 라우터 객체 참조
+// 라우터 사용하여 라우팅 함수 등록
 var router = express.Router();
 
-router.route('/process/users/:id').get(function(req, res) {
-	console.log('/process/users/:id 처리함.');
+router.route('/process/showCookie').get(function(req, res) {
+	console.log('/process/showCookie 호출됨.');
 
-    // URL 파라미터 확인
-	var paramId = req.params.id;
-	
-	console.log('/process/users와 토큰 %s를 이용해 처리함.', paramId);
-
-	res.writeHead('200', {'Content-Type':'text/html;charset=utf8'});
-	res.write('<h1>Express 서버에서 응답한 결과입니다.</h1>');
-	res.write('<div><p>Param id : ' + paramId + '</p></div>');
-	res.end();
+	res.send(req.cookies);
 });
 
-// 라우터 객체를 app 객체에 등록
+router.route('/process/setUserCookie').get(function(req, res) {
+	console.log('/process/setUserCookie 호출됨.');
+
+	// 쿠키 설정
+	res.cookie('user', {
+		id: 'mike',
+		name: '소녀시대',
+		authorized: true
+	});
+	
+	// redirect로 응답
+	res.redirect('/process/showCookie');
+});
+
 app.use('/', router);
 
 
@@ -62,3 +82,4 @@ app.use( errorHandler );
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
 });
+
