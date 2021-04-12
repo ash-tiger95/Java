@@ -3,8 +3,6 @@
  * 
  * user2.js 모듈 파일 불러오기
  *
- * @date 2016-11-10
- * @author Mike
  */
 
 // users2는 {} 로 리턴됨

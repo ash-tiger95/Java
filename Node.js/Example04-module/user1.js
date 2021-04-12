@@ -1,3 +1,10 @@
+/**
+ * 모듈에 대해 알아보기
+ * 
+ * exports 객체 속성으로 추가하기
+ *
+ */
+
 // exports 객체 속성으로 함수 추가
 exports.getUser = function() {
 	return {id:'test01', name:'소녀시대'};
