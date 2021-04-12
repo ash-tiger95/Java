@@ -214,7 +214,7 @@ router.route('/process/adduser').post(function(req, res) {
 			
             // 결과 객체 있으면 성공 응답 전송
 			if (addedUser) {
-				console.dir(addedUser.name);
+				console.dir(addedUser);
  
 				res.writeHead('200', {'Content-Type':'text/html;charset=utf8'});
 				res.write('<h2>사용자 추가 성공</h2>');
@@ -256,7 +256,7 @@ router.route('/process/listuser').post(function(req, res) {
             }
 			  
 			if (results) {  // 결과 객체 있으면 리스트 전송
-				console.dir(results[0].name);
+				console.dir(results);
  
 				res.writeHead('200', {'Content-Type':'text/html;charset=utf8'});
 				res.write('<h2>사용자 리스트</h2>');
