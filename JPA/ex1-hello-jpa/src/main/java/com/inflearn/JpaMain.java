@@ -15,19 +15,18 @@ public class JpaMain {
 		tx.begin();
 		
 		try {
-			
-			// === 문제점 예시 ===
+			// 저장
 			Team team = new Team();
 			team.setName("TeamA");
-			em.persist(team); // 영속 컨텍스트에 올라가면서 1차 캐시가 ID를 기억한다.
+			em.persist(team);
 			
 			Member member = new Member();
 			member.setUsername("member1");
-			
-			// member를 team에 소속시키고 싶을 때
-			member.setTeamId(team.getId()); // 객체지향적이지가 않다. (setTeam()으로 해야될 것 같은데.)
+			member.changeTeam(team);
 			em.persist(member);
 			
+			em.flush();
+			em.clear();
 			
 			tx.commit();
 		} catch (Exception e) {

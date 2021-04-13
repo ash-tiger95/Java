@@ -3,8 +3,6 @@
  * 
  * module.exports에 인스턴스 객체를 만들어 할당
  *
- * @date 2016-11-10
- * @author Mike
  */
 
 // 사용 패턴 : module.exports에 인스턴스 객체를 만들어 할당함
