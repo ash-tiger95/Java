@@ -1,4 +1,4 @@
-package com.inflearn;
+package com.inflearn.ex0603.일대다양방향;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -7,10 +7,11 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
 
 @Entity
-public class Team {
+public class Team2 {
 	
 	@Id
 	@GeneratedValue
@@ -19,8 +20,9 @@ public class Team {
 	
 	private String name;
 	
-	@OneToMany(mappedBy="team") // 일대다, 반대편에 내가 뭐와 연결되어 있는지 적어둬야한다. (Team의 변수명)
-	private List<Member> members = new ArrayList<>(); // 최기화. add 할때 nullpoint가 안뜨려고, 이걸 관례로 많이 쓴다.
+	@OneToMany
+	@JoinColumn(name = "TEAM_ID")
+	private List<Member2> members = new ArrayList<>();
 
 	public Long getId() {
 		return id;
@@ -38,13 +40,14 @@ public class Team {
 		this.name = name;
 	}
 
-	public List<Member> getMembers() {
+	public List<Member2> getMembers() {
 		return members;
 	}
 
-	public void setMembers(List<Member> members) {
+	public void setMembers(List<Member2> members) {
 		this.members = members;
 	}
+	
 	
 	
 }
