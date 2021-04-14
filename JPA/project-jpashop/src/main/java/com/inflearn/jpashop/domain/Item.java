@@ -16,6 +16,7 @@ public class Item {
 	private String name;
 	private int price;
 	private int stockQuantity;
+	
 	public Long getId() {
 		return id;
 	}
