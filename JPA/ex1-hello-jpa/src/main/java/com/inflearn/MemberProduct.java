@@ -1,4 +1,4 @@
-package com.inflearn.ex0605.다대다;
+package com.inflearn;
 
 import java.time.LocalDateTime;
 
@@ -16,11 +16,11 @@ public class MemberProduct {
 	
 	@ManyToOne
 	@JoinColumn(name = "MEMBER_ID")
-	private Member4 member;
+	private Member member;
 	
 	@ManyToOne
 	@JoinColumn(name = "PRODUCT_ID")
-	private Product4 product;
+	private Product product;
 	
 	private int count;
 	

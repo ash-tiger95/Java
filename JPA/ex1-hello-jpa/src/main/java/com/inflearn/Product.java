@@ -1,28 +1,24 @@
-package com.inflearn.ex0603.일대다양방향;
+package com.inflearn;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
+import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
 
 @Entity
-public class Team2 {
+public class Product {
 	
-	@Id
-	@GeneratedValue
-	@Column(name = "TEAM_ID")
+	@Id @GeneratedValue
 	private Long id;
 	
 	private String name;
 	
-	@OneToMany
-	@JoinColumn(name = "TEAM_ID")
-	private List<Member2> members = new ArrayList<>();
+	@OneToMany(mappedBy = "product")
+	private List<MemberProduct> memberProducts = new ArrayList<>();
 
 	public Long getId() {
 		return id;
@@ -40,14 +36,13 @@ public class Team2 {
 		this.name = name;
 	}
 
-	public List<Member2> getMembers() {
-		return members;
+	public List<MemberProduct> getMemberProducts() {
+		return memberProducts;
 	}
 
-	public void setMembers(List<Member2> members) {
-		this.members = members;
+	public void setMemberProducts(List<MemberProduct> memberProducts) {
+		this.memberProducts = memberProducts;
 	}
-	
 	
 	
 }

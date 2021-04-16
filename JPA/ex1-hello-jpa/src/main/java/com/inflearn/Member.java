@@ -1,25 +1,21 @@
 package com.inflearn;
 
-import java.util.Date;
+import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.EnumType;
-import javax.persistence.Enumerated;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
-import javax.persistence.Lob;
 import javax.persistence.ManyToOne;
-import javax.persistence.SequenceGenerator;
-import javax.persistence.Table;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
-import javax.persistence.Transient;
+import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 
 @Entity
-public class Member {
+public class Member extends BaseEntity{
 
 	@Id
 	@GeneratedValue
@@ -29,12 +25,10 @@ public class Member {
 	@Column(name = "USERNAME")
 	private String username;
 	
-//	@Column(name = "TEAM_ID")
-//	private Long teamId;
-	
-	@ManyToOne // 다대일
-	@JoinColumn(name = "TEAM_ID") // mapping
-	private Team team; // 연관관계의 주인
+	@ManyToOne(fetch = FetchType.EAGER)
+	@JoinColumn
+	private Team team;
+
 
 	public Long getId() {
 		return id;
@@ -56,10 +50,10 @@ public class Member {
 		return team;
 	}
 
-	public void changeTeam(Team team) {
+	public void setTeam(Team team) {
 		this.team = team;
-		
-		team.getMembers().add(this);
 	}
+
 	
+
 }
