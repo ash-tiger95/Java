@@ -18,14 +18,14 @@ public class JpaMain {
 		
 		try {
 			
-			// 핵심: 단방향으로 설계하는 것이 가장 중요하다. (양방향은 필요에 따라)
-			Order order = new Order();
-			em.persist(order);
-//			order.addOrderItem(new OrderItem());
-			
-			OrderItem orderItem = new OrderItem();
-			orderItem.setOrder(order);
-			em.persist(orderItem);
+//			// 핵심: 단방향으로 설계하는 것이 가장 중요하다. (양방향은 필요에 따라)
+//			Order order = new Order();
+//			em.persist(order);
+////			order.addOrderItem(new OrderItem());
+//			
+//			OrderItem orderItem = new OrderItem();
+//			orderItem.setOrder(order);
+//			em.persist(orderItem);
 			
 			tx.commit();
 		} catch (Exception e) {
