@@ -23,21 +23,28 @@ public class JpaMain {
 			team.setName("TEAM A");
 			em.persist(team);
 			
+			Team team2 = new Team();
+			team.setName("TEAM B");
+			em.persist(team2);
+			
 			Member member = new Member();
 			member.setUsername("hello");
 			member.setTeam(team);
 			em.persist(member);
 			
+			Member member2 = new Member();
+			member.setUsername("hello");
+			member.setTeam(team2);
+			em.persist(member2);
+			
 			em.flush();
 			em.clear();
 			
-			Member m = em.find(Member.class, member.getId());
+//			Member m = em.find(Member.class, member.getId());
 			
-			System.out.println("m = " + m.getTeam().getClass());
+			List<Member> members = em.createQuery("select m from Member m", Member.class).getResultList();
 			
-			System.out.println("============");
-			m.getTeam().getName();
-			System.out.println("============");
+			
 			tx.commit();
 		} catch (Exception e) {
 			tx.rollback();
