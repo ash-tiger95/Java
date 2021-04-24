@@ -19,22 +19,6 @@ public class test4 {
 		return answer;
 	}
 
-//	private static int topDown(int start) {
-//		if(start <= 1) {
-//			return 0;
-//		}
-//		
-//		if(memoi[start] > 0) {
-//			return memoi[start];
-//		}
-//		
-//		memoi[start] = topDown(start-1); 
-//		
-//		if(start -2>=2) {
-//			
-//		}
-//		
-//	}
 	
 	private static int topDown2(int start) {
 		if (start <= 1) {
