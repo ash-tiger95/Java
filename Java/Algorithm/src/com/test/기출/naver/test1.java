@@ -1,4 +1,4 @@
-package com.test;
+package com.test.기출.naver;
 
 import java.util.Arrays;
 

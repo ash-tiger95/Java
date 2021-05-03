@@ -1,4 +1,4 @@
-package com.test;
+package com.test.기출.naver;
 
 public class test2 {
 	private static double solution(int n, int[] p, int[] c) {
