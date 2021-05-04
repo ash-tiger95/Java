@@ -8,11 +8,13 @@ import java.util.StringTokenizer;
 
 /**
  * 
- * 서로소 집합: Disjoint-set 서로소 집합을 표현하는 알고리즘: Union-Find 알고리즘 (트리 구조)
+ * 서로소 집합: Disjoint-set
+ * 서로소 집합을 표현하는 알고리즘: Union-Find 알고리즘 (트리 구조)
  * 
- * Union-Find 연산 1. make-set(x): 초기화, x를 유일한 원소로 하는 새로운 집합 2. union(x, y): 합하기,
- * x가 속한 집합과 y가 속한 집합을 합친다. 즉, x와 y가 두 집합을 합치는 연산 3. find(x): 찾기, x가 속한 집합의
- * 대표값(루트 노드 값)을 반환한다.
+ * Union-Find 연산
+ * 1. make-set(x): 초기화, x를 유일한 원소로 하는 새로운 집합 
+ * 2. union(x, y): 합하기, x가 속한 집합과 y가 속한 집합을 합친다. 즉, x와 y가 두 집합을 합치는 연산 
+ * 3. find(x): 찾기, x가 속한 집합의 대표값(루트 노드 값)을 반환한다.
  * 
  * @author jugia
  *
@@ -40,8 +42,10 @@ public class Main_Gold4_1717_집합의표현 {
 			int b = Integer.parseInt(st.nextToken());
 
 			if (ope == 0) {
+				// union
 				union(a, b);
 			} else {
+				// find
 				a = find(a);
 				b = find(b);
 				if (a == b) {
@@ -52,7 +56,7 @@ public class Main_Gold4_1717_집합의표현 {
 			}
 
 		}
-		System.out.println(Arrays.toString(parent));
+//		System.out.println(Arrays.toString(parent));
 		System.out.println(sb.toString());
 
 	}
