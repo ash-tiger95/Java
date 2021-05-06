@@ -5,7 +5,7 @@ public class Solution_Level3_네트워크 {
 	static int Ans;
 	static boolean[] visited;
 
-	public static int solution(int n, int[][] computers) {
+	private static int solution(int n, int[][] computers) {
 		Ans = 0;
 		visited = new boolean[n]; // 정점 방문 처리
 
@@ -20,7 +20,7 @@ public class Solution_Level3_네트워크 {
 		return Ans;
 	}
 
-	public static void dfs(int start, int n, int[][] computers) { // start(열)를 기준으로 행 검사
+	private static void dfs(int start, int n, int[][] computers) { // start(열)를 기준으로 행 검사
 		for (int j = 0; j < n; j++) {
 			if (start == j) {
 				continue;
