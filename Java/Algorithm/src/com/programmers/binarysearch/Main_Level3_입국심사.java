@@ -20,13 +20,14 @@ public class Main_Level3_입국심사 {
 			sum = 0;
 
 			for (int i = 0; i < times.length; i++) {
-				sum += mid / times[i];
+				sum += mid / times[i]; // times별로 가능한 경우를 합한다.
 
 				if (sum >= n) {
 					break;
 				}
 			}
 
+			// 이분탐색
 			if (n > sum) {
 				start = mid + 1;
 			} else {
