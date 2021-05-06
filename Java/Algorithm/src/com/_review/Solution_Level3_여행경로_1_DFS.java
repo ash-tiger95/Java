@@ -1,6 +1,6 @@
 package com._review;
 
-public class Solution_Level3_여행경로 {
+public class Solution_Level3_여행경로_1_DFS { // 내 풀이
 
 	static String Ans;
 
@@ -26,7 +26,8 @@ public class Solution_Level3_여행경로 {
 				Ans = ans;
 			} else {
 				if (Ans.compareTo(ans) > 0) { // 알파벳 빠른 순을 뽑기 위해 비교한다.
-					Ans = ans;
+					// Ans가 더 크면(알파벳이 느리면) return 양수
+					Ans = ans; 
 				}
 			}
 			return;
