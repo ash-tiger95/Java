@@ -1,4 +1,4 @@
-package com.boj;
+package com.boj.dp.memoi;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -28,14 +28,11 @@ public class Main_Gold5_1915_가장큰정사각형 {
 				for (int j = 1; j <= M; j++) {
 					int temp = input.charAt(j - 1) - '0';
 
-					if (i == 1 && j == 1) {
-						memoi[i][j] = temp;
-					} else {
-						if (temp == 1) {
-							memoi[i][j] = Math.min(Math.min(memoi[i - 1][j], memoi[i][j - 1]), memoi[i - 1][j - 1]) + 1;
-							Ans = Math.max(Ans, memoi[i][j]);
-						}
+					if (temp == 1) {
+						memoi[i][j] = Math.min(Math.min(memoi[i - 1][j], memoi[i][j - 1]), memoi[i - 1][j - 1]) + 1;
+						Ans = Math.max(Ans, memoi[i][j]);
 					}
+
 				}
 			}
 		}
