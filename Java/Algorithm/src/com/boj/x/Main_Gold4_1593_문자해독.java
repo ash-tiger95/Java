@@ -60,7 +60,7 @@ public class Main_Gold4_1593_문자해독 {
 	}
 
 	private static void dfs(int[] alpha, int index, int count) {
-		if(index >= sLen) {
+		if (index >= sLen) {
 			return;
 		}
 		if (count == wLen) {
