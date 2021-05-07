@@ -1,4 +1,4 @@
-package com.boj;
+package com.boj.graph.floydwarshall;
 
 import java.io.BufferedReader;
 

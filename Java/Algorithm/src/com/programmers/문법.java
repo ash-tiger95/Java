@@ -89,7 +89,7 @@ public class 문법 {
 		tm1.put("AA", "C");
 		tm1.put("C", "BB");
 		tm1.put("1", "AAA");
-		System.out.println(tm1);
+		System.out.println("TreeMap 자동정렬: " + tm1);
 		
 		
 		System.out.println("---------------");
