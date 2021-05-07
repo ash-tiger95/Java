@@ -44,7 +44,6 @@ public class Main_Gold3_1644_소수의연속합 {
 
 		// prime[0]과 prime[1]은 소수가 아니다.
 		isPrime[0] = isPrime[1] = true;
-		int count = 2;
 
 		for (int i = 2; i * i <= N; i++) { // 2부터 자기 자신을 제외한 배수를 제외시킨다.
 			if (!isPrime[i]) {
