@@ -1,4 +1,4 @@
-package com._review;
+package com.programmers;
 
 public class Solution_Level2_타겟넘버 {
 

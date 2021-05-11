@@ -1,4 +1,4 @@
-package com._review;
+package com.programmers;
 
 public class Solution_Level3_여행경로_1_DFS { // 내 풀이
 
