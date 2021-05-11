@@ -11,12 +11,13 @@
 			<property name="javax.persistence.jdbc.password" value="" />
 			<property name="javax.persistence.jdbc.url" value="jdbc:h2:tcp://localhost/~/test" />
 			<property name="hibernate.dialect" value="org.hibernate.dialect.H2Dialect" />
+			
 			<!-- 옵션 -->
-			<property name="hibernate.show_sql" value="true" /> <!-- Run할 때 sql 출력 -->
-			<property name="hibernate.format_sql" value="true" /> <!-- sql 출력할 때 formatting(이쁘게) -->
-			<property name="hibernate.use_sql_comments" value="true" /> <!-- 출력할 때 맨 위 (왜 쿼리가 나왔는지) -->
-			<property name="hibernate.jdbc.batch_size" value = "10" /> <!-- SQL에 모았다가 보낼 때, 이 사이즈만큼 모았다가 한 방에 보낸다 -->
-			<property name="hibernate.hbm2ddl.auto" value="create" /> <!-- 테이블 drop -> create table 실행 -->
+			<property name="hibernate.show_sql" value="true" />
+			<property name="hibernate.format_sql" value="true" />
+			<property name="hibernate.use_sql_comments" value="true" />
+			<property name="hibernate.jdbc.batch_size" value = "10" />
+			<property name="hibernate.hbm2ddl.auto" value="update" />
 		</properties>
 	</persistence-unit>
 </persistence>
