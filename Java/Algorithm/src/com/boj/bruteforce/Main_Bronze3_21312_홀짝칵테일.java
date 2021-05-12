@@ -1,4 +1,4 @@
-package com._review;
+package com.boj.bruteforce;
 
 import java.io.BufferedReader;
 import java.io.IOException;
