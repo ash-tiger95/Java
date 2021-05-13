@@ -1,10 +1,18 @@
-package com._review;
+package com.boj.twopointer;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
+import java.util.Arrays;
 
+/**
+ * 1. Eratosthenes로 소수 구하기
+ * 2. Two Pointer
+ * 
+ * @author jugia
+ *
+ */
 public class Main_Gold3_1644_소수의연속합 {
 
 	static int N, Ans;
@@ -17,13 +25,15 @@ public class Main_Gold3_1644_소수의연속합 {
 
 		N = Integer.parseInt(br.readLine()); // 소수의 연속합으로 N 만들기
 
-		eratosthenes();
+		eratosthenes(); // make Prime
+		
+		System.out.println(prime);
 
 		int start = 0;
 		int end = 0;
 		long sum = 0;
 
-		while (end <= prime.size() - 1) {
+		while (end <= prime.size()-1) {
 			if (sum >= N) {
 				sum -= prime.get(start++);
 			} else {
@@ -39,7 +49,7 @@ public class Main_Gold3_1644_소수의연속합 {
 
 	}
 
-	private static void eratosthenes() { // make Prime
+	private static void eratosthenes() {
 		isPrime = new boolean[N + 1];
 
 		// prime[0]과 prime[1]은 소수가 아니다.

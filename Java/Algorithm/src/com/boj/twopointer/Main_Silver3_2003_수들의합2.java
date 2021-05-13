@@ -1,10 +1,16 @@
-package com._review;
+package com.boj.twopointer;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
+/**
+ * Two Pointer 기본 문제
+ * 
+ * @author jugia
+ *
+ */
 public class Main_Silver3_2003_수들의합2 {
 
 	static int N, M, Ans;

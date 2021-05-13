@@ -1,11 +1,18 @@
-package com._review;
+package com.boj.twopointer;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.Arrays;
 import java.util.StringTokenizer;
 
-public class Main_Gold4_1806_부분합 { // Two Pointer
+/**
+ * Two Pointer 기본 문제
+ * 
+ * @author jugia
+ *
+ */
+public class Main_Gold4_1806_부분합 {
 
 	static int N, S, Ans;
 	static int[] in;
@@ -15,8 +22,8 @@ public class Main_Gold4_1806_부분합 { // Two Pointer
 		StringTokenizer st = new StringTokenizer(br.readLine());
 		Ans = Integer.MAX_VALUE;
 
-		N = Integer.parseInt(st.nextToken());
-		S = Integer.parseInt(st.nextToken());
+		N = Integer.parseInt(st.nextToken()); // 길이 N짜리 수열
+		S = Integer.parseInt(st.nextToken()); // 합이 S 이상이 되는 것 중, 가장 짧은 것의 길이 구하기
 
 		in = new int[N + 1];
 
@@ -28,8 +35,11 @@ public class Main_Gold4_1806_부분합 { // Two Pointer
 		int start = 0;
 		int end = 0;
 		long sum = 0;
+		
+		System.out.println(Arrays.toString(in));
 
 		while (end <= N) {
+			System.out.println(start + " "+end +" " +sum);
 			if (sum >= S) {
 				Ans = Math.min(Ans, end - start); // S를 넘을 때마다 최소 길이 검사
 				sum -= in[start++];
