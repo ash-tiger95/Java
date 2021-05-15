@@ -46,10 +46,6 @@ public class Main_Gold4_4256_트리 {
 			}
 			
 			
-			
-			
-			
-			
 		} // for T
 	}
 
