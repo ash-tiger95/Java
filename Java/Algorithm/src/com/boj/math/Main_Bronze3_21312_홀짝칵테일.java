@@ -1,4 +1,4 @@
-package com.boj.bruteforce;
+package com.boj.math;
 
 import java.io.BufferedReader;
 import java.io.IOException;
