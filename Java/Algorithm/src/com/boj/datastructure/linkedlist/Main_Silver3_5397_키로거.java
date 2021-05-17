@@ -6,6 +6,13 @@ import java.io.InputStreamReader;
 import java.util.LinkedList;
 import java.util.StringTokenizer;
 
+/**
+ * 풀이) 링크드 리스트: 183992KB, 2884ms
+ * 또 다른 풀이) 스택 2개: 165192KB, 1276ms
+ * 
+ * @author jugia
+ *
+ */
 public class Main_Silver3_5397_키로거 {
 
 	static int T;
