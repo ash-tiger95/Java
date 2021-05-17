@@ -1,4 +1,4 @@
-package com.boj.x;
+package com._review.previous;
 
 import java.io.BufferedReader;
 import java.io.IOException;

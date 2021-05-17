@@ -1,4 +1,4 @@
-package com.boj.x;
+package com._review.previous;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -7,7 +7,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.StringTokenizer;
 
-public class Main_Gold5_2636_치즈 {
+public class Main_Gold5_2636_치즈_BFS {
 	static int N, M, time, pre;
 	static int[][] map;
 	static boolean[][] visited;
