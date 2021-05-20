@@ -1,4 +1,4 @@
-package com._review;
+package com.boj.search.bfs;
 
 import java.io.BufferedReader;
 import java.io.IOException;
