@@ -20,8 +20,8 @@ public class Main_Gold2_1655_가운데를말해요 {
 		N = Integer.parseInt(st.nextToken()); // 1 <= N <= 100,000
 
 		// 람다식
-		PriorityQueue<Integer> front = new PriorityQueue<>((o1, o2) -> (o2 - o1));
-		PriorityQueue<Integer> rear = new PriorityQueue<>((o1, o2) -> (o1 - o2));
+		PriorityQueue<Integer> front = new PriorityQueue<>((o1, o2) -> (o2 - o1)); // 큰 수 찾기
+		PriorityQueue<Integer> rear = new PriorityQueue<>((o1, o2) -> (o1 - o2)); // 작은 수 찾기
 
 		for (int i = 0; i < N; i++) {
 			int in = Integer.parseInt(br.readLine());
@@ -42,10 +42,6 @@ public class Main_Gold2_1655_가운데를말해요 {
 
 			sb.append(front.peek()).append("\n");
 		}
-		
-		
-		
 		System.out.println(sb);
-
 	}
 }
