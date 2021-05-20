@@ -33,5 +33,4 @@ public class Main_Silver5_19947_투자의귀재배주형 {
 		
 		System.out.println(dp[Y]);
 	}
-
 }
