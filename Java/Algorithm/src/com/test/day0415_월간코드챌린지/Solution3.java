@@ -1,4 +1,4 @@
-package com.test.day0415월간코드챌린지;
+package com.test.day0415_월간코드챌린지;
 
 import java.util.ArrayList;
 import java.util.List;

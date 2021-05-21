@@ -1,4 +1,4 @@
-package com.test.day0415월간코드챌린지;
+package com.test.day0415_월간코드챌린지;
 
 public class Solution1 { // 성공
 	public int solution(int[] absolutes, boolean[] signs) {
