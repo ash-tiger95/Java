@@ -55,6 +55,8 @@ public class Solution_Test_1767_프로세서연결하기 {
 		if(idx == list.size()) {
 			Ans = Math.min(Ans, len);
 			
+			
+			
 			return;
 		}
 		for(int i=0;i<N;i++) {
