@@ -6,7 +6,8 @@ import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
 /**
- * 풀이) 단순히 재귀로 하려 했지만 시간초과. 다른 방법을 생각해야 한다.
+ * 풀이) 단순히 재귀로 하려 했지만 시간초과.
+ * 또 다른 풀이) DP
  * 
  * @author jugia
  *
