@@ -89,6 +89,8 @@ public class Solution_Test_1767_프로세서연결하기 {
 				value++;
 				len++;
 			}
+			
+			
 
 			if (idx + 1 != list.size()) { // 마지막 좌표인지 판별
 				dfs(idx + 1, visited, len);
