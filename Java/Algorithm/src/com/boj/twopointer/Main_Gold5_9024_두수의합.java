@@ -7,11 +7,13 @@ import java.util.Arrays;
 import java.util.StringTokenizer;
 
 /**
- * 다른 방향 투포인터
+ * 이전 풀이) 조합 -> 시간초과
+ * 해결) 투 포인터
+ * 
  * @author jugia
  *
  */
-public class Main_Gold5_9024_두수의합 {
+public class Main_Gold5_9024_두수의합 { // 실패
 
 	static int T, N, K, Ans;
 	static int[] in, out;

@@ -5,6 +5,12 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
+/**
+ * 풀이) 조합 -> 시간초과
+ * 다른 풀이) 투 포인터
+ * @author jugia
+ *
+ */
 public class Main_Gold5_9024_두수의합 {
 
 	static int T, N, K, max, Ans;
