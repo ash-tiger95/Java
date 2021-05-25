@@ -18,11 +18,14 @@ public class JpaMain {
 
 		try {
 			// 영속
-			Member findMember1 = em.find(Member.class, 101L);
-			Member findMember2 = em.find(Member.class, 101L);
+			Member memberA = em.find(Member.class, 150L);
+			memberA.setName("AAAAA");
 			
-			System.out.println("result = " + (findMember1 == findMember2));
-
+			// 준영속으로 변경
+			em.detach(memberA);
+			
+			System.out.println("==============");
+			
 			tx.commit(); // DB에 쿼리가 날라간다.
 		} catch (Exception e) {
 			tx.rollback();
