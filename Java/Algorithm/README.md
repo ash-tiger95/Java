@@ -2,14 +2,14 @@
 
 ## 2021/05/26
 
-|                            난이도                            |                     번호                     |                       문제 이름                       | 유형 |
-| :----------------------------------------------------------: | :------------------------------------------: | :---------------------------------------------------: | ---- |
-| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/7.svg"/> | [4949](https://www.acmicpc.net/problem/4949) | [균형잡힌 세상](https://www.acmicpc.net/problem/4949) |      |
-|                                                              |                                              |                                                       |      |
-|                                                              |                                              |                                                       |      |
-|                                                              |                                              |                                                       |      |
-|                                                              |                                              |                                                       |      |
-|                                                              |                                              |                                                       |      |
+|                            난이도                            |                     번호                     |                       문제 이름                       | 유형       |
+| :----------------------------------------------------------: | :------------------------------------------: | :---------------------------------------------------: | ---------- |
+| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/7.svg"/> | [4949](https://www.acmicpc.net/problem/4949) | [균형잡힌 세상](https://www.acmicpc.net/problem/4949) | ArrayDeque |
+| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/10.svg"/> | [7576](https://www.acmicpc.net/problem/7576) |    [토마토](https://www.acmicpc.net/problem/7576)     |            |
+|                                                              |                                              |                                                       |            |
+|                                                              |                                              |                                                       |            |
+|                                                              |                                              |                                                       |            |
+|                                                              |                                              |                                                       |            |
 
 ## 2021/05/25
 
