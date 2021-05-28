@@ -28,9 +28,6 @@ public class Main_Silver1_20495_수열과헌팅 {
 			}
 		}
 		
-		
-
-
 		for (int i = 0; i < N; i++) {
 			binarySearch(in[i][0]-in[i][1], in[i][0]+in[i][1]);
 		}
