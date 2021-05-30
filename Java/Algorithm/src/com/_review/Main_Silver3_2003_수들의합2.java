@@ -1,4 +1,4 @@
-package com.boj.slidingwindow;
+package com._review;
 
 import java.io.BufferedReader;
 import java.io.IOException;

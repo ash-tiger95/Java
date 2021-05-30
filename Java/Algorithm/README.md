@@ -1,5 +1,15 @@
 # Algorithm
 
+## 2021/05/30
+
+| 난이도                                                       | 번호                                           | 문제이름                                            | 유형                       |
+| ------------------------------------------------------------ | ---------------------------------------------- | --------------------------------------------------- | -------------------------- |
+| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/7.svg"/> | [11653](https://www.acmicpc.net/problem/11653) | [소인수분해](https://www.acmicpc.net/problem/11653) | 에라토스테네스의 체 / sqrt |
+|                                                              |                                                |                                                     |                            |
+|                                                              |                                                |                                                     |                            |
+
+
+
 ## 2021/05/26
 
 |                            난이도                            |                      번호                      |                       문제 이름                       | 유형       |
@@ -7,9 +17,6 @@
 | <img height="25px" width="25px" src="https://static.solved.ac/tier_small/7.svg"/> |  [4949](https://www.acmicpc.net/problem/4949)  | [균형잡힌 세상](https://www.acmicpc.net/problem/4949) | ArrayDeque |
 | <img height="25px" width="25px" src="https://static.solved.ac/tier_small/10.svg"/> |  [7576](https://www.acmicpc.net/problem/7576)  |    [토마토](https://www.acmicpc.net/problem/7576)     | 간단한 BFS |
 | <img height="25px" width="25px" src="https://static.solved.ac/tier_small/10.svg"/> | [20495](https://www.acmicpc.net/problem/20495) | [수열과 헌팅](https://www.acmicpc.net/problem/20495)  |            |
-|                                                              |                                                |                                                       |            |
-|                                                              |                                                |                                                       |            |
-|                                                              |                                                |                                                       |            |
 
 ## 2021/05/25
 
