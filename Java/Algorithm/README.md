@@ -2,11 +2,11 @@
 
 ## 2021/05/31
 
-|                            난이도                            |                     번호                     |                      문제 이름                      |  유형  |
-| :----------------------------------------------------------: | :------------------------------------------: | :-------------------------------------------------: | :----: |
-| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/4.svg"/> | [1152](https://www.acmicpc.net/problem/1152) | [단어의 개수](https://www.acmicpc.net/problem/1152) | String |
-|                                                              |                                              |                                                     |        |
-|                                                              |                                              |                                                     |        |
+|                            난이도                            |                      번호                      |                       문제 이름                        |  유형  |
+| :----------------------------------------------------------: | :--------------------------------------------: | :----------------------------------------------------: | :----: |
+| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/4.svg"/> |  [1152](https://www.acmicpc.net/problem/1152)  |  [단어의 개수](https://www.acmicpc.net/problem/1152)   | String |
+| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/9.svg"/> | [10819](https://www.acmicpc.net/problem/10819) | [차이를 최대로](https://www.acmicpc.net/problem/10819) |  nPr   |
+|                                                              |                                                |                                                        |        |
 
 
 
