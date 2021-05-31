@@ -1,72 +1,76 @@
 # Algorithm
 
+## 2021/05/31
+
+|                            난이도                            |                     번호                     |                      문제 이름                      |  유형  |
+| :----------------------------------------------------------: | :------------------------------------------: | :-------------------------------------------------: | :----: |
+| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/4.svg"/> | [1152](https://www.acmicpc.net/problem/1152) | [단어의 개수](https://www.acmicpc.net/problem/1152) | String |
+|                                                              |                                              |                                                     |        |
+|                                                              |                                              |                                                     |        |
+
+
+
 ## 2021/05/30
 
-| 난이도                                                       | 번호                                           | 문제이름                                            | 유형                       |
-| ------------------------------------------------------------ | ---------------------------------------------- | --------------------------------------------------- | -------------------------- |
-| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/7.svg"/> | [11653](https://www.acmicpc.net/problem/11653) | [소인수분해](https://www.acmicpc.net/problem/11653) | 에라토스테네스의 체 / sqrt |
-|                                                              |                                                |                                                     |                            |
-|                                                              |                                                |                                                     |                            |
-
-
+|                            난이도                            |                      번호                      |                      문제 이름                       |            유형            |
+| :----------------------------------------------------------: | :--------------------------------------------: | :--------------------------------------------------: | :------------------------: |
+| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/7.svg"/> | [11653](https://www.acmicpc.net/problem/11653) | [소인수분해](https://www.acmicpc.net/problem/11653)  | 에라토스테네스의 체 / sqrt |
+| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/9.svg"/> |  [9934](https://www.acmicpc.net/problem/9934)  | [완전이진트리](https://www.acmicpc.net/problem/9934) |           Recur            |
 
 ## 2021/05/26
 
-|                            난이도                            |                      번호                      |                       문제 이름                       | 유형       |
-| :----------------------------------------------------------: | :--------------------------------------------: | :---------------------------------------------------: | ---------- |
+|                            난이도                            |                      번호                      |                       문제 이름                       |    유형    |
+| :----------------------------------------------------------: | :--------------------------------------------: | :---------------------------------------------------: | :--------: |
 | <img height="25px" width="25px" src="https://static.solved.ac/tier_small/7.svg"/> |  [4949](https://www.acmicpc.net/problem/4949)  | [균형잡힌 세상](https://www.acmicpc.net/problem/4949) | ArrayDeque |
 | <img height="25px" width="25px" src="https://static.solved.ac/tier_small/10.svg"/> |  [7576](https://www.acmicpc.net/problem/7576)  |    [토마토](https://www.acmicpc.net/problem/7576)     | 간단한 BFS |
 | <img height="25px" width="25px" src="https://static.solved.ac/tier_small/10.svg"/> | [20495](https://www.acmicpc.net/problem/20495) | [수열과 헌팅](https://www.acmicpc.net/problem/20495)  |            |
 
 ## 2021/05/25
 
-|                            난이도                            |                      번호                      |                      문제 이름                       | 유형                  |
-| :----------------------------------------------------------: | :--------------------------------------------: | :--------------------------------------------------: | --------------------- |
+|                            난이도                            |                      번호                      |                      문제 이름                       |         유형          |
+| :----------------------------------------------------------: | :--------------------------------------------: | :--------------------------------------------------: | :-------------------: |
 | <img height="25px" width="25px" src="https://static.solved.ac/tier_small/8.svg"/> | [21275](https://www.acmicpc.net/problem/21275) |  [폰 호석만](https://www.acmicpc.net/problem/21275)  |                       |
 | <img height="25px" width="25px" src="https://static.solved.ac/tier_small/11.svg"/> | [16719](https://www.acmicpc.net/problem/16719) |    [ZOAC](https://www.acmicpc.net/problem/16719)     | Implementation :bulb: |
-| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/12.svg"/> | [10986](https://www.acmicpc.net/problem/10986) |  [나머지 합](https://www.acmicpc.net/problem/10986)  | PrefixSum :bulb:      |
+| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/12.svg"/> | [10986](https://www.acmicpc.net/problem/10986) |  [나머지 합](https://www.acmicpc.net/problem/10986)  |   PrefixSum :bulb:    |
 | <img height="25px" width="25px" src="https://static.solved.ac/tier_small/13.svg"/> |  [7579](https://www.acmicpc.net/problem/7579)  |      [앱](https://www.acmicpc.net/problem/7579)      |                       |
 | <img height="25px" width="25px" src="https://static.solved.ac/tier_small/7.svg"/> | [10025](https://www.acmicpc.net/problem/10025) | [게으른 백곰](https://www.acmicpc.net/problem/10025) |                       |
-|                                                              |                                                |                                                      |                       |
-|                                                              |                                                |                                                      |                       |
-|                                                              |                                                |                                                      |                       |
 
 ## 2021/05/24
 
-|                            난이도                            |                      번호                      |                       문제 이름                       | 유형                        |
-| :----------------------------------------------------------: | :--------------------------------------------: | :---------------------------------------------------: | --------------------------- |
-| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/8.svg"/> | [13019](https://www.acmicpc.net/problem/13019) |   [A를 B로](https://www.acmicpc.net/problem/13019)    | Greedy :bulb:               |
-| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/9.svg"/> | [14430](https://www.acmicpc.net/problem/14430) |  [자원 캐기](https://www.acmicpc.net/problem/14430)   | DP :bulb:                   |
-| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/11.svg"/> |  [9024](https://www.acmicpc.net/problem/9024)  |  [두 수의 합](https://www.acmicpc.net/problem/9024)   | Two Pointer / nCr           |
+|                            난이도                            |                      번호                      |                       문제 이름                       |            유형             |
+| :----------------------------------------------------------: | :--------------------------------------------: | :---------------------------------------------------: | :-------------------------: |
+| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/8.svg"/> | [13019](https://www.acmicpc.net/problem/13019) |   [A를 B로](https://www.acmicpc.net/problem/13019)    |        Greedy :bulb:        |
+| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/9.svg"/> | [14430](https://www.acmicpc.net/problem/14430) |  [자원 캐기](https://www.acmicpc.net/problem/14430)   |          DP :bulb:          |
+| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/11.svg"/> |  [9024](https://www.acmicpc.net/problem/9024)  |  [두 수의 합](https://www.acmicpc.net/problem/9024)   |      Two Pointer / nCr      |
 | <img height="25px" width="25px" src="https://static.solved.ac/tier_small/13.svg"/> |  [1644](https://www.acmicpc.net/problem/1644)  | [소수의 연속합](https://www.acmicpc.net/problem/1644) | Two Pointer + Erathosthenes |
-| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/6.svg"/> | [11170](https://www.acmicpc.net/problem/11170) |   [0의 개수](https://www.acmicpc.net/problem/11170)   | Brute Force                 |
-| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/9.svg"/> |  [3187](https://www.acmicpc.net/problem/3187)  |   [양치기 꿍](https://www.acmicpc.net/problem/3187)   | 간단한 BFS                  |
-| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/12.svg"/> |  [4386](https://www.acmicpc.net/problem/4386)  | [별자리 만들기](https://www.acmicpc.net/problem/4386) | 기본 Prim / 기본 Kruskal    |
+| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/6.svg"/> | [11170](https://www.acmicpc.net/problem/11170) |   [0의 개수](https://www.acmicpc.net/problem/11170)   |         Brute Force         |
+| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/9.svg"/> |  [3187](https://www.acmicpc.net/problem/3187)  |   [양치기 꿍](https://www.acmicpc.net/problem/3187)   |         간단한 BFS          |
+| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/12.svg"/> |  [4386](https://www.acmicpc.net/problem/4386)  | [별자리 만들기](https://www.acmicpc.net/problem/4386) |  기본 Prim / 기본 Kruskal   |
 | <img height="25px" width="25px" src="https://static.solved.ac/tier_small/13.svg"/> | [10159](https://www.acmicpc.net/problem/10159) |     [저울](https://www.acmicpc.net/problem/10159)     |                             |
 
 ## 2021/05/21 
 
-|                            난이도                            |                      번호                      |                       문제 이름                        | 유형                |
-| :----------------------------------------------------------: | :--------------------------------------------: | :----------------------------------------------------: | ------------------- |
-| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/6.svg"/> |  [1476](https://www.acmicpc.net/problem/1476)  |    [날짜계산](https://www.acmicpc.net/problem/1476)    | Implementation      |
-| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/3.svg"/> |  [3029](https://www.acmicpc.net/problem/3029)  |      [경고](https://www.acmicpc.net/problem/3029)      | Implementation      |
-| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/9.svg"/> |  [1260](https://www.acmicpc.net/problem/1260)  |   [DFS와 BFS](https://www.acmicpc.net/problem/1260)    | Adj matrix          |
+|                            난이도                            |                      번호                      |                       문제 이름                        |        유형         |
+| :----------------------------------------------------------: | :--------------------------------------------: | :----------------------------------------------------: | :-----------------: |
+| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/6.svg"/> |  [1476](https://www.acmicpc.net/problem/1476)  |    [날짜계산](https://www.acmicpc.net/problem/1476)    |   Implementation    |
+| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/3.svg"/> |  [3029](https://www.acmicpc.net/problem/3029)  |      [경고](https://www.acmicpc.net/problem/3029)      |   Implementation    |
+| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/9.svg"/> |  [1260](https://www.acmicpc.net/problem/1260)  |   [DFS와 BFS](https://www.acmicpc.net/problem/1260)    |     Adj matrix      |
 | <img height="25px" width="25px" src="https://static.solved.ac/tier_small/9.svg"/> | [19622](https://www.acmicpc.net/problem/19622) | [회의실 배정 3](https://www.acmicpc.net/problem/19622) | Greedy (Comparator) |
 | <img height="25px" width="25px" src="https://static.solved.ac/tier_small/13.svg"/> |  [1368](https://www.acmicpc.net/problem/1368)  |     [물대기](https://www.acmicpc.net/problem/1368)     |                     |
 
 ## 2021/05/20 
 
-|                            난이도                            |                      번호                      |                          문제 이름                          | 유형           |
-| :----------------------------------------------------------: | :--------------------------------------------: | :---------------------------------------------------------: | -------------- |
-| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/4.svg"/> | [18312](https://www.acmicpc.net/problem/18312) |        [시각](https://www.acmicpc.net/problem/18312)        | Brute Force    |
-| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/9.svg"/> |  [3184](https://www.acmicpc.net/problem/3184)  |         [양](https://www.acmicpc.net/problem/3184)          | 간단한 BFS     |
+|                            난이도                            |                      번호                      |                          문제 이름                          |      유형      |
+| :----------------------------------------------------------: | :--------------------------------------------: | :---------------------------------------------------------: | :------------: |
+| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/4.svg"/> | [18312](https://www.acmicpc.net/problem/18312) |        [시각](https://www.acmicpc.net/problem/18312)        |  Brute Force   |
+| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/9.svg"/> |  [3184](https://www.acmicpc.net/problem/3184)  |         [양](https://www.acmicpc.net/problem/3184)          |   간단한 BFS   |
 | <img height="25px" width="25px" src="https://static.solved.ac/tier_small/11.svg"/> |  [7682](https://www.acmicpc.net/problem/7682)  |       [틱택토](https://www.acmicpc.net/problem/7682)        | Implementation |
 | <img height="25px" width="25px" src="https://static.solved.ac/tier_small/14.svg"/> | [10775](https://www.acmicpc.net/problem/10775) |        [공항](https://www.acmicpc.net/problem/10775)        |                |
-| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/4.svg"/> | [10808](https://www.acmicpc.net/problem/10808) |    [알파벳 개수](https://www.acmicpc.net/problem/10808)     | String         |
-| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/10.svg"/> |  [1926](https://www.acmicpc.net/problem/1926)  |        [그림](https://www.acmicpc.net/problem/1926)         | 간단한 BFS     |
+| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/4.svg"/> | [10808](https://www.acmicpc.net/problem/10808) |    [알파벳 개수](https://www.acmicpc.net/problem/10808)     |     String     |
+| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/10.svg"/> |  [1926](https://www.acmicpc.net/problem/1926)  |        [그림](https://www.acmicpc.net/problem/1926)         |   간단한 BFS   |
 | <img height="25px" width="25px" src="https://static.solved.ac/tier_small/11.svg"/> | [14891](https://www.acmicpc.net/problem/14891) |      [톱니바퀴](https://www.acmicpc.net/problem/14891)      | Implementation |
-| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/13.svg"/> | [11779](https://www.acmicpc.net/problem/11779) | [최소비용 구하기 2](https://www.acmicpc.net/problem/11779)  | Dijkstra       |
-| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/6.svg"/> | [19947](https://www.acmicpc.net/problem/19947) | [투자의 귀재 배주형](https://www.acmicpc.net/problem/19947) | DP             |
+| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/13.svg"/> | [11779](https://www.acmicpc.net/problem/11779) | [최소비용 구하기 2](https://www.acmicpc.net/problem/11779)  |    Dijkstra    |
+| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/6.svg"/> | [19947](https://www.acmicpc.net/problem/19947) | [투자의 귀재 배주형](https://www.acmicpc.net/problem/19947) |       DP       |
 
 
 
