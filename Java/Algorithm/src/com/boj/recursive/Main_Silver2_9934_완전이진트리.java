@@ -1,4 +1,4 @@
-package com.boj.recur;
+package com.boj.recursive;
 
 import java.io.BufferedReader;
 import java.io.IOException;
