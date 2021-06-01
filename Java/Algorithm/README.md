@@ -14,6 +14,7 @@ BFS에서 메모리초가: q에 중복되는 값이 들어가는지 확인하자
 | <img height="25px" width="25px" src="https://static.solved.ac/tier_small/14.svg"/> |        [14725](https://www.acmicpc.net/problem/14725)        |       [개미굴](https://www.acmicpc.net/problem/14725)        |       Trie :x:        |
 | <img height="25px" width="150px" src="https://swexpertacademy.com/main/images/sw_img/main_logo.png"/> 모의 SW 역량테스트 | [2105](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV5VwAr6APYDFAWu) | [디저트 카페](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV5VwAr6APYDFAWu) |    Simulation(DFS)    |
 | <img height="25px" width="25px" src="https://static.solved.ac/tier_small/4.svg"/> |         [1942](https://www.acmicpc.net/problem/1942)         |     [디지털 시계](https://www.acmicpc.net/problem/1942)      |  Implemetation(Time)  |
+| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/9.svg"/> |        [13565](https://www.acmicpc.net/problem/13565)        |        [침투](https://www.acmicpc.net/problem/13565)         |      간단한 BFS       |
 
 
 
