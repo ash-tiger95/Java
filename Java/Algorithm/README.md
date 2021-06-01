@@ -13,6 +13,7 @@ BFS에서 메모리초가: q에 중복되는 값이 들어가는지 확인하자
 | <img height="25px" width="25px" src="https://static.solved.ac/tier_small/11.svg"/> |        [12851](https://www.acmicpc.net/problem/12851)        |      [숨바꼭질2](https://www.acmicpc.net/problem/12851)      |      BFS :bulb:       |
 | <img height="25px" width="25px" src="https://static.solved.ac/tier_small/14.svg"/> |        [14725](https://www.acmicpc.net/problem/14725)        |       [개미굴](https://www.acmicpc.net/problem/14725)        |       Trie :x:        |
 | <img height="25px" width="150px" src="https://swexpertacademy.com/main/images/sw_img/main_logo.png"/> 모의 SW 역량테스트 | [2105](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV5VwAr6APYDFAWu) | [디저트 카페](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV5VwAr6APYDFAWu) |    Simulation(DFS)    |
+| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/4.svg"/> |         [1942](https://www.acmicpc.net/problem/1942)         |     [디지털 시계](https://www.acmicpc.net/problem/1942)      |  Implemetation(Time)  |
 
 
 
@@ -29,10 +30,11 @@ BFS에서 메모리초가: q에 중복되는 값이 들어가는지 확인하자
 
 ## 2021/05/30
 
-|                            난이도                            |                      번호                      |                      문제 이름                       |            유형            |
-| :----------------------------------------------------------: | :--------------------------------------------: | :--------------------------------------------------: | :------------------------: |
-| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/7.svg"/> | [11653](https://www.acmicpc.net/problem/11653) | [소인수분해](https://www.acmicpc.net/problem/11653)  | 에라토스테네스의 체 / sqrt |
-| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/9.svg"/> |  [9934](https://www.acmicpc.net/problem/9934)  | [완전이진트리](https://www.acmicpc.net/problem/9934) |           Recur            |
+|                            난이도                            |                      번호                      |                          문제 이름                           |            유형            |
+| :----------------------------------------------------------: | :--------------------------------------------: | :----------------------------------------------------------: | :------------------------: |
+| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/7.svg"/> | [11653](https://www.acmicpc.net/problem/11653) |     [소인수분해](https://www.acmicpc.net/problem/11653)      | 에라토스테네스의 체 / sqrt |
+| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/9.svg"/> |  [9934](https://www.acmicpc.net/problem/9934)  |     [완전이진트리](https://www.acmicpc.net/problem/9934)     |           Recur            |
+| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/12.svg"/> | [15918](https://www.acmicpc.net/problem/15918) | [랭퍼든 수열쟁이야!!](https://www.acmicpc.net/problem/15918) |            :x:             |
 
 ## 2021/05/26
 
@@ -46,11 +48,11 @@ BFS에서 메모리초가: q에 중복되는 값이 들어가는지 확인하자
 
 |                            난이도                            |                      번호                      |                      문제 이름                       |         유형          |
 | :----------------------------------------------------------: | :--------------------------------------------: | :--------------------------------------------------: | :-------------------: |
-| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/8.svg"/> | [21275](https://www.acmicpc.net/problem/21275) |  [폰 호석만](https://www.acmicpc.net/problem/21275)  |                       |
+| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/8.svg"/> | [21275](https://www.acmicpc.net/problem/21275) |  [폰 호석만](https://www.acmicpc.net/problem/21275)  |          :x:          |
 | <img height="25px" width="25px" src="https://static.solved.ac/tier_small/11.svg"/> | [16719](https://www.acmicpc.net/problem/16719) |    [ZOAC](https://www.acmicpc.net/problem/16719)     | Implementation :bulb: |
 | <img height="25px" width="25px" src="https://static.solved.ac/tier_small/12.svg"/> | [10986](https://www.acmicpc.net/problem/10986) |  [나머지 합](https://www.acmicpc.net/problem/10986)  |   PrefixSum :bulb:    |
-| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/13.svg"/> |  [7579](https://www.acmicpc.net/problem/7579)  |      [앱](https://www.acmicpc.net/problem/7579)      |                       |
-| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/7.svg"/> | [10025](https://www.acmicpc.net/problem/10025) | [게으른 백곰](https://www.acmicpc.net/problem/10025) |                       |
+| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/13.svg"/> |  [7579](https://www.acmicpc.net/problem/7579)  |      [앱](https://www.acmicpc.net/problem/7579)      |          :x:          |
+| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/7.svg"/> | [10025](https://www.acmicpc.net/problem/10025) | [게으른 백곰](https://www.acmicpc.net/problem/10025) |          :x:          |
 
 ## 2021/05/24
 
@@ -63,17 +65,17 @@ BFS에서 메모리초가: q에 중복되는 값이 들어가는지 확인하자
 | <img height="25px" width="25px" src="https://static.solved.ac/tier_small/6.svg"/> | [11170](https://www.acmicpc.net/problem/11170) |   [0의 개수](https://www.acmicpc.net/problem/11170)   |         Brute Force         |
 | <img height="25px" width="25px" src="https://static.solved.ac/tier_small/9.svg"/> |  [3187](https://www.acmicpc.net/problem/3187)  |   [양치기 꿍](https://www.acmicpc.net/problem/3187)   |         간단한 BFS          |
 | <img height="25px" width="25px" src="https://static.solved.ac/tier_small/12.svg"/> |  [4386](https://www.acmicpc.net/problem/4386)  | [별자리 만들기](https://www.acmicpc.net/problem/4386) |  기본 Prim / 기본 Kruskal   |
-| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/13.svg"/> | [10159](https://www.acmicpc.net/problem/10159) |     [저울](https://www.acmicpc.net/problem/10159)     |                             |
+| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/13.svg"/> | [10159](https://www.acmicpc.net/problem/10159) |     [저울](https://www.acmicpc.net/problem/10159)     |             :x:             |
 
 ## 2021/05/21 
 
-|                            난이도                            |                      번호                      |                       문제 이름                        |        유형         |
-| :----------------------------------------------------------: | :--------------------------------------------: | :----------------------------------------------------: | :-----------------: |
-| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/6.svg"/> |  [1476](https://www.acmicpc.net/problem/1476)  |    [날짜계산](https://www.acmicpc.net/problem/1476)    |   Implementation    |
-| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/3.svg"/> |  [3029](https://www.acmicpc.net/problem/3029)  |      [경고](https://www.acmicpc.net/problem/3029)      |   Implementation    |
-| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/9.svg"/> |  [1260](https://www.acmicpc.net/problem/1260)  |   [DFS와 BFS](https://www.acmicpc.net/problem/1260)    |     Adj matrix      |
-| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/9.svg"/> | [19622](https://www.acmicpc.net/problem/19622) | [회의실 배정 3](https://www.acmicpc.net/problem/19622) | Greedy (Comparator) |
-| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/13.svg"/> |  [1368](https://www.acmicpc.net/problem/1368)  |     [물대기](https://www.acmicpc.net/problem/1368)     |                     |
+|                            난이도                            |                      번호                      |                       문제 이름                        |         유형         |
+| :----------------------------------------------------------: | :--------------------------------------------: | :----------------------------------------------------: | :------------------: |
+| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/6.svg"/> |  [1476](https://www.acmicpc.net/problem/1476)  |    [날짜계산](https://www.acmicpc.net/problem/1476)    | Implementation(Time) |
+| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/3.svg"/> |  [3029](https://www.acmicpc.net/problem/3029)  |      [경고](https://www.acmicpc.net/problem/3029)      | Implementation(Time) |
+| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/9.svg"/> |  [1260](https://www.acmicpc.net/problem/1260)  |   [DFS와 BFS](https://www.acmicpc.net/problem/1260)    |      Adj matrix      |
+| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/9.svg"/> | [19622](https://www.acmicpc.net/problem/19622) | [회의실 배정 3](https://www.acmicpc.net/problem/19622) | Greedy (Comparator)  |
+| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/13.svg"/> |  [1368](https://www.acmicpc.net/problem/1368)  |     [물대기](https://www.acmicpc.net/problem/1368)     |                      |
 
 ## 2021/05/20 
 
