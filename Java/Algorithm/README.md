@@ -2,11 +2,11 @@
 
 ## 2021/06/01
 
-|                            난이도                            |                     번호                     |                     문제 이름                     |  유형  |
-| :----------------------------------------------------------: | :------------------------------------------: | :-----------------------------------------------: | :----: |
-| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/7.svg"/> | [1543](https://www.acmicpc.net/problem/1543) | [문서 검색](https://www.acmicpc.net/problem/1543) | String |
-|                                                              |                                              |                                                   |        |
-|                                                              |                                              |                                                   |        |
+|                            난이도                            |                      번호                      |                      문제 이름                       |      유형      |
+| :----------------------------------------------------------: | :--------------------------------------------: | :--------------------------------------------------: | :------------: |
+| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/7.svg"/> |  [1543](https://www.acmicpc.net/problem/1543)  |  [문서 검색](https://www.acmicpc.net/problem/1543)   |     String     |
+| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/11.svg"/> | [11000](https://www.acmicpc.net/problem/11000) | [강의실 배정](https://www.acmicpc.net/problem/11000) | PQ(Comparator) |
+|                                                              |                                                |                                                      |                |
 
 
 
