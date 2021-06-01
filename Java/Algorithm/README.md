@@ -1,12 +1,16 @@
 # Algorithm
 
+## 오류 분석
+
+BFS에서 메모리초가: q에 중복되는 값이 들어가는지 확인하자
+
 ## 2021/06/01
 
-|                            난이도                            |                      번호                      |                      문제 이름                       |      유형      |
-| :----------------------------------------------------------: | :--------------------------------------------: | :--------------------------------------------------: | :------------: |
-| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/7.svg"/> |  [1543](https://www.acmicpc.net/problem/1543)  |  [문서 검색](https://www.acmicpc.net/problem/1543)   |     String     |
-| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/11.svg"/> | [11000](https://www.acmicpc.net/problem/11000) | [강의실 배정](https://www.acmicpc.net/problem/11000) | PQ(Comparator) |
-|                                                              |                                                |                                                      |                |
+|                            난이도                            |                      번호                      |                      문제 이름                       |         유형          |
+| :----------------------------------------------------------: | :--------------------------------------------: | :--------------------------------------------------: | :-------------------: |
+| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/7.svg"/> |  [1543](https://www.acmicpc.net/problem/1543)  |  [문서 검색](https://www.acmicpc.net/problem/1543)   |        String         |
+| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/11.svg"/> | [11000](https://www.acmicpc.net/problem/11000) | [강의실 배정](https://www.acmicpc.net/problem/11000) | PQ(Comparator) :bulb: |
+| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/11.svg"/> | [12851](https://www.acmicpc.net/problem/12851) |  [숨바꼭질2](https://www.acmicpc.net/problem/12851)  |      BFS :bulb:       |
 
 
 
