@@ -31,7 +31,7 @@ public class Main_Gold5_12851_숨바꼭질2 { // 시간초과
 		minTime = Integer.MAX_VALUE; // 수빈이가 동생을 찾는 가장 빠른 시간
 		Case = 0; // 가장 빠른 시간의 경우의 수
 
-		if (N >= K) {
+		if (N >= K) { // 간단한 경우 처리
 			System.out.println((N - K) + "\n1");
 			return;
 		}
