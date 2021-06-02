@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 /**
- * 풀이) LCS 기본문제
+ * 풀이) 최장 공통 부분수열 기본문제
  * 
  * 처음에는 a,b를 String으로 입력받아 charAt을 사용했는데 164ms 
  * a,b를 char[]로 입력받으면 144ms
