@@ -5,7 +5,11 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 /**
- * 풀이) 최장 공통 부분수열 기본문제
+ * 풀이) 기본 LCS(Longest Common Subsequence) 최장 공통 부분수열 크기 구하기
+ * 
+ * 최장 공통 부분수열이란?
+ * -> 두 수열이 주어졌을 때, 모두의 부분 수열이 되는 수열 중 가장 긴 것 
+ * -> 부분수열이기 때문에 문자사이를 건너뛰면서 가장 긴 부분 문자열을 만든다.
  * 
  * 처음에는 a,b를 String으로 입력받아 charAt을 사용했는데 164ms 
  * a,b를 char[]로 입력받으면 144ms
