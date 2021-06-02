@@ -4,6 +4,16 @@
 
 BFS에서 메모리초가: q에 중복되는 값이 들어가는지 확인하자
 
+## 2021/06/02
+
+|                            난이도                            |                     번호                     |                      문제이름                       |         유형          |
+| :----------------------------------------------------------: | :------------------------------------------: | :-------------------------------------------------: | :-------------------: |
+| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/8.svg"/> | [1269](https://www.acmicpc.net/problem/1269) | [대칭 차집합](https://www.acmicpc.net/problem/1269) | HashSet / Two Pointer |
+| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/11.svg"/> | [9251](https://www.acmicpc.net/problem/9251) |     [LCS](https://www.acmicpc.net/problem/9251)     |       기본 LCS        |
+|                                                              |                                              |                                                     |                       |
+
+
+
 ## 2021/06/01
 
 |                            난이도                            |                             번호                             |                          문제 이름                           |         유형          |
