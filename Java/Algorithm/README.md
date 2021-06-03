@@ -4,9 +4,19 @@
 
 BFS에서 메모리초가: q에 중복되는 값이 들어가는지 확인하자
 
+## 2021/06/03
+
+|                            난이도                            |                     번호                     |                     문제 이름                     |  유형  |
+| :----------------------------------------------------------: | :------------------------------------------: | :-----------------------------------------------: | :----: |
+| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/4.svg"/> | [1159](https://www.acmicpc.net/problem/1159) | [농구 경기](https://www.acmicpc.net/problem/1159) | String |
+|                                                              |                                              |                                                   |        |
+|                                                              |                                              |                                                   |        |
+
+
+
 ## 2021/06/02
 
-|                            난이도                            |                      번호                      |                          문제이름                          |            유형            |
+|                            난이도                            |                      번호                      |                         문제 이름                          |            유형            |
 | :----------------------------------------------------------: | :--------------------------------------------: | :--------------------------------------------------------: | :------------------------: |
 | <img height="25px" width="25px" src="https://static.solved.ac/tier_small/8.svg"/> |  [1269](https://www.acmicpc.net/problem/1269)  |    [대칭 차집합](https://www.acmicpc.net/problem/1269)     |   HashSet / Two Pointer    |
 | <img height="25px" width="25px" src="https://static.solved.ac/tier_small/11.svg"/> |  [9251](https://www.acmicpc.net/problem/9251)  |        [LCS](https://www.acmicpc.net/problem/9251)         | 기본 LCS (Subsequence크기) |
@@ -15,7 +25,7 @@ BFS에서 메모리초가: q에 중복되는 값이 들어가는지 확인하자
 | <img height="25px" width="25px" src="https://static.solved.ac/tier_small/13.svg"/> |  [1958](https://www.acmicpc.net/problem/1958)  |        [LCS3](https://www.acmicpc.net/problem/1958)        |   3차원 LCS(Subsequence)   |
 | <img height="25px" width="25px" src="https://static.solved.ac/tier_small/15.svg"/> | [16118](https://www.acmicpc.net/problem/16118) |     [달빛 여우](https://www.acmicpc.net/problem/16118)     |          Dijkstra          |
 | <img height="25px" width="25px" src="https://static.solved.ac/tier_small/8.svg"/> |  [1676](https://www.acmicpc.net/problem/1676)  | [팩토리얼 0의 개수](https://www.acmicpc.net/problem/1676)  |            Math            |
-| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/11.svg"/> | [11687](https://www.acmicpc.net/problem/11687) | [팩토리얼 0의 개수](https://www.acmicpc.net/problem/11687) |                            |
+| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/11.svg"/> | [11687](https://www.acmicpc.net/problem/11687) | [팩토리얼 0의 개수](https://www.acmicpc.net/problem/11687) |            :x:             |
 
 
 
