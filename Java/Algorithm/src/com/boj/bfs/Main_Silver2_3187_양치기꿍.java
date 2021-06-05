@@ -1,4 +1,4 @@
-package com.boj.search.bfs;
+package com.boj.bfs;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -8,14 +8,13 @@ import java.util.Queue;
 import java.util.StringTokenizer;
 
 /**
- * 풀이) 간단한 BFS
- * 
+ * 간단한 BFS
  * @author jugia
  *
  */
-public class Main_Silver2_3184_양 {
+public class Main_Silver2_3187_양치기꿍 {
 
-	static int R, C, sheep, wolf, sheepAns, wolfAns;
+	static int R, C, wolf, sheep;
 	static char[][] map;
 	static boolean[][] visited;
 	static int[][] dirs = { { 1, 0 }, { -1, 0 }, { 0, 1 }, { 0, -1 } };
@@ -26,38 +25,42 @@ public class Main_Silver2_3184_양 {
 
 		R = Integer.parseInt(st.nextToken());
 		C = Integer.parseInt(st.nextToken());
-		sheepAns = wolfAns = 0; // 다음날 살아있을 양과 늑대 마리 수
 
 		map = new char[R][C];
-		visited = new boolean[R][C];
 		for (int i = 0; i < R; i++) {
-			map[i] = br.readLine().toCharArray();
-		}
-
-		for (int i = 0; i < R; i++) {
+			String in = br.readLine();
 			for (int j = 0; j < C; j++) {
-
-				if (map[i][j] != '#' && !visited[i][j]) {
-					sheep = wolf = 0; // 한 구역에 대한 양과 늑대 임시 카운트
-					visited[i][j] = true;
-					if (map[i][j] == 'o') {
-						sheep++;
-					} else if (map[i][j] == 'v') {
-						wolf++;
-					}
-
-					bfs(i, j);
-				}
-
+				map[i][j] = in.charAt(j);
 			}
 		}
 
-		System.out.println(sheepAns + " " + wolfAns);
+		visited = new boolean[R][C];
+		wolf = sheep = 0;
+
+		for (int i = 0; i < R; i++) {
+			for (int j = 0; j < C; j++) {
+				if (map[i][j] != '#' && !visited[i][j]) {
+					bfs(i, j);
+				}
+			}
+		}
+
+		System.out.println(sheep + " " + wolf);
 	}
 
 	private static void bfs(int sy, int sx) {
 		Queue<int[]> q = new LinkedList<>();
 		q.offer(new int[] { sy, sx });
+		visited[sy][sx] = true;
+
+		int sheepCnt = 0;
+		int wolfCnt = 0;
+
+		if (map[sy][sx] == 'v') {
+			wolfCnt++;
+		} else if (map[sy][sx] == 'k') {
+			sheepCnt++;
+		}
 
 		while (!q.isEmpty()) {
 			int[] cp = q.poll();
@@ -74,19 +77,19 @@ public class Main_Silver2_3184_양 {
 					q.offer(new int[] { ny, nx });
 					visited[ny][nx] = true;
 
-					if (map[ny][nx] == 'o') { // 마리 수 증가
-						sheep++;
-					} else if (map[ny][nx] == 'v') {
-						wolf++;
+					if (map[ny][nx] == 'v') {
+						wolfCnt++;
+					} else if (map[ny][nx] == 'k') {
+						sheepCnt++;
 					}
 				}
 			}
 		}
 
-		if (sheep > wolf) {
-			sheepAns += sheep;
+		if (wolfCnt >= sheepCnt) {
+			wolf += wolfCnt;
 		} else {
-			wolfAns += wolf;
+			sheep += sheepCnt;
 		}
 	}
 

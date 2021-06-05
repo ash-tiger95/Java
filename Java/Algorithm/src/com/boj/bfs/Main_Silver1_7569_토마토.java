@@ -1,4 +1,4 @@
-package com.boj.search.bfs;
+package com.boj.bfs;
 
 import java.io.BufferedReader;
 import java.io.IOException;

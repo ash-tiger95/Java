@@ -1,4 +1,4 @@
-package com.boj.search.bfs;
+package com.boj.bfs;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -7,10 +7,16 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.StringTokenizer;
 
-public class Main_Silver2_13565_침투 {
+/**
+ * 풀이) 간단한 BFS
+ * 
+ * @author jugia
+ *
+ */
+public class Main_Silver2_3184_양 {
 
-	static int R, C;
-	static int[][] map;
+	static int R, C, sheep, wolf, sheepAns, wolfAns;
+	static char[][] map;
 	static boolean[][] visited;
 	static int[][] dirs = { { 1, 0 }, { -1, 0 }, { 0, 1 }, { 0, -1 } };
 
@@ -20,40 +26,41 @@ public class Main_Silver2_13565_침투 {
 
 		R = Integer.parseInt(st.nextToken());
 		C = Integer.parseInt(st.nextToken());
+		sheepAns = wolfAns = 0; // 다음날 살아있을 양과 늑대 마리 수
 
-		map = new int[R][C];
-		for (int i = 0; i < R; i++) {
-			String in = br.readLine();
-			for (int j = 0; j < C; j++) {
-				map[i][j] = in.charAt(j) - '0'; // 0: 전류 가능, 1: 차단
-			}
-		}
-
+		map = new char[R][C];
 		visited = new boolean[R][C];
-		for (int i = 0; i < C; i++) {
-			if (map[0][i] == 0 && !visited[0][i]) {
-				if (bfs(0, i)) {
-					System.out.println("YES"); // 더이상 탐색할 필요가 없다.
-					return;
+		for (int i = 0; i < R; i++) {
+			map[i] = br.readLine().toCharArray();
+		}
+
+		for (int i = 0; i < R; i++) {
+			for (int j = 0; j < C; j++) {
+
+				if (map[i][j] != '#' && !visited[i][j]) {
+					sheep = wolf = 0; // 한 구역에 대한 양과 늑대 임시 카운트
+					visited[i][j] = true;
+					if (map[i][j] == 'o') {
+						sheep++;
+					} else if (map[i][j] == 'v') {
+						wolf++;
+					}
+
+					bfs(i, j);
 				}
+
 			}
 		}
 
-		System.out.println("NO");
+		System.out.println(sheepAns + " " + wolfAns);
 	}
 
-	private static boolean bfs(int sy, int sx) {
+	private static void bfs(int sy, int sx) {
 		Queue<int[]> q = new LinkedList<>();
 		q.offer(new int[] { sy, sx });
-		visited[sy][sx] = true;
 
 		while (!q.isEmpty()) {
 			int[] cp = q.poll();
-
-			if (cp[0] == R - 1) { // inner side에 접근 가능하면 더이상 탐색할 필요 없다.
-
-				return true;
-			}
 
 			for (int d = 0; d < 4; d++) {
 				int ny = cp[0] + dirs[d][0];
@@ -63,14 +70,24 @@ public class Main_Silver2_13565_침투 {
 					continue;
 				}
 
-				if (map[ny][nx] == 0 && !visited[ny][nx]) {
+				if (map[ny][nx] != '#' && !visited[ny][nx]) {
 					q.offer(new int[] { ny, nx });
 					visited[ny][nx] = true;
+
+					if (map[ny][nx] == 'o') { // 마리 수 증가
+						sheep++;
+					} else if (map[ny][nx] == 'v') {
+						wolf++;
+					}
 				}
 			}
 		}
 
-		return false;
+		if (sheep > wolf) {
+			sheepAns += sheep;
+		} else {
+			wolfAns += wolf;
+		}
 	}
 
 	private static boolean boundary(int ny, int nx) {

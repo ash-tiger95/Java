@@ -1,4 +1,4 @@
-package com.boj.search.bfs;
+package com.boj.bfs;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -7,15 +7,9 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.StringTokenizer;
 
-/**
- * 풀이) 간단한 BFS
- * 
- * @author jugia
- *
- */
-public class Main_Silver1_1926_그림 {
+public class Main_Silver2_13565_침투 {
 
-	static int N, M, count, max;
+	static int R, C;
 	static int[][] map;
 	static boolean[][] visited;
 	static int[][] dirs = { { 1, 0 }, { -1, 0 }, { 0, 1 }, { 0, -1 } };
@@ -24,39 +18,42 @@ public class Main_Silver1_1926_그림 {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		StringTokenizer st = new StringTokenizer(br.readLine());
 
-		N = Integer.parseInt(st.nextToken());
-		M = Integer.parseInt(st.nextToken());
+		R = Integer.parseInt(st.nextToken());
+		C = Integer.parseInt(st.nextToken());
 
-		map = new int[N][M];
-		visited = new boolean[N][M];
-		for (int i = 0; i < N; i++) {
-			st = new StringTokenizer(br.readLine());
-			for (int j = 0; j < M; j++) {
-				map[i][j] = Integer.parseInt(st.nextToken());
+		map = new int[R][C];
+		for (int i = 0; i < R; i++) {
+			String in = br.readLine();
+			for (int j = 0; j < C; j++) {
+				map[i][j] = in.charAt(j) - '0'; // 0: 전류 가능, 1: 차단
 			}
 		}
 
-		count = max = 0;
-		for (int i = 0; i < N; i++) {
-			for (int j = 0; j < M; j++) {
-				if (map[i][j] == 1 && !visited[i][j]) {
-					bfs(i, j);
+		visited = new boolean[R][C];
+		for (int i = 0; i < C; i++) {
+			if (map[0][i] == 0 && !visited[0][i]) {
+				if (bfs(0, i)) {
+					System.out.println("YES"); // 더이상 탐색할 필요가 없다.
+					return;
 				}
 			}
 		}
 
-		System.out.println(count);
-		System.out.println(max);
+		System.out.println("NO");
 	}
 
-	private static void bfs(int sy, int sx) {
+	private static boolean bfs(int sy, int sx) {
 		Queue<int[]> q = new LinkedList<>();
 		q.offer(new int[] { sy, sx });
 		visited[sy][sx] = true;
-		int area = 1; // 각 그림의 넓이
 
 		while (!q.isEmpty()) {
 			int[] cp = q.poll();
+
+			if (cp[0] == R - 1) { // inner side에 접근 가능하면 더이상 탐색할 필요 없다.
+
+				return true;
+			}
 
 			for (int d = 0; d < 4; d++) {
 				int ny = cp[0] + dirs[d][0];
@@ -66,19 +63,17 @@ public class Main_Silver1_1926_그림 {
 					continue;
 				}
 
-				if (!visited[ny][nx] && map[ny][nx] == 1) {
+				if (map[ny][nx] == 0 && !visited[ny][nx]) {
 					q.offer(new int[] { ny, nx });
 					visited[ny][nx] = true;
-					area++;
 				}
 			}
 		}
 
-		count++; // 그림 총 개수
-		max = area > max ? area : max; // 가장 큰 넓이로 업데이트
+		return false;
 	}
 
 	private static boolean boundary(int ny, int nx) {
-		return ny >= 0 && ny < N && nx >= 0 && nx < M;
+		return ny >= 0 && ny < R && nx >= 0 && nx < C;
 	}
 }
