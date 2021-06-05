@@ -44,6 +44,7 @@ public class Solution_Test_2105_디저트카페 {
 		} // for T
 
 		System.out.println(sb);
+		br.close();
 	}
 
 	private static void dfs(int sy, int sx, int y, int x, int dir, boolean[] dessert, int dessertCnt) {

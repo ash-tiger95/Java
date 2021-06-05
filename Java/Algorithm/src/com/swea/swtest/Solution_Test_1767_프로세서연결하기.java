@@ -49,6 +49,7 @@ public class Solution_Test_1767_프로세서연결하기 {
 		} // for T
 
 		System.out.println(sb);
+		br.close();
 	}
 
 	private static void dfs(int idx, int coreCnt, int len) {
