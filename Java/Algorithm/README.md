@@ -10,7 +10,7 @@ BFS에서 메모리초가: q에 중복되는 값이 들어가는지 확인하자
 | :----------------------------------------------------------: | :------------------------------------------: | :-------------------------------------------------: | :--------: |
 | <img height="25px" width="25px" src="https://static.solved.ac/tier_small/4.svg"/> | [1668](https://www.acmicpc.net/problem/1668) | [트로피 진열](https://www.acmicpc.net/problem/1668) | BruteForce |
 | <img height="25px" width="25px" src="https://static.solved.ac/tier_small/9.svg"/> | [4963](https://www.acmicpc.net/problem/4963) |  [섬의 개수](https://www.acmicpc.net/problem/4963)  | 간단한 BFS |
-|                                                              |                                              |                                                     |            |
+| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/12.svg"/> | [6087](https://www.acmicpc.net/problem/6087) | [레이저 통신](https://www.acmicpc.net/problem/6087) |    BFS     |
 
 
 
