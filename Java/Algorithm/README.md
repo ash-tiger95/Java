@@ -6,11 +6,10 @@ BFS에서 메모리초가: q에 중복되는 값이 들어가는지 확인하자
 
 ## 2021/06/06
 
-|                            난이도                            |                     번호                     |                  문제 이름                   |      유형      |
-| :----------------------------------------------------------: | :------------------------------------------: | :------------------------------------------: | :------------: |
-| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/4.svg"/> | [1718](https://www.acmicpc.net/problem/1718) | [암호](https://www.acmicpc.net/problem/1718) | Implementation |
-|                                                              |                                              |                                              |                |
-|                                                              |                                              |                                              |                |
+|                            난이도                            |                             번호                             |                          문제 이름                           |      유형      |
+| :----------------------------------------------------------: | :----------------------------------------------------------: | :----------------------------------------------------------: | :------------: |
+| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/4.svg"/> |         [1718](https://www.acmicpc.net/problem/1718)         |         [암호](https://www.acmicpc.net/problem/1718)         | Implementation |
+| <img height="25px" width="150px" src="https://swexpertacademy.com/main/images/sw_img/main_logo.png"/>모의 SW 역량테스트 | [5650](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AWXRF8s6ezEDFAUo) | [핀볼 게임](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AWXRF8s6ezEDFAUo) |   Simulation   |
 
 
 
@@ -33,8 +32,6 @@ BFS에서 메모리초가: q에 중복되는 값이 들어가는지 확인하자
 |                            난이도                            |                     번호                     |                     문제 이름                     |  유형  |
 | :----------------------------------------------------------: | :------------------------------------------: | :-----------------------------------------------: | :----: |
 | <img height="25px" width="25px" src="https://static.solved.ac/tier_small/4.svg"/> | [1159](https://www.acmicpc.net/problem/1159) | [농구 경기](https://www.acmicpc.net/problem/1159) | String |
-|                                                              |                                              |                                                   |        |
-|                                                              |                                              |                                                   |        |
 
 
 
