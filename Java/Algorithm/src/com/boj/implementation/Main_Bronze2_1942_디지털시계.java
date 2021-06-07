@@ -3,7 +3,6 @@ package com.boj.implementation;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.Arrays;
 import java.util.StringTokenizer;
 
 public class Main_Bronze2_1942_디지털시계 {
