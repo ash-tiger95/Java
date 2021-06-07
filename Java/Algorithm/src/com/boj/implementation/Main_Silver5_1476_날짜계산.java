@@ -53,5 +53,8 @@ public class Main_Silver5_1476_날짜계산 {
 		}
 		
 		System.out.println(Ans);
+		
+		br.close();
 	}
+	
 }

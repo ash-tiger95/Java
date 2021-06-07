@@ -83,6 +83,7 @@ public class Main_Gold5_16719_ZOAC {
 		}
 		System.out.println(sb);
 
+		br.close();
 	}
 
 	private static boolean isFinish(int idx) {

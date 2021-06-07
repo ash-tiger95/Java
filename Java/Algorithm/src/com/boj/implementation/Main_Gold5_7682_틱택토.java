@@ -72,6 +72,8 @@ public class Main_Gold5_7682_틱택토 {
 
 		} // end while
 		System.out.println(sb);
+		
+		br.close();
 	}
 
 	private static void check() {

@@ -54,5 +54,7 @@ public class Main_Bronze3_3029_경고 {
 
 			System.out.printf("%02d:%02d:%02d", hour, minute, second);
 		}
+		
+		br.close();
 	}
 }

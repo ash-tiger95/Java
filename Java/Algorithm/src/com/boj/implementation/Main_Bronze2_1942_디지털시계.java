@@ -64,5 +64,7 @@ public class Main_Bronze2_1942_디지털시계 {
 		}
 
 		System.out.println(sb);
+		
+		br.close();
 	}
 }

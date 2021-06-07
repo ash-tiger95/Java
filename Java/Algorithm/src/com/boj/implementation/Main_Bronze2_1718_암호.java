@@ -39,5 +39,6 @@ public class Main_Bronze2_1718_암호 {
 
 		System.out.println(sb);
 
+		br.close();
 	}
 }
