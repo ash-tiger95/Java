@@ -6,11 +6,11 @@ BFS에서 메모리초가: q에 중복되는 값이 들어가는지 확인하자
 
 ## 2021/06/09
 
-|                            난이도                            |                     번호                     |                  문제 이름                   |        유형        |
-| :----------------------------------------------------------: | :------------------------------------------: | :------------------------------------------: | :----------------: |
-| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/6.svg"/> | [7568](https://www.acmicpc.net/problem/7568) | [덩치](https://www.acmicpc.net/problem/7568) | Brute Force :bulb: |
-| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/9.svg"/> | [6603](https://www.acmicpc.net/problem/6603) | [로또](https://www.acmicpc.net/problem/6603) |        nCr         |
-|                                                              |                                              |                                              |                    |
+|                            난이도                            |                     번호                     |                   문제 이름                    |        유형        |
+| :----------------------------------------------------------: | :------------------------------------------: | :--------------------------------------------: | :----------------: |
+| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/6.svg"/> | [7568](https://www.acmicpc.net/problem/7568) |  [덩치](https://www.acmicpc.net/problem/7568)  | Brute Force :bulb: |
+| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/9.svg"/> | [6603](https://www.acmicpc.net/problem/6603) |  [로또](https://www.acmicpc.net/problem/6603)  |        nCr         |
+| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/12.svg"/> | [3151](https://www.acmicpc.net/problem/3151) | [합이 0](https://www.acmicpc.net/problem/3151) | Two Pointer :bulb: |
 
 
 
