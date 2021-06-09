@@ -6,6 +6,11 @@ import java.io.InputStreamReader;
 import java.util.Arrays;
 import java.util.StringTokenizer;
 
+/**
+ * 기본 문제) Gold4 2473 세 용액 (Two Pointer)
+ * @author jugia
+ *
+ */
 public class Main_Gold4_3151_합이0 {
 
 	static int N;
@@ -27,8 +32,8 @@ public class Main_Gold4_3151_합이0 {
 		ans = 0; // 3명의 학생의 코딩실력 합이 0이 되는 경우의 수 구하기
 
 		// 풀이1. nCr, 시간초과
-//		out = new int[3];
-//		nCr(0, 0);
+		out = new int[3];
+		nCr(0, 0);
 
 		// 풀이2. 투 포인터
 		Arrays.sort(in);
@@ -87,6 +92,8 @@ public class Main_Gold4_3151_합이0 {
 		}
 
 		System.out.println(ans);
+		
+		br.close();
 	}
 
 	private static void nCr(int cnt, int cur) {

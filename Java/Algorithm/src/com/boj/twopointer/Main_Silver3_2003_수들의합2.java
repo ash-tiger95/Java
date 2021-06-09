@@ -48,5 +48,6 @@ public class Main_Silver3_2003_수들의합2 {
 
 		System.out.println(Ans);
 
+		br.close();
 	}
 }

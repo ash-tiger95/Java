@@ -50,5 +50,7 @@ public class Main_Gold4_1806_부분합 {
 		}
 
 		System.out.println(Ans == Integer.MAX_VALUE ? 0 : Ans);
+		
+		br.close();
 	}
 }

@@ -66,5 +66,7 @@ public class Main_Gold5_9024_두수의합 { // 실패
 			
 		} // for T
 		System.out.print(sb);
+		
+		br.close();
 	}
 }

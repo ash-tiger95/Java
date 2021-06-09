@@ -4,7 +4,6 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
-import java.util.Arrays;
 
 /**
  * 1. Eratosthenes로 소수 구하기
@@ -47,6 +46,7 @@ public class Main_Gold3_1644_소수의연속합 {
 
 		System.out.println(Ans);
 
+		br.close();
 	}
 
 	private static void eratosthenes() {

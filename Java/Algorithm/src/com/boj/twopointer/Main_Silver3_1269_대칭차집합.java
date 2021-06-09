@@ -49,6 +49,8 @@ public class Main_Silver3_1269_대칭차집합 {
 		}
 
 		System.out.println(aSize + bSize - Ans * 2);
+		
+		br.close();
 	}
 
 	private static void search(int as, int bs, int[] aArr, int[] bArr) {
