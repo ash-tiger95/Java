@@ -4,6 +4,14 @@
 
 BFS에서 메모리초가: q에 중복되는 값이 들어가는지 확인하자
 
+## 2021/06/11
+
+|                            난이도                            |                      번호                      |                      문제 이름                      |  유형  |
+| :----------------------------------------------------------: | :--------------------------------------------: | :-------------------------------------------------: | :----: |
+| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/6.svg"/> | [20300](https://www.acmicpc.net/problem/20300) | [서강근육맨](https://www.acmicpc.net/problem/20300) | Greedy |
+|                                                              |                                                |                                                     |        |
+|                                                              |                                                |                                                     |        |
+
 ## 2021/06/09
 
 |                            난이도                            |                      번호                      |                      문제 이름                       |                             유형                             |
@@ -15,19 +23,18 @@ BFS에서 메모리초가: q에 중복되는 값이 들어가는지 확인하자
 | <img height="25px" width="25px" src="https://static.solved.ac/tier_small/4.svg"/> |  [2231](https://www.acmicpc.net/problem/2231)  |    [분해합](https://www.acmicpc.net/problem/2231)    |                         Brute Force                          |
 | <img height="25px" width="25px" src="https://static.solved.ac/tier_small/11.svg"/> | [14699](https://www.acmicpc.net/problem/14699) | [관악산 등산](https://www.acmicpc.net/problem/14699) |                            Graph                             |
 
-
-
 ## 2021/06/08
+
+|                            난이도                            |                      번호                      |                      문제 이름                       | 유형 |
+| :----------------------------------------------------------: | :--------------------------------------------: | :--------------------------------------------------: | :--: |
+| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/13.svg"/> | [15644](https://www.acmicpc.net/problem/15644) | [구슬 탈출 3](https://www.acmicpc.net/problem/15644) | :x:  |
 
 ## 2021/06/07
 
-| 난이도 | 번호 | 문제 이름 | 유형 |
-| :----: | :--: | --------- | ---- |
-|        |      |           |      |
-|        |      |           |      |
-|        |      |           |      |
-
-
+|                            난이도                            |                      번호                      |                      문제 이름                       |      유형      |
+| :----------------------------------------------------------: | :--------------------------------------------: | :--------------------------------------------------: | :------------: |
+| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/4.svg"/> | [11365](https://www.acmicpc.net/problem/11365) |  [!밀비급일](https://www.acmicpc.net/problem/11365)  | Implementation |
+| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/11.svg"/> | [12865](https://www.acmicpc.net/problem/12865) | [평범한 배낭](https://www.acmicpc.net/problem/12865) |    Knapsack    |
 
 ## 2021/06/06
 
@@ -35,8 +42,6 @@ BFS에서 메모리초가: q에 중복되는 값이 들어가는지 확인하자
 | :----------------------------------------------------------: | :----------------------------------------------------------: | :----------------------------------------------------------: | :------------: |
 | <img height="25px" width="25px" src="https://static.solved.ac/tier_small/4.svg"/> |         [1718](https://www.acmicpc.net/problem/1718)         |         [암호](https://www.acmicpc.net/problem/1718)         | Implementation |
 | <img height="25px" width="150px" src="https://swexpertacademy.com/main/images/sw_img/main_logo.png"/>모의 SW 역량테스트 | [5650](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AWXRF8s6ezEDFAUo) | [핀볼 게임](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AWXRF8s6ezEDFAUo) |   Simulation   |
-
-
 
 ## 2021/06/05
 
@@ -50,15 +55,11 @@ BFS에서 메모리초가: q에 중복되는 값이 들어가는지 확인하자
 | <img height="25px" width="25px" src="https://static.solved.ac/tier_small/11.svg"/> |        [10026](https://www.acmicpc.net/problem/10026)        |      [적록색약](https://www.acmicpc.net/problem/10026)       |    BFS     |
 | <img height="25px" width="150px" src="https://swexpertacademy.com/main/images/sw_img/main_logo.png"/>모의 SW 역량테스트 | [1949](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV5PoOKKAPIDFAUq&categoryId=AV5PoOKKAPIDFAUq&categoryType=CODE&problemTitle=sw&orderBy=FIRST_REG_DATETIME&selectCodeLang=ALL&select-1=&pageSize=10&pageIndex=2) | [등산로 조성](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV5PoOKKAPIDFAUq&categoryId=AV5PoOKKAPIDFAUq&categoryType=CODE&problemTitle=sw&orderBy=FIRST_REG_DATETIME&selectCodeLang=ALL&select-1=&pageSize=10&pageIndex=2) |    DFS     |
 
-
-
 ## 2021/06/03
 
 |                            난이도                            |                     번호                     |                     문제 이름                     |  유형  |
 | :----------------------------------------------------------: | :------------------------------------------: | :-----------------------------------------------: | :----: |
 | <img height="25px" width="25px" src="https://static.solved.ac/tier_small/4.svg"/> | [1159](https://www.acmicpc.net/problem/1159) | [농구 경기](https://www.acmicpc.net/problem/1159) | String |
-
-
 
 ## 2021/06/02
 
@@ -73,8 +74,6 @@ BFS에서 메모리초가: q에 중복되는 값이 들어가는지 확인하자
 | <img height="25px" width="25px" src="https://static.solved.ac/tier_small/8.svg"/> |  [1676](https://www.acmicpc.net/problem/1676)  | [팩토리얼 0의 개수](https://www.acmicpc.net/problem/1676)  |            Math            |
 | <img height="25px" width="25px" src="https://static.solved.ac/tier_small/11.svg"/> | [11687](https://www.acmicpc.net/problem/11687) | [팩토리얼 0의 개수](https://www.acmicpc.net/problem/11687) |            :x:             |
 
-
-
 ## 2021/06/01
 
 |                            난이도                            |                             번호                             |                          문제 이름                           |         유형          |
@@ -86,8 +85,6 @@ BFS에서 메모리초가: q에 중복되는 값이 들어가는지 확인하자
 | <img height="25px" width="150px" src="https://swexpertacademy.com/main/images/sw_img/main_logo.png"/> 모의 SW 역량테스트 | [2105](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV5VwAr6APYDFAWu) | [디저트 카페](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV5VwAr6APYDFAWu) |    Simulation(DFS)    |
 | <img height="25px" width="25px" src="https://static.solved.ac/tier_small/4.svg"/> |         [1942](https://www.acmicpc.net/problem/1942)         |     [디지털 시계](https://www.acmicpc.net/problem/1942)      |  Implemetation(Time)  |
 | <img height="25px" width="25px" src="https://static.solved.ac/tier_small/9.svg"/> |        [13565](https://www.acmicpc.net/problem/13565)        |        [침투](https://www.acmicpc.net/problem/13565)         |      간단한 BFS       |
-
-
 
 ## 2021/05/31
 
