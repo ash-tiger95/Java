@@ -29,6 +29,7 @@ public class Main_Silver2_1912_연속합 {
 		
 		
 		
+		
 	}
 	
 	private static int recur(int N) {
