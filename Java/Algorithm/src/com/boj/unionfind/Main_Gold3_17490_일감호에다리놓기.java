@@ -169,7 +169,8 @@ public class Main_Gold3_17490_일감호에다리놓기 {
 			}
 
 		}
-
+		
+		br.close();
 	}
 
 	private static void makeSet() {

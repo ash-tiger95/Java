@@ -22,5 +22,7 @@ public class Main_Bronze2_10808_알파벳개수 {
 			sb.append(ans[i]).append(" ");
 		}
 		System.out.println(sb);
+		
+		br.close();
 	}
 }

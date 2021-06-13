@@ -38,5 +38,7 @@ public class Main_Bronze2_1159_농구경기 {
 		} else {
 			System.out.println("PREDAJA");
 		}
+		
+		br.close();
 	}
 }

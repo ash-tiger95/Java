@@ -36,6 +36,8 @@ public class Main_Silver4_1543_문서검색 {
 		}
 
 		System.out.println(Ans);
+		
+		br.close();
 	}
 	
 	// 잘못생각한 풀이

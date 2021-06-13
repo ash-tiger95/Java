@@ -1,9 +1,6 @@
 package com.boj.string;
 
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
-import java.util.StringTokenizer;
 
 public class Main_Bronze2_1152_단어의개수 {
 
