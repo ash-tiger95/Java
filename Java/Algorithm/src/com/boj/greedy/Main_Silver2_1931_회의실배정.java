@@ -57,5 +57,7 @@ public class Main_Silver2_1931_회의실배정 {
 		}
 
 		System.out.println(count);
+		
+		br.close();
 	}
 }

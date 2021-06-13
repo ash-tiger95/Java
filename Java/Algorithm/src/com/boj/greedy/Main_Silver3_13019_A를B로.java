@@ -56,5 +56,6 @@ public class Main_Silver3_13019_A를B로 {
 			System.out.println(size - count);
 		}
 
+		br.close();
 	}
 }
