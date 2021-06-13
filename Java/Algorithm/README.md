@@ -6,11 +6,12 @@ BFS에서 메모리초가: q에 중복되는 값이 들어가는지 확인하자
 
 ## 2021/06/13
 
-|                            난이도                            |                      번호                      |                      문제 이름                      |      유형      |
-| :----------------------------------------------------------: | :--------------------------------------------: | :-------------------------------------------------: | :------------: |
-| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/4.svg"/> |  [2309](https://www.acmicpc.net/problem/2309)  | [일곱 난쟁이](https://www.acmicpc.net/problem/2309) |  Brute Force   |
-| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/9.svg"/> | [14400](https://www.acmicpc.net/problem/14400) |  [편의점2](https://www.acmicpc.net/problem/14400)   | Greedy :bulb:  |
-| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/9.svg"/> | [17291](https://www.acmicpc.net/problem/17291) |  [새끼치기](https://www.acmicpc.net/problem/17291)  | Recursive / DP |
+|                            난이도                            |                      번호                      |                          문제 이름                          |               유형                |
+| :----------------------------------------------------------: | :--------------------------------------------: | :---------------------------------------------------------: | :-------------------------------: |
+| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/4.svg"/> |  [2309](https://www.acmicpc.net/problem/2309)  |     [일곱 난쟁이](https://www.acmicpc.net/problem/2309)     |            Brute Force            |
+| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/9.svg"/> | [14400](https://www.acmicpc.net/problem/14400) |      [편의점2](https://www.acmicpc.net/problem/14400)       |           Greedy :bulb:           |
+| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/9.svg"/> | [17291](https://www.acmicpc.net/problem/17291) |      [새끼치기](https://www.acmicpc.net/problem/17291)      |          Recursive / DP           |
+| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/13.svg"/> | [17490](https://www.acmicpc.net/problem/17490) | [일감호에 다리 놓기](https://www.acmicpc.net/problem/17490) | Union-Find<br>Greedy로도 풀어보자 |
 
 ## 2021/06/12
 
