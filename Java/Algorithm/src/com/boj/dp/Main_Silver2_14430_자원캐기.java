@@ -43,5 +43,7 @@ public class Main_Silver2_14430_자원캐기 {
 		}
 
 		System.out.println(dp[R][C]);
+		
+		br.close();
 	}
 }

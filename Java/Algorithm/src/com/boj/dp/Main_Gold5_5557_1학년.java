@@ -37,6 +37,8 @@ public class Main_Gold5_5557_1학년 {
 
 		cal(0);
 		System.out.println(count[in[N-1]]);
+		
+		br.close();
 	}
 
 	private static void cal(int index) {
