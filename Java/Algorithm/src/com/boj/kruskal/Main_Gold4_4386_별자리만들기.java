@@ -1,4 +1,4 @@
-package com.boj.graph.kruskal;
+package com.boj.kruskal;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -61,6 +61,8 @@ public class Main_Gold4_4386_별자리만들기 {
 
 		kruskal();
 		System.out.println(String.format("%.2f", Ans));
+		
+		br.close();
 	}
 
 	private static void makeSet() {
