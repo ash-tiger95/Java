@@ -1,8 +1,40 @@
-# Woori i
-
-![image-20210503110222351](README.assets/image-20210503110222351.png)
+# 투명하고 간편한 우리 아이 용돈 관리 서비스
 
 
+
+<center>
+
+![logo](./Asset/logo.PNG)
+
+</center>
+
+### 성과: 우리은행 온택트 해커톤 대상
+
+### [UCC](https://youtu.be/YFNKrRlOvww)
+
+***
+
+# 0. 주제
+
+
+
+<center>
+
+하이
+
+</center>
+
+
+
+
+
+
+
+
+
+# WooRI i
+
+![skill](./Asset/skill.PNG)
 
 ## 기술 스택
 

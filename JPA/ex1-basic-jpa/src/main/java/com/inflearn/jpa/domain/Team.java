@@ -1,29 +1,26 @@
 package com.inflearn.jpa.domain;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 
 @Entity
-public class Member {
-	
+public class Team {
+
 	@Id @GeneratedValue
-	@Column(name="MEMBER_ID")
+	@Column(name = "TEAM_ID")
 	private Long id;
 	
-	@Column(name = "USERNAME")
 	private String name;
-	
-//	@Column(name = "TEAM_ID")
-//	private Long teamId;
-	
-	@ManyToOne
-	@JoinColumn(name = "TEAM_ID")
-	private Team team;
 
+	@OneToMany(mappedBy = "team") // mappedBy는 변수명
+	private List<Member> members = new ArrayList<>();
+	
 	public Long getId() {
 		return id;
 	}
@@ -40,11 +37,13 @@ public class Member {
 		this.name = name;
 	}
 
-	public Team getTeam() {
-		return team;
+	public List<Member> getMembers() {
+		return members;
 	}
 
-	public void setTeam(Team team) {
-		this.team = team;
+	public void setMembers(List<Member> members) {
+		this.members = members;
 	}
+
+	
 }

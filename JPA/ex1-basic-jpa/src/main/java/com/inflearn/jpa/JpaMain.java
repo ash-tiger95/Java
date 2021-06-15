@@ -1,7 +1,6 @@
 package com.inflearn.jpa;
 
-import java.time.LocalDate;
-import java.time.LocalDateTime;
+import java.util.List;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -9,6 +8,7 @@ import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
 
 import com.inflearn.jpa.domain.Member;
+import com.inflearn.jpa.domain.Team;
 
 public class JpaMain {
 
@@ -20,20 +20,36 @@ public class JpaMain {
 		tx.begin();
 
 		try {
+			// insert
+			Team team = new Team();
+			team.setName("TeamA");
+			em.persist(team);
+
 			Member member = new Member();
-			member.setId(1L);
-			member.setTestLocalDate(LocalDate.now());
-			member.setTestLocalDateTime(LocalDateTime.now());
-			
+			member.setName("member1");
+			member.setTeam(team);
 			em.persist(member);
+
+			// 쿼리를 보고 싶으면 영속성 컨텍스트를 날려준다.
+			em.flush();
+			em.clear();
+
+			// select
+			Member findMember = em.find(Member.class, member.getId());
+
+			List<Member> members = findMember.getTeam().getMembers();
 			
-			tx.commit(); // DB에 쿼리가 날라간다.
+			for(Member m : members) {
+				System.out.println("m = "+m.getName());
+			}
+
+			tx.commit();
 		} catch (Exception e) {
 			tx.rollback();
 		} finally {
 			em.close();
 		}
-		
+
 		emf.close();
 
 	}
