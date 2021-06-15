@@ -1,4 +1,4 @@
-package com.swea.swtest;
+package com.swea.sw역량테스트;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;
@@ -96,6 +96,7 @@ public class Solution_Test_5650_핀볼게임 {
 		} // for T
 
 		System.out.println(sb);
+		br.close();
 	}
 
 	private static int startGame(int sy, int sx, int sd) {

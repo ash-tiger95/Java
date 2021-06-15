@@ -1,4 +1,4 @@
-package com.swea.swtest;
+package com.swea.sw역량테스트;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;

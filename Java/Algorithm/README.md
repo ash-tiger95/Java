@@ -4,6 +4,13 @@
 
 BFS에서 메모리초가: q에 중복되는 값이 들어가는지 확인하자
 
+## 2021/06/15
+
+|                            난이도                            |                             번호                             |                          문제 이름                           |      유형      |
+| :----------------------------------------------------------: | :----------------------------------------------------------: | :----------------------------------------------------------: | :------------: |
+| <img height="25px" width="150px" src="https://swexpertacademy.com/main/images/sw_img/main_logo.png"/>S/W 문제해결 기본 1일차 D2 | [1204](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV13zo1KAAACFAYh&categoryId=AV13zo1KAAACFAYh&categoryType=CODE&problemTitle=s%2Fw&orderBy=FIRST_REG_DATETIME&selectCodeLang=ALL&select-1=&pageSize=10&pageIndex=5) | [최빈수 구하기](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV13zo1KAAACFAYh&categoryId=AV13zo1KAAACFAYh&categoryType=CODE&problemTitle=s%2Fw&orderBy=FIRST_REG_DATETIME&selectCodeLang=ALL&select-1=&pageSize=10&pageIndex=5) | Implementation |
+| <img height="25px" width="150px" src="https://swexpertacademy.com/main/images/sw_img/main_logo.png"/>S/W 문제해결 기본 1일차 D3 | [1206](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV134DPqAA8CFAYh#none) | [View](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV134DPqAA8CFAYh#none) |                |
+
 ## 2021/06/14
 
 |                            난이도                            |                     번호                     |                       문제 이름                       |   유형   |

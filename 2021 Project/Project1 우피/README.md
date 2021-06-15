@@ -3,26 +3,50 @@
 
 
 <center>
-
-![logo](./Asset/logo.PNG)
-
+	<p align="center"><img src="./Asset/logo.png"></p>
 </center>
+
+
 
 ### 성과: 우리은행 온택트 해커톤 대상
 
 ### [UCC](https://youtu.be/YFNKrRlOvww)
 
-***
-
-# 0. 주제
 
 
+## 0. 주제
 
-<center>
 
-하이
 
-</center>
+## 1. 프로젝트 소개
+
+### 1-1. 주제 선정 배경
+
+
+
+### 1-2. 시장 분석
+
+
+
+### 1-3. 특장점 및 기대효과
+
+
+
+### 1-4. 주요 대상
+
+
+
+## 2. 주요 기능
+
+### 2-1. 기술 스태
+
+### 2-2. 서비스 흐름도
+
+
+
+## 3. 프로젝트 시연
+
+### 3-1. 로그인
 
 
 
@@ -34,7 +58,7 @@
 
 # WooRI i
 
-![skill](./Asset/skill.PNG)
+![skill](./Asset/skill.png)
 
 ## 기술 스택
 
