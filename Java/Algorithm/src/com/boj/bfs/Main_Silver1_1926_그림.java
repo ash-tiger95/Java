@@ -47,6 +47,8 @@ public class Main_Silver1_1926_그림 {
 
 		System.out.println(count);
 		System.out.println(max);
+		
+		br.close();
 	}
 
 	private static void bfs(int sy, int sx) {

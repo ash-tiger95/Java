@@ -50,6 +50,8 @@ public class Main_Silver2_4963_섬의개수 {
 		}
 		
 		System.out.println(sb);
+		
+		br.close();
 	}
 
 	private static void bfs(int sy, int sx) {

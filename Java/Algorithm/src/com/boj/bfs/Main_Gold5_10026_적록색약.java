@@ -51,6 +51,8 @@ public class Main_Gold5_10026_적록색약 {
 		}
 
 		System.out.println(Ans + " " + RGBAns);
+		
+		br.close();
 	}
 
 	private static void bfs(int sy, int sx, char color) {

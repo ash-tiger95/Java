@@ -53,6 +53,8 @@ public class Main_Silver2_3184_양 {
 		}
 
 		System.out.println(sheepAns + " " + wolfAns);
+		
+		br.close();
 	}
 
 	private static void bfs(int sy, int sx) {

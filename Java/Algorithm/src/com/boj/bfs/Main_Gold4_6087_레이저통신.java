@@ -123,6 +123,8 @@ public class Main_Gold4_6087_레이저통신 {
 //		}
 
 		System.out.println(visited[ey][ex]);
+		
+		br.close();
 	}
 
 	private static boolean boundary(int ny, int nx) {

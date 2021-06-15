@@ -47,6 +47,8 @@ public class Main_Silver1_7576_토마토 {
 		}
 		
 		System.out.println(check() ? max - 1 : -1);
+		
+		br.close();
 	}
 
 	private static boolean check() {

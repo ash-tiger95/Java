@@ -46,6 +46,8 @@ public class Main_Silver2_3187_양치기꿍 {
 		}
 
 		System.out.println(sheep + " " + wolf);
+		
+		br.close();
 	}
 
 	private static void bfs(int sy, int sx) {

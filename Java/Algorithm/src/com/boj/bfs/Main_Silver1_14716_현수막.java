@@ -48,6 +48,8 @@ public class Main_Silver1_14716_현수막 {
 		}
 
 		System.out.println(Ans);
+		
+		br.close();
 	}
 
 	private static void bfs(int cy, int cx) {

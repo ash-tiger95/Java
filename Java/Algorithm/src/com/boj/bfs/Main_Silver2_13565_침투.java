@@ -40,6 +40,8 @@ public class Main_Silver2_13565_침투 {
 		}
 
 		System.out.println("NO");
+		
+		br.close();
 	}
 
 	private static boolean bfs(int sy, int sx) {

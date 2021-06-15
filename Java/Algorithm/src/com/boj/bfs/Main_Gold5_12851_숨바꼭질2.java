@@ -42,6 +42,8 @@ public class Main_Gold5_12851_숨바꼭질2 { // 시간초과
 
 		System.out.println(minTime);
 		System.out.println(Case);
+		
+		br.close();
 	}
 
 	private static void bfs() {

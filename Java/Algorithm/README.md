@@ -12,9 +12,10 @@ BFS에서 메모리초가: q에 중복되는 값이 들어가는지 확인하자
 | <img height="25px" width="150px" src="https://swexpertacademy.com/main/images/sw_img/main_logo.png"/>S/W 문제해결 기본 1일차 D3 | [1206](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV134DPqAA8CFAYh#none) | [View](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV134DPqAA8CFAYh#none) | Implementation |
 | <img height="25px" width="150px" src="https://swexpertacademy.com/main/images/sw_img/main_logo.png"/>S/W 문제해결 기본 1일차 D3 | [1208](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV139KOaABgCFAYh) | [Flatten](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV139KOaABgCFAYh) | Implementation |
 
-|                            난이도                            |                      번호                      |                        문제 이름                        |      유형      |
-| :----------------------------------------------------------: | :--------------------------------------------: | :-----------------------------------------------------: | :------------: |
-| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/8.svg"/> | [20152](https://www.acmicpc.net/problem/20152) | [Game Addiction](https://www.acmicpc.net/problem/20152) | DP  :bulb:Type |
+|                            난이도                            |                      번호                      |                         문제 이름                         |      유형      |
+| :----------------------------------------------------------: | :--------------------------------------------: | :-------------------------------------------------------: | :------------: |
+| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/8.svg"/> | [20152](https://www.acmicpc.net/problem/20152) |  [Game Addiction](https://www.acmicpc.net/problem/20152)  | DP  :bulb:Type |
+| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/11.svg"/> | [17836](https://www.acmicpc.net/problem/17836) | [공주님을 구해라!](https://www.acmicpc.net/problem/17836) |      BFS       |
 
 ## 2021/06/14
 

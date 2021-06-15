@@ -73,6 +73,8 @@ public class Main_Silver1_7569_토마토 {
 			}
 
 		}
+		
+		br.close();
 	}
 
 	private static void bfs() {

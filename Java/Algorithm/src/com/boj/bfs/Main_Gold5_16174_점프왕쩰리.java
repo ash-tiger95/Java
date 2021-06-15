@@ -36,6 +36,8 @@ public class Main_Gold5_16174_점프왕쩰리 {
 		}
 
 		System.out.println(bfs() == true ? "HaruHaru" : "Hing");
+		
+		br.close();
 	}
 
 	private static boolean bfs() {

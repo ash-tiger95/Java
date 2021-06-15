@@ -14,7 +14,7 @@ public class Main {
 		StringBuilder sb = new StringBuilder();
 
 
-		bw.write(sb.toString()); // 출력
+		bw.write(sb.toString());
         bw.flush(); //남아있는 데이터를 모두 출력시킴
 
         br.close(); 
