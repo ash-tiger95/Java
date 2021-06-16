@@ -1,7 +1,3 @@
-# 투명하고 간편한 우리 아이 용돈 관리 서비스
-
-
-
 <center>
 	<p align="center"><img src="./Asset/logo.png"></p>
 </center>
@@ -10,11 +6,13 @@
 
 ### 성과: 우리은행 온택트 해커톤 대상
 
-### [UCC](https://youtu.be/YFNKrRlOvww)
+### UCC: https://youtu.be/YFNKrRlOvww
 
 
 
-## 0. 주제
+## 0. 주제: 투명하고 간편한 우리 아이 용돈 관리 서비스
+
+부모와 자녀의 **간편한 계좌 연동**을 바탕으로, 부모는 자녀의 **소비 현황**을 쉽게 파악할 수 있고, 자녀는 **금전적 보상**을 통해 경제 관념을 확립할 수 있다.
 
 
 
@@ -22,59 +20,49 @@
 
 ### 1-1. 주제 선정 배경
 
-
-
-### 1-2. 시장 분석
-
-
-
-### 1-3. 특장점 및 기대효과
+- 우리은행 "우리 아이(Eye)" 서비스 출시, 금융권 최초 **비대면 자녀 계좌 조회** 서비스
+- 금융위원회는 올해 6월부터 만 12세 이상 **청소년**도 부모 동의 하 본인 명의 **신용카드** 발급받는 규제를 2년간 한시적으로 완화. 단, 부모가 한도 설정
 
 
 
-### 1-4. 주요 대상
+### 1-2. 특장점 및 기대효과
+
+<center>
+	<p align="center"><img src="./Asset/effect.png"></p>
+</center>
+
+### 1-3. 주요 대상
+
+- 부모: 자녀의 소비 현황을 쉽게 파악할 수 있다.
+- 자녀: 금전적 보상을 통해 경제 관념을 확립할 수 있다.
 
 
 
-## 2. 주요 기능
+## 2. 시스템 아키텍처
 
-### 2-1. 기술 스태
+### 2-1. 기술 스택
+
+<center>
+	<p align="center"><img src="./Asset/skill.png"></p>
+</center>
 
 ### 2-2. 서비스 흐름도
 
-
+<center>
+	<p align="center"><img src="./Asset/service.png"></p>
+</center>
 
 ## 3. 프로젝트 시연
 
-### 3-1. 로그인
+### 3-1. 부모 회원가입
+
+<center>
+	<p align="center"><img src="./Asset/parentSignUp.gif"></p>
+</center>
 
 
 
 
-
-
-
-
-
-# WooRI i
-
-![skill](./Asset/skill.png)
-
-## 기술 스택
-
-```
-- Vue.js
-- HTML5
-- CSS3
-- JavaScript
-- Spring boot
-- Spring Security
-- Maria DB
-- JPA Hibernate
-- AWS EC2, RDB
-- KeyDB (≒ redis)
-- Nginx
-```
 
 
 
