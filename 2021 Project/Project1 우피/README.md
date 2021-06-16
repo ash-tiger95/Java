@@ -3,20 +3,26 @@
 </center>
 
 
-
+<br/>
 
 
 ### 성과: 우리은행 온택트 해커톤 대상
 
 ### UCC: https://youtu.be/YFNKrRlOvww
 
-
+<br/>
 
 ## 0. 주제: 투명하고 간편한 우리 아이 용돈 관리 서비스
 
 부모와 자녀의 **간편한 계좌 연동**을 바탕으로, 부모는 자녀의 **소비 현황**을 쉽게 파악할 수 있고, 자녀는 **금전적 보상**을 통해 경제 관념을 확립할 수 있다.
 
+<br/>
 
+자녀는 부모의 계좌와 연동하여 부모가 설정한 한도 내의 금액을 사용할 수 있다. 이때 금전적 보상을 받은 경우, 한도를 일회적으로 늘릴 수 있다.
+
+<br/>
+
+<br/>
 
 ## 1. 프로젝트 소개
 
@@ -25,20 +31,21 @@
 - 우리은행 "우리 아이(Eye)" 서비스 출시, 금융권 최초 **비대면 자녀 계좌 조회** 서비스
 - 금융위원회는 올해 6월부터 만 12세 이상 **청소년**도 부모 동의 하 본인 명의 **신용카드** 발급받는 규제를 2년간 한시적으로 완화. 단, 부모가 한도 설정
 
-
+<br/>
 
 ### 1-2. 특장점 및 기대효과
 
 <center>
 	<p align="center"><img src="./Asset/effect.png"></p>
 </center>
+<br/>
 
 ### 1-3. 주요 대상
 
 - 부모: 자녀의 소비 현황을 쉽게 파악할 수 있다.
 - 자녀: 금전적 보상을 통해 경제 관념을 확립할 수 있다.
 
-
+<br/><br/>
 
 ## 2. 시스템 아키텍처
 
@@ -53,39 +60,46 @@
 <center>
 	<p align="center"><img src="./Asset/service.png"></p>
 </center>
+<br/><br/>
 
 ## 3. 프로젝트 시연
 
 ### 3-1. 부모: 회원가입
 
+> 휴대폰 인증 절차를 거친다. 이때, 인증번호는 Redis DB를 활용해 유효시간을 설정해 안정성을 향상시켰다.
+
 <center>
 	<p align="center"><img src="./Asset/parentSignUp.gif" width="300" height="500"></p>
 </center>
-
 ### 3-2. 자녀: 회원가입
+
+> 자녀는 부모의 QR코드를 인식하여 회원가입 완료 시, 자동으로 부모 계좌와 연동된다.
 
 <center>
 	<p align="center"><img src="./Asset/childSignUp.gif" width="300" height="500"></p>
 </center>
-
 ### 3-3. 자녀: 송금
+
+> 자녀는 제한된 한도 내의 금액을 송금할 수 있다.
 
 <center>
 	<p align="center"><img src="./Asset/childSend.gif" width="300" height="500"></p>
 </center>
-
 ### 3-4. 자녀: 미션 확인 및 등록
+
+> 자녀가 미션을 등록할 시, 부모에게 미션 등록 확인을 받아야 최종적으로 미션이 등록된다.
 
 <center>
 	<p align="center"><img src="./Asset/childMission.gif" width="300" height="500"></p>
 </center>
-
 ### 3-5. 부모: 자녀 거래내역 확인 및 의심 거래 설정
+
+> 부모는 자녀의 거래 내역을 확인할 수 있고 거래 의심 지역과 시간을 설정해 알림을 받을 수 있다.
 
 <center>
 	<p align="center"><img src="./Asset/parentCheckChild.gif" width="300" height="500"></p>
 </center>
-
+<br/><br/><br/><br/>
 
 ## Spring Boot API Server 빌드 가이드(Ubuntu 기준)
 
