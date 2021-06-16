@@ -54,12 +54,35 @@
 
 ## 3. 프로젝트 시연
 
-### 3-1. 부모 회원가입
+### 3-1. 부모: 회원가입
 
 <center>
-	<p align="center"><img src="./Asset/parentSignUp.gif"></p>
+	<p align="center"><img src="./Asset/parentSignUp.gif" width="300" height="500"></p>
 </center>
 
+### 3-2. 자녀: 회원가입
+
+<center>
+	<p align="center"><img src="./Asset/childSignUp.gif" width="300" height="500"></p>
+</center>
+
+### 3-3. 자녀: 송금
+
+<center>
+	<p align="center"><img src="./Asset/childSend.gif" width="300" height="500"></p>
+</center>
+
+### 3-4. 자녀: 미션 확인 및 등록
+
+<center>
+	<p align="center"><img src="./Asset/childMission.gif" width="300" height="500"></p>
+</center>
+
+### 3-5. 부모: 자녀 거래내역 확인 및 의심 거래 설정
+
+<center>
+	<p align="center"><img src="./Asset/parentCheckChild.gif" width="300" height="500"></p>
+</center>
 
 
 
