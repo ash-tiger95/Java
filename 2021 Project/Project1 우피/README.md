@@ -1,6 +1,8 @@
 <center>
-	<p align="center"><img src="./Asset/logo.png"></p>
+	<p align="center"><img src="./Asset/Woorii.png"></p>
 </center>
+
+
 
 
 
@@ -83,10 +85,6 @@
 <center>
 	<p align="center"><img src="./Asset/parentCheckChild.gif" width="300" height="500"></p>
 </center>
-
-
-
-
 
 
 ## Spring Boot API Server 빌드 가이드(Ubuntu 기준)
