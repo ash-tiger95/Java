@@ -71,6 +71,8 @@
 <center>
 	<p align="center"><img src="./Asset/parentSignUp.gif" width="300" height="500"></p>
 </center>
+<br/>
+
 ### 3-2. 자녀: 회원가입
 
 > 자녀는 부모의 QR코드를 인식하여 회원가입 완료 시, 자동으로 부모 계좌와 연동된다.
@@ -78,6 +80,8 @@
 <center>
 	<p align="center"><img src="./Asset/childSignUp.gif" width="300" height="500"></p>
 </center>
+<br/>
+
 ### 3-3. 자녀: 송금
 
 > 자녀는 제한된 한도 내의 금액을 송금할 수 있다.
@@ -85,6 +89,8 @@
 <center>
 	<p align="center"><img src="./Asset/childSend.gif" width="300" height="500"></p>
 </center>
+<br/>
+
 ### 3-4. 자녀: 미션 확인 및 등록
 
 > 자녀가 미션을 등록할 시, 부모에게 미션 등록 확인을 받아야 최종적으로 미션이 등록된다.
@@ -92,6 +98,8 @@
 <center>
 	<p align="center"><img src="./Asset/childMission.gif" width="300" height="500"></p>
 </center>
+<br/>
+
 ### 3-5. 부모: 자녀 거래내역 확인 및 의심 거래 설정
 
 > 부모는 자녀의 거래 내역을 확인할 수 있고 거래 의심 지역과 시간을 설정해 알림을 받을 수 있다.
