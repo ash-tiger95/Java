@@ -1,4 +1,4 @@
-package com._review;
+package com.boj.datastructure.priorityqueue;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -40,24 +40,36 @@ public class Main_Gold4_20440_니가싫어싫어너무싫어싫어오지마내�
 				}
 			}
 		});
-		
+
 		PriorityQueue<Integer> pq = new PriorityQueue<>();
 		pq.add(time[0][1]);
-		
-		int max = 0;
-		int start=0;
-		int end = 0;
-		
-		for(int i=1;i<time.length;i++) {
-			if(pq.peek() <= time[i][0]) {
+
+		int cnt = 1;
+		int start = time[0][0];
+		int end = time[0][1];
+
+		for (int i = 1; i < time.length; i++) {
+			while (!pq.isEmpty() && pq.peek() < time[i][0]) {
 				pq.poll();
-				start = i;
 			}
-			
+
+			if (!pq.isEmpty() && pq.peek() == time[i][0]) {
+				if (pq.peek() == end) {
+					end = time[i][1];
+				}
+				pq.poll();
+			}
+
 			pq.add(time[i][1]);
+
+			if (pq.size() > cnt) {
+				cnt = pq.size();
+				start = time[i][0];
+				end = pq.peek();
+			}
 		}
-		
-		sb.append(pq.size());
+		sb.append(cnt).append("\n");
+		sb.append(start).append(" ").append(end);
 
 		bw.write(sb.toString());
 		bw.flush();
