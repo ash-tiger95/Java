@@ -14,7 +14,7 @@ import java.util.StringTokenizer;
  * @author jugia
  *
  */
-public class Main_Gold5_3020_개똥벌레 {
+public class Main_Gold5_3020_개똥벌레 { // 시간초과
 
 	static int N, H;
 	static boolean[][] cave;
