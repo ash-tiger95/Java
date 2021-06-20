@@ -6,10 +6,11 @@ BFS에서 메모리초가: q에 중복되는 값이 들어가는지 확인하자
 
 ## 2021/06/20
 
-|                            난이도                            |                     번호                     |                    문제 이름                     |    유형     |
-| :----------------------------------------------------------: | :------------------------------------------: | :----------------------------------------------: | :---------: |
-| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/4.svg"/> | [2798](https://www.acmicpc.net/problem/2798) |  [블랙잭](https://www.acmicpc.net/problem/2798)  | Brute Force |
-| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/11.svg"/> | [3020](https://www.acmicpc.net/problem/3020) | [개똥벌레](https://www.acmicpc.net/problem/3020) |     BFS     |
+|                            난이도                            |                      번호                      |                     문제 이름                      |       유형        |
+| :----------------------------------------------------------: | :--------------------------------------------: | :------------------------------------------------: | :---------------: |
+| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/4.svg"/> |  [2798](https://www.acmicpc.net/problem/2798)  |   [블랙잭](https://www.acmicpc.net/problem/2798)   |    Brute Force    |
+| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/11.svg"/> |  [3020](https://www.acmicpc.net/problem/3020)  |  [개똥벌레](https://www.acmicpc.net/problem/3020)  | Prefix Sum :bulb: |
+| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/12.svg"/> | [16398](https://www.acmicpc.net/problem/16398) | [행성 연결](https://www.acmicpc.net/problem/16398) |                   |
 
 
 
