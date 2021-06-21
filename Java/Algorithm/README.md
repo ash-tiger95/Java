@@ -6,13 +6,13 @@ BFS에서 메모리초가: q에 중복되는 값이 들어가는지 확인하자
 
 ## 2021/06/21
 
-| 난이도 | 번호 | 문제 이름 | 유형 |
-| :----: | :--: | :-------: | :--: |
-|        |      |           |      |
-|        |      |           |      |
-|        |      |           |      |
-|        |      |           |      |
-|        |      |           |      |
+|                            난이도                            |                      번호                      |                          문제 이름                           | 유형 |
+| :----------------------------------------------------------: | :--------------------------------------------: | :----------------------------------------------------------: | :--: |
+| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/4.svg"/> | [19532](https://www.acmicpc.net/problem/19532) | [수학은 비대면강의입니다](https://www.acmicpc.net/problem/19532) | Math |
+|                                                              |                                                |                                                              |      |
+|                                                              |                                                |                                                              |      |
+|                                                              |                                                |                                                              |      |
+|                                                              |                                                |                                                              |      |
 
 ## 2021/06/20
 
@@ -24,8 +24,6 @@ BFS에서 메모리초가: q에 중복되는 값이 들어가는지 확인하자
 | <img height="25px" width="25px" src="https://static.solved.ac/tier_small/5.svg"/> | [20546](https://www.acmicpc.net/problem/20546)  |  [기적의 매매법](https://www.acmicpc.net/problem/20546)  |       Implementation        |
 | <img height="25px" width="25px" src="https://static.solved.ac/tier_small/9.svg"/> | [10971](https://www.acmicpc.net/problem/109710) |  [외판원 순회2](https://www.acmicpc.net/problem/10971)   |         DFS :bulb:          |
 | <img height="25px" width="25px" src="https://static.solved.ac/tier_small/9.svg"/> | [18232](https://www.acmicpc.net/problem/18232)  | [텔레포트 정거장](https://www.acmicpc.net/problem/18232) |          1차원 BFS          |
-
-
 
 ## 2021/06/15
 
@@ -216,8 +214,6 @@ BFS에서 메모리초가: q에 중복되는 값이 들어가는지 확인하자
 | <img height="25px" width="25px" src="https://static.solved.ac/tier_small/11.svg"/> | [14891](https://www.acmicpc.net/problem/14891) |      [톱니바퀴](https://www.acmicpc.net/problem/14891)      | Implementation |
 | <img height="25px" width="25px" src="https://static.solved.ac/tier_small/13.svg"/> | [11779](https://www.acmicpc.net/problem/11779) | [최소비용 구하기 2](https://www.acmicpc.net/problem/11779)  |    Dijkstra    |
 | <img height="25px" width="25px" src="https://static.solved.ac/tier_small/6.svg"/> | [19947](https://www.acmicpc.net/problem/19947) | [투자의 귀재 배주형](https://www.acmicpc.net/problem/19947) |       DP       |
-
-
 
 ## 1. Recursive
 
