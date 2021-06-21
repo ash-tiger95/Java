@@ -23,25 +23,18 @@ public class JpaMain {
 			// insert
 			Team team = new Team();
 			team.setName("TeamA");
+//			team.getMembers().add(member);
 			em.persist(team);
-
+			
 			Member member = new Member();
 			member.setName("member1");
 			member.setTeam(team);
 			em.persist(member);
+			
 
 			// 쿼리를 보고 싶으면 영속성 컨텍스트를 날려준다.
 			em.flush();
 			em.clear();
-
-			// select
-			Member findMember = em.find(Member.class, member.getId());
-
-			List<Member> members = findMember.getTeam().getMembers();
-			
-			for(Member m : members) {
-				System.out.println("m = "+m.getName());
-			}
 
 			tx.commit();
 		} catch (Exception e) {
