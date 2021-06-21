@@ -18,6 +18,7 @@ public class Main_Bronze2_19532_수학은비대면강의입니다 {
 
 		StringTokenizer st = new StringTokenizer(br.readLine());
 
+		// 연립 일차방정식
 		a = Integer.parseInt(st.nextToken());
 		b = Integer.parseInt(st.nextToken());
 		c = Integer.parseInt(st.nextToken());

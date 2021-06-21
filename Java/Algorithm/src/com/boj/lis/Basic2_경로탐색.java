@@ -8,14 +8,14 @@ import java.util.StringTokenizer;
 
 public class Basic2_경로탐색 {
 	public static void main(String[] args) throws NumberFormatException, IOException {
-//		int[] a = { 1, 8, 9, 2, 4, 3, 6, 11, 7, 10, 14, 5 };
+		int[] a = { 1, 8, 9, 2, 4, 3, 6, 11, 7, 10, 14, 5 };
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		int n = Integer.parseInt(br.readLine());
-		int[] a = new int[n];
-		StringTokenizer st = new StringTokenizer(br.readLine());
-		for(int i=0;i<n;i++) {
-			a[i] = Integer.parseInt(st.nextToken());
-		}
+//		int n = Integer.parseInt(br.readLine());
+//		int[] a = new int[n];
+//		StringTokenizer st = new StringTokenizer(br.readLine());
+//		for(int i=0;i<n;i++) {
+//			a[i] = Integer.parseInt(st.nextToken());
+//		}
 		int[] c = new int[a.length]; // LIS index 저장
 		int[] path = new int[a.length]; // 경로를 저장할 배열 역추적할 index를 저장
 		int size = 0; // LIS의 개수 관리할 변수

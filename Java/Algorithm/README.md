@@ -6,13 +6,13 @@ BFS에서 메모리초가: q에 중복되는 값이 들어가는지 확인하자
 
 ## 2021/06/21
 
-|                            난이도                            |                      번호                      |                          문제 이름                           | 유형 |
-| :----------------------------------------------------------: | :--------------------------------------------: | :----------------------------------------------------------: | :--: |
-| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/4.svg"/> | [19532](https://www.acmicpc.net/problem/19532) | [수학은 비대면강의입니다](https://www.acmicpc.net/problem/19532) | Math |
-|                                                              |                                                |                                                              |      |
-|                                                              |                                                |                                                              |      |
-|                                                              |                                                |                                                              |      |
-|                                                              |                                                |                                                              |      |
+|                            난이도                            |                      번호                      |                          문제 이름                           |   유형   |
+| :----------------------------------------------------------: | :--------------------------------------------: | :----------------------------------------------------------: | :------: |
+| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/4.svg"/> | [19532](https://www.acmicpc.net/problem/19532) | [수학은 비대면강의입니다](https://www.acmicpc.net/problem/19532) |   Math   |
+| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/9.svg"/> | [11722](https://www.acmicpc.net/problem/11722) | [가장 긴 감소하는 부분 수열](https://www.acmicpc.net/problem/11722) | 기본 LIS |
+|                                                              |                                                |                                                              |          |
+|                                                              |                                                |                                                              |          |
+|                                                              |                                                |                                                              |          |
 
 ## 2021/06/20
 
