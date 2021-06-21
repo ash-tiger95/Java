@@ -4,14 +4,25 @@
 
 BFS에서 메모리초가: q에 중복되는 값이 들어가는지 확인하자
 
+## 2021/06/21
+
+| 난이도 | 번호 | 문제 이름 | 유형 |
+| :----: | :--: | :-------: | :--: |
+|        |      |           |      |
+|        |      |           |      |
+|        |      |           |      |
+|        |      |           |      |
+|        |      |           |      |
+
 ## 2021/06/20
 
-|                            난이도                            |                      번호                      |                       문제 이름                        |            유형             |
-| :----------------------------------------------------------: | :--------------------------------------------: | :----------------------------------------------------: | :-------------------------: |
-| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/4.svg"/> |  [2798](https://www.acmicpc.net/problem/2798)  |     [블랙잭](https://www.acmicpc.net/problem/2798)     |         Brute Force         |
-| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/11.svg"/> |  [3020](https://www.acmicpc.net/problem/3020)  |    [개똥벌레](https://www.acmicpc.net/problem/3020)    |      Prefix Sum :bulb:      |
-| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/12.svg"/> | [16398](https://www.acmicpc.net/problem/16398) |   [행성 연결](https://www.acmicpc.net/problem/16398)   | Prim 최적화, Kruskal 최적화 |
-| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/5.svg"/> | [20546](https://www.acmicpc.net/problem/20546) | [기적의 매매법](https://www.acmicpc.net/problem/20546) |       Implementation        |
+|                            난이도                            |                      번호                       |                       문제 이름                        |            유형             |
+| :----------------------------------------------------------: | :---------------------------------------------: | :----------------------------------------------------: | :-------------------------: |
+| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/4.svg"/> |  [2798](https://www.acmicpc.net/problem/2798)   |     [블랙잭](https://www.acmicpc.net/problem/2798)     |         Brute Force         |
+| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/11.svg"/> |  [3020](https://www.acmicpc.net/problem/3020)   |    [개똥벌레](https://www.acmicpc.net/problem/3020)    |      Prefix Sum :bulb:      |
+| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/12.svg"/> | [16398](https://www.acmicpc.net/problem/16398)  |   [행성 연결](https://www.acmicpc.net/problem/16398)   | Prim 최적화, Kruskal 최적화 |
+| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/5.svg"/> | [20546](https://www.acmicpc.net/problem/20546)  | [기적의 매매법](https://www.acmicpc.net/problem/20546) |       Implementation        |
+| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/9.svg"/> | [10971](https://www.acmicpc.net/problem/109710) | [외판원 순회2](https://www.acmicpc.net/problem/10971)  |         DFS :bulb:          |
 
 
 
