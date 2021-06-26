@@ -222,12 +222,37 @@ BFS에서 메모리초가: q에 중복되는 값이 들어가는지 확인하자
 | <img height="25px" width="25px" src="https://static.solved.ac/tier_small/4.svg"/> | [18312](https://www.acmicpc.net/problem/18312) |        [시각](https://www.acmicpc.net/problem/18312)        |  Brute Force   |
 | <img height="25px" width="25px" src="https://static.solved.ac/tier_small/9.svg"/> |  [3184](https://www.acmicpc.net/problem/3184)  |         [양](https://www.acmicpc.net/problem/3184)          |   간단한 BFS   |
 | <img height="25px" width="25px" src="https://static.solved.ac/tier_small/11.svg"/> |  [7682](https://www.acmicpc.net/problem/7682)  |       [틱택토](https://www.acmicpc.net/problem/7682)        | Implementation |
-| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/14.svg"/> | [10775](https://www.acmicpc.net/problem/10775) |        [공항](https://www.acmicpc.net/problem/10775)        |                |
+| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/14.svg"/> | [10775](https://www.acmicpc.net/problem/10775) |        [공항](https://www.acmicpc.net/problem/10775)        |      :x:       |
 | <img height="25px" width="25px" src="https://static.solved.ac/tier_small/4.svg"/> | [10808](https://www.acmicpc.net/problem/10808) |    [알파벳 개수](https://www.acmicpc.net/problem/10808)     |     String     |
 | <img height="25px" width="25px" src="https://static.solved.ac/tier_small/10.svg"/> |  [1926](https://www.acmicpc.net/problem/1926)  |        [그림](https://www.acmicpc.net/problem/1926)         |   간단한 BFS   |
 | <img height="25px" width="25px" src="https://static.solved.ac/tier_small/11.svg"/> | [14891](https://www.acmicpc.net/problem/14891) |      [톱니바퀴](https://www.acmicpc.net/problem/14891)      | Implementation |
 | <img height="25px" width="25px" src="https://static.solved.ac/tier_small/13.svg"/> | [11779](https://www.acmicpc.net/problem/11779) | [최소비용 구하기 2](https://www.acmicpc.net/problem/11779)  |    Dijkstra    |
 | <img height="25px" width="25px" src="https://static.solved.ac/tier_small/6.svg"/> | [19947](https://www.acmicpc.net/problem/19947) | [투자의 귀재 배주형](https://www.acmicpc.net/problem/19947) |       DP       |
+
+## 2021/05/19
+
+|                            난이도                            |                     번호                     |                        문제 이름                        | 유형 |
+| :----------------------------------------------------------: | :------------------------------------------: | :-----------------------------------------------------: | :--: |
+| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/14.svg"/> | [1655](https://www.acmicpc.net/problem/1655) | [가운데를 말해요](https://www.acmicpc.net/problem/1655) |  PQ  |
+
+## 2021/05/18
+
+|                            난이도                            |                      번호                      |                     문제 이름                      |   유형    |
+| :----------------------------------------------------------: | :--------------------------------------------: | :------------------------------------------------: | :-------: |
+| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/10.svg"/> |  [7569](https://www.acmicpc.net/problem/7569)  |   [토마토](https://www.acmicpc.net/problem/7569)   | 3차원 BFS |
+| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/10.svg"/> | [11286](https://www.acmicpc.net/problem/11286) | [절댓값 힙](https://www.acmicpc.net/problem/11286) | PQ(Heap)  |
+| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/9.svg"/> | [11279](https://www.acmicpc.net/problem/11279) |  [최대힙](https://www.acmicpc.net/problem/11279)   | PQ(Heap)  |
+
+## 2021/05/17
+
+|                            난이도                            |                      번호                      |                          문제 이름                           |        유형        |
+| :----------------------------------------------------------: | :--------------------------------------------: | :----------------------------------------------------------: | :----------------: |
+| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/7.svg"/> |  [1920](https://www.acmicpc.net/problem/1920)  |       [수 찾기](https://www.acmicpc.net/problem/1920)        |   Binary Search    |
+| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/8.svg"/> |  [5397](https://www.acmicpc.net/problem/5397)  |        [키로거](https://www.acmicpc.net/problem/5397)        | LinkedList / Stack |
+| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/10.svg"/> | [14716](https://www.acmicpc.net/problem/14716) |       [현수막](https://www.acmicpc.net/problem/14716)        |      기본 BFS      |
+| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/11.svg"/> | [16174](https://www.acmicpc.net/problem/16174) | [점프왕 쩰리 (Large)](https://www.acmicpc.net/problem/16174) |        BFS         |
+| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/15.svg"/> | [15806](https://www.acmicpc.net/problem/15806) | [영우의 기숙사 청소](https://www.acmicpc.net/problem/15806)  |        :x:         |
+| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/6.svg"/> |  [2609](https://www.acmicpc.net/problem/2609)  | [최대공약수와 최소공배수](https://www.acmicpc.net/problem/2609) |     Euclidean      |
 
 ## 1. Recursive
 
