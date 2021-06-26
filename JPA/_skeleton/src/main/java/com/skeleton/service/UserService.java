@@ -5,7 +5,7 @@ import java.util.List;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.skeleton.domain.User;
+import com.skeleton.entity.User;
 import com.skeleton.repo.UserRepo;
 
 import lombok.RequiredArgsConstructor;

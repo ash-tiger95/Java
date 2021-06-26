@@ -1,4 +1,4 @@
-package com.skeleton.domain;
+package com.skeleton.entity;
 
 import java.util.Map;
 

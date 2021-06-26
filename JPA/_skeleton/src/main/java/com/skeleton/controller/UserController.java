@@ -16,8 +16,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.skeleton.domain.User;
 import com.skeleton.dto.UserDto;
+import com.skeleton.entity.User;
 import com.skeleton.service.UserService;
 import com.skeleton.util.BasicResponse;
 
