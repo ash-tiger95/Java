@@ -15,5 +15,4 @@ public class MemberRepoImpl implements MemberRepo{
 	public int join(MemberDto memberDto) {
 		return sqlSession.insert("com.skeleton.repo.MemberRepo.join",memberDto);
 	}
-	
 }

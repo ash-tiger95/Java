@@ -10,4 +10,5 @@
     <mappers>
 		<mapper resource="mappers/member.xml" />
 	</mappers>
+	
 </configuration>

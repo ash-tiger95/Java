@@ -2,6 +2,7 @@
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <c:set var="root" value="${pageContext.request.contextPath}"/>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -34,11 +35,7 @@
 			<label for="">비밀번호</label>
 			<input type="password" id="password" name="password" placeholder="" onkeydown="javascript:if(event.keyCode == 13) {login();}">
 		</div>
-		<div align="right">
-		    <label>
-		      <input type="checkbox" id="saveEmail" name="saveEmail" value="saveok"${idck}> 아이디저장 
-		    </label>
-		</div>
+		
 		<div align="center">
 			<button type="button" class="genric-btn success circle arrow" onclick="javascript:login();">로그인</button>
 		</div>
