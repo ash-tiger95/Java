@@ -9,6 +9,8 @@ BFS에서 메모리초가: q에 중복되는 값이 들어가는지 확인하자
 |                            난이도                            |                      번호                      |                       문제 이름                        |      유형      |
 | :----------------------------------------------------------: | :--------------------------------------------: | :----------------------------------------------------: | :------------: |
 | <img height="25px" width="25px" src="https://static.solved.ac/tier_small/4.svg"/> | [13410](https://www.acmicpc.net/problem/13410) | [거꾸로 구구단](https://www.acmicpc.net/problem/13410) | Implementation |
+| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/9.svg"/> |  [1182](https://www.acmicpc.net/problem/1182)  | [부분수열의 합](https://www.acmicpc.net/problem/1182)  |      Math      |
+| <img height="25px" width="25px" src="https://static.solved.ac/tier_small/9.svg"/> | [11047](https://www.acmicpc.net/problem/11047) |     [동전0](https://www.acmicpc.net/problem/11047)     |     Greedy     |
 
 ## 2021/06/26
 
