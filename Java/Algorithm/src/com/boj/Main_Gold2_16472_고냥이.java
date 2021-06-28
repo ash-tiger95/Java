@@ -27,6 +27,7 @@ public class Main_Gold2_16472_고냥이 {
 		bw.write(sb.toString());
         bw.flush();
 
+        
         br.close(); 
         bw.close();
 	}
