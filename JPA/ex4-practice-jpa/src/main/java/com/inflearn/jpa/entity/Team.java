@@ -16,16 +16,15 @@ import lombok.Setter;
 import lombok.ToString;
 
 @Entity
-@Getter
-@Setter
+@Getter @Setter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @ToString(of = { "id", "name" })
 public class Team {
 
-	@Id
-	@GeneratedValue
+	@Id @GeneratedValue
 	@Column(name = "team_id")
 	private Long id;
+	
 	private String name;
 
 	@OneToMany(mappedBy = "team")

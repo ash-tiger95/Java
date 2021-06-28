@@ -26,12 +26,12 @@ public class TeamJpaRepo {
 	}
 
 	public List<Team> findAll() {
-		return em.createQuery("select m from Team t", Team.class).getResultList();
+		return em.createQuery("select t from Team t", Team.class).getResultList();
 	}
 
 	public Optional<Team> findById(Long id) {
 		Team team = em.find(Team.class, id);
-		return Optional.ofNullable(team); // ofNullable(): member가 null일 수 있고 아닐 수 있다라는 의미
+		return Optional.ofNullable(team);
 	}
 
 	public Long count() {

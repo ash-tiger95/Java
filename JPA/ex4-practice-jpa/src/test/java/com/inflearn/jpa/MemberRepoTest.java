@@ -23,11 +23,10 @@ import com.inflearn.jpa.repo.TeamRepo;
 @Rollback(false)
 public class MemberRepoTest {
 
-	@Autowired
-	MemberRepo memberRepo;
-	@Autowired
-	TeamRepo teamRepo;
+	@Autowired MemberRepo memberRepo;
+	@Autowired TeamRepo teamRepo;
 
+	/*
 	@Test
 	public void testMember() {
 		Member member = new Member("member1");
@@ -72,12 +71,38 @@ public class MemberRepoTest {
 	public void findByUsernameAndAgeGreaterThan() {
 		Member m1 = new Member("AAA", 10);
 		Member m2 = new Member("AAA", 20);
+		Member m3 = new Member("AAA", 30);
+		Member m4 = new Member("AAA", 40);
+
 		memberRepo.save(m1);
 		memberRepo.save(m2);
+		memberRepo.save(m3);
+		memberRepo.save(m4);
+		
 		List<Member> result = memberRepo.findByUsernameAndAgeGreaterThan("AAA", 15);
-		assertThat(result.get(0).getUsername()).isEqualTo("AAA");
-		assertThat(result.get(0).getAge()).isEqualTo(20);
-		assertThat(result.size()).isEqualTo(1);
+		
+		for (Member m : result) {
+			System.out.println(m.getUsername() + " " + m.getAge());
+		}
+	}
+	
+	@Test
+	public void testNamedQuery() {
+		Member m1 = new Member("BBB", 10);
+		Member m2 = new Member("BBB", 20);
+		Member m3 = new Member("BBB", 30);
+		Member m4 = new Member("BBB", 40);
+
+		memberRepo.save(m1);
+		memberRepo.save(m2);
+		memberRepo.save(m3);
+		memberRepo.save(m4);
+
+		List<Member> result = memberRepo.findByUsername("BBB");
+
+		for (Member m : result) {
+			System.out.println(m.getUsername() + " " + m.getAge());
+		}
 	}
 	
 	@Test
@@ -90,7 +115,6 @@ public class MemberRepoTest {
 		
 		List<Member> result = memberRepo.findUser("AAA", 10);
 		assertThat(result.get(0)).isEqualTo(m1);
-		
 	}
 	
 	@Test
@@ -103,10 +127,10 @@ public class MemberRepoTest {
 		
 		List<String> result = memberRepo.findUsernameList();
 		for(String s : result) {
-			System.out.println("S = " + s);
+			System.out.println("findUsernameList = " + s);
 		}
-		
 	}
+*/
 	
 	@Test
 	public void findMemberDto() {
@@ -117,14 +141,12 @@ public class MemberRepoTest {
 		m1.setTeam(team);
 		memberRepo.save(m1);
 		
-		
 		List<MemberDto> result = memberRepo.findMemberDto();
 		for(MemberDto dto : result) {
 			System.out.println("Dto = " + dto);
 		}
-		
 	}
-	
+	/*
 	@Test
 	public void findByNames() {
 		Member m1 = new Member("AAA",10);
@@ -138,7 +160,7 @@ public class MemberRepoTest {
 			System.out.println("Member = " + member);
 		}
 		
-	}
+	}*/
 	
 	@Test
 	public void returnType() {
@@ -167,4 +189,5 @@ public class MemberRepoTest {
 		
 		// 단건 조회인데 데이터가 여러 개면 예외처리한다.
 	}
+
 }

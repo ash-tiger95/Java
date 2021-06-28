@@ -34,7 +34,7 @@ public class MemberTest {
 		Member member3 = new Member("member3", 30, teamB);
 		Member member4 = new Member("member4", 40, teamB);
 		
-		em.persist(member1); // persist: 영속성 컨택스트에 담아 놓는다.
+		em.persist(member1); // persist: 영속성 컨택스트에 담아 놓는다. DB에 쿼리 안 보냄
 		em.persist(member2);
 		em.persist(member3);
 		em.persist(member4);
