@@ -6,9 +6,16 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
 
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Slice;
+import org.springframework.data.domain.Sort;
 import org.springframework.test.annotation.Rollback;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -22,9 +29,11 @@ import com.inflearn.jpa.repo.TeamRepo;
 @Transactional
 @Rollback(false)
 public class MemberRepoTest {
-
+	
 	@Autowired MemberRepo memberRepo;
 	@Autowired TeamRepo teamRepo;
+	
+	@PersistenceContext EntityManager em;
 
 	/*
 	@Test
@@ -130,7 +139,7 @@ public class MemberRepoTest {
 			System.out.println("findUsernameList = " + s);
 		}
 	}
-*/
+
 	
 	@Test
 	public void findMemberDto() {
@@ -146,9 +155,9 @@ public class MemberRepoTest {
 			System.out.println("Dto = " + dto);
 		}
 	}
-	/*
+	
 	@Test
-	public void findByNames() {
+	public void 컬렉션파라미터바인딩() {
 		Member m1 = new Member("AAA",10);
 		Member m2 = new Member("BBB",20);
 		
@@ -159,35 +168,173 @@ public class MemberRepoTest {
 		for(Member member : result) {
 			System.out.println("Member = " + member);
 		}
-		
-	}*/
+	}
 	
 	@Test
-	public void returnType() {
+	public void 반환타입() {
 		Member m1 = new Member("AAA",10);
 		Member m2 = new Member("BBB",20);
+		
 		memberRepo.save(m1);
 		memberRepo.save(m2);
 		
 		
+		// 1. 여러 개 조회
 		List<Member> result = memberRepo.findListByUsername("AAA");
 		for(Member member : result) {
-			System.out.println("findListByUsername = " + member);
+			System.out.println("List Member = " + member);
 		}
-		// 주의! 컬렉션 조회에서 데이터가 없는 경우 null을 반환하는 것이 아니라 빈 컬렉션을 반환해준다. isEmpty()로 판별
+		// 주의!
+		// 컬렉션 조회에서 데이터가 없는 경우 null을 반환하는 것이 아니라 빈 컬렉션을 반환해준다. isEmpty()로 판별
 		
-		/*
+		
+		// 2. 단건 조회
 		Member result2 = memberRepo.findMemberByUsername("AAA");
-		System.out.println("findMemberByUsername: " + result2);
-		// 주의! 없는 경우 null 반환
+		System.out.println("Member: " + result2);
+		// 주의!
+		// 없는 경우 null 반환
 		
-		Optional<Member> result3 = memberRepo.findOptionalByUsername("AAA"); // optional: null일 수 있고 아닐 수 있다.
-		System.out.println("findOptionalByUsername: " + result3);
+		
+		// 3. Optional(null일 수 있고 아닐 수 있다.) 조회
+		Optional<Member> result3 = memberRepo.findOptionalByUsername("AAA");
+		System.out.println("Optional Member: " + result3);
 		// 위의 2개를 해결 = Optional, 없으면 Optional.empty 반환
 		// Optional은 단건조회인데 데이터가 2개 이상이면 exception
-		*/
+		
 		
 		// 단건 조회인데 데이터가 여러 개면 예외처리한다.
+	}
+	
+	
+	@Test
+	public void 페이징() {
+		memberRepo.save(new Member("member1", 10));
+		memberRepo.save(new Member("member2", 10));
+		memberRepo.save(new Member("member3", 10));
+		memberRepo.save(new Member("member4", 10));
+		memberRepo.save(new Member("member5", 10));
+		memberRepo.save(new Member("member6", 10));
+
+		int age = 10;
+		// 페이지 시작은 0부터
+		PageRequest pageRequest = PageRequest.of(0, 3, Sort.by(Sort.Direction.DESC, "username"));
+		// 0 페이지에서 3개 가져와서 username으로 정렬
+		
+		// when
+		Page<Member> page = memberRepo.findByAge(age, pageRequest);
+
+		// then
+		List<Member> content = page.getContent();
+		long totalElements = page.getTotalElements(); // total Count
+		
+		for(Member member : content) {
+			System.out.println("Member: " + member);
+		}
+		System.out.println("totalElements: "+totalElements);
+
+		assertThat(content.size()).isEqualTo(3);
+		assertThat(page.getTotalElements()).isEqualTo(6);
+		assertThat(page.getNumber()).isEqualTo(0); // 페이지 번호
+		assertThat(page.getTotalPages()).isEqualTo(2); // 전체 페이지 개수
+		assertThat(page.isFirst()).isTrue(); // 첫 번째 페이지인지
+		assertThat(page.hasNext()).isTrue(); // 다음 페이지가 있는지
+	}
+	
+	@Test
+	public void 슬라이스() {
+		memberRepo.save(new Member("member1", 10));
+		memberRepo.save(new Member("member2", 10));
+		memberRepo.save(new Member("member3", 10));
+		memberRepo.save(new Member("member4", 10));
+		memberRepo.save(new Member("member5", 10));
+		memberRepo.save(new Member("member6", 10));
+
+		int age = 10;
+		PageRequest pageRequest = PageRequest.of(0, 3, Sort.by(Sort.Direction.DESC, "username")); // 페이지 0부터 시작
+		// 0 페이지에서 3개 가져와서 username으로 정렬
+		
+		// when
+		Slice<Member> page = memberRepo.findByAge(age, pageRequest);
+		
+		// then
+		List<Member> content = page.getContent();
+		
+		for(Member member : content) {
+			System.out.println("Member: " + member);
+		}
+		
+		assertThat(content.size()).isEqualTo(3);
+//		assertThat(page.getTotalElements()).isEqualTo(6);
+		assertThat(page.getNumber()).isEqualTo(0); // 페이지 번호
+//		assertThat(page.getTotalPages()).isEqualTo(2); // 전체 페이지 개수
+		assertThat(page.isFirst()).isTrue(); // 첫 번째 페이지인지
+		assertThat(page.hasNext()).isTrue(); // 다음 페이지가 있는지
+	}
+	
+	
+	@Test
+	public void 카운트최적화() {
+		memberRepo.save(new Member("member1", 10));
+		memberRepo.save(new Member("member2", 10));
+		memberRepo.save(new Member("member3", 10));
+		memberRepo.save(new Member("member4", 10));
+		memberRepo.save(new Member("member5", 10));
+		memberRepo.save(new Member("member6", 10));
+
+		int age = 10;
+		// 페이지 시작은 0부터
+		PageRequest pageRequest = PageRequest.of(0, 3, Sort.by(Sort.Direction.DESC, "username"));
+		// 0 페이지에서 3개 가져와서 username으로 정렬
+		
+		// when
+		Page<Member> page = memberRepo.findByAge2(age, pageRequest);
+		
+		
+		// ★. 중요! Page<Member>를 Controller에서 그대로 반환하면 절대 안된다.
+		// 엔티티를 외부에 노출시키면 안되
+		// DTO로 변환해서 리턴해줘야 한다.
+		Page<MemberDto> toMap = page.map(member -> new MemberDto(member.getId(), member.getUsername(), null));
+
+		// then
+		List<Member> content = page.getContent();
+		long totalElements = page.getTotalElements(); // total Count
+		
+		for(Member member : content) {
+			System.out.println("Member: " + member);
+		}
+		System.out.println("totalElements: "+totalElements);
+
+		assertThat(content.size()).isEqualTo(3);
+		assertThat(page.getTotalElements()).isEqualTo(6);
+		assertThat(page.getNumber()).isEqualTo(0); // 페이지 번호
+		assertThat(page.getTotalPages()).isEqualTo(2); // 전체 페이지 개수
+		assertThat(page.isFirst()).isTrue(); // 첫 번째 페이지인지
+		assertThat(page.hasNext()).isTrue(); // 다음 페이지가 있는지
+	}
+	*/
+	
+	@Test
+	public void bulkUpdate() {
+		// given
+		memberRepo.save(new Member("member1", 10));
+		memberRepo.save(new Member("member2", 19));
+		memberRepo.save(new Member("member3", 20));
+		memberRepo.save(new Member("member4", 21));
+		memberRepo.save(new Member("member5", 23));
+		memberRepo.save(new Member("member6", 34));
+
+		// when
+		int resultCount = memberRepo.bulkAgePlus(20);
+		
+//		em.flush();
+//		em.clear();
+		
+		List<Member> result = memberRepo.findByUsername("member5");
+		Member member5 = result.get(0);
+		System.out.println("member5: " + member5);
+		
+//		System.out.println("resultCount: " + resultCount);
+//		assertThat(resultCount).isEqualTo(4);
 	}
 
 }

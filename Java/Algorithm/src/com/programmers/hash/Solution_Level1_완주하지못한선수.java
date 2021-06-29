@@ -3,13 +3,7 @@ package com.programmers.hash;
 import java.util.HashMap;
 
 public class Solution_Level1_완주하지못한선수 {
-	public static void main(String[] args) {
-		String[] participant = {"mislav", "stanko", "mislav", "ana"};
-		String[] completion = { "stanko", "ana", "mislav"};
-
-		System.out.println(solution(participant, completion));
-	}
-
+	
 	public static String solution(String[] participant, String[] completion) {
 		/*
 		// O(n*n)
@@ -55,5 +49,12 @@ public class Solution_Level1_완주하지못한선수 {
             }
         }
         return answer;
+	}
+	
+	public static void main(String[] args) {
+		String[] participant = {"mislav", "stanko", "mislav", "ana"};
+		String[] completion = { "stanko", "ana", "mislav"};
+
+		System.out.println(solution(participant, completion));
 	}
 }
