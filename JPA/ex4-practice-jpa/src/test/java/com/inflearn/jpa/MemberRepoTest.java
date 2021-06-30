@@ -311,7 +311,7 @@ public class MemberRepoTest {
 		assertThat(page.isFirst()).isTrue(); // 첫 번째 페이지인지
 		assertThat(page.hasNext()).isTrue(); // 다음 페이지가 있는지
 	}
-	*/
+	
 	
 	@Test
 	public void bulkUpdate() {
@@ -335,6 +335,33 @@ public class MemberRepoTest {
 		
 //		System.out.println("resultCount: " + resultCount);
 //		assertThat(resultCount).isEqualTo(4);
+	}
+	*/
+	
+	@Test
+	public void findMemberLazy() {
+		Team teamA = new Team("teamA");
+		Team teamB = new Team("teamB");
+		
+		teamRepo.save(teamA);
+		teamRepo.save(teamB);
+		
+		Member member1 = new Member("member1", 10, teamA);
+		Member member2 = new Member("member2", 10, teamB);
+		
+		memberRepo.save(member1);
+		memberRepo.save(member2);
+		
+		em.flush(); // 영속성 컨텍스트에 있는 정보를 DB에 반영하고
+		em.clear(); // 영속성 컨텍스트를 깔끔하게 날린다
+		
+		List<Member> members = memberRepo.findAll();
+		
+		for(Member m : members) {
+			System.out.println("member: " + m.getUsername());
+			System.out.println("member.teamClass: "+m.getTeam().getClass());
+			System.out.println("member.team: " + m.getTeam().getName());
+		}
 	}
 
 }
