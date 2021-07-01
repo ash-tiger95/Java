@@ -4,9 +4,12 @@ import java.util.Collection;
 import java.util.List;
 import java.util.Optional;
 
+import javax.persistence.NamedEntityGraph;
+
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Slice;
+import org.springframework.data.jpa.repository.EntityGraph;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
@@ -65,4 +68,26 @@ public interface MemberRepo extends JpaRepository<Member, Long> { // <Type, PK�
 	@Modifying(clearAutomatically = true) // .executeUpdate()를 실행
 	@Query("update Member m set m.age = m.age + 1 where m.age >= :age")
 	int bulkAgePlus(@Param("age") int age);
+	
+	// [JPA 실전] 8. 패치 조인
+	@Query("select m from Member m left join fetch m.team")
+	List<Member> findMemberFetchJoin();
+	
+	// [JPA 실전] 8. EntityGraph
+	@Override
+	@EntityGraph(attributePaths= {"team"})
+	List<Member> findAll();
+	
+	// [JPA 실전] 8. Query에 패치조인을 추가하고 싶을 때, 이러한 방법도 가능
+	@EntityGraph(attributePaths= {"team"})
+	@Query("select m from Member m")
+	List<Member> findMemberEntityGraph();
+	
+	// [JPA 실전] 8. 메서드 이름으로 쿼리 생성하는 방법에서 패치 조인을 추가하고 싶을 때
+	@EntityGraph(attributePaths= {"team"})
+	List<Member> findEntityGraphByUsername(@Param("username") String username);
+
+	// [JPA 실전] 8. NamedQuery에서 EntityGraph 추가하는 방법 = @@NamedEntityGraph
+	@EntityGraph("Member.all")
+	List<Member> findNamedQueryByUsername(@Param("username") String username);
 }

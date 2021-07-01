@@ -347,7 +347,7 @@ public class MemberRepoTest {
 		teamRepo.save(teamB);
 		
 		Member member1 = new Member("member1", 10, teamA);
-		Member member2 = new Member("member2", 10, teamB);
+		Member member2 = new Member("member1", 10, teamB);
 		
 		memberRepo.save(member1);
 		memberRepo.save(member2);
@@ -355,7 +355,7 @@ public class MemberRepoTest {
 		em.flush(); // 영속성 컨텍스트에 있는 정보를 DB에 반영하고
 		em.clear(); // 영속성 컨텍스트를 깔끔하게 날린다
 		
-		List<Member> members = memberRepo.findAll();
+		List<Member> members = memberRepo.findNamedQueryByUsername("member1");
 		
 		for(Member m : members) {
 			System.out.println("member: " + m.getUsername());
