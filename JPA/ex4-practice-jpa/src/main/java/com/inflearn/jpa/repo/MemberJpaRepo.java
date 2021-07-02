@@ -80,6 +80,5 @@ public class MemberJpaRepo {
 		return em.createQuery("update Member m set m.age = m.age + 1 where m.age >= :age")
 			.setParameter("age", age)
 			.executeUpdate();
-		
 	}
 }

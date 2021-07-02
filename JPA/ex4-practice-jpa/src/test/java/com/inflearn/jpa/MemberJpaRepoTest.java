@@ -133,7 +133,7 @@ public class MemberJpaRepoTest {
 		assertThat(members.size()).isEqualTo(3);
 		assertThat(totalCount).isEqualTo(6);
 	}
-	*/
+	
 	
 	@Test
 	public void bulkUpdate() {
@@ -151,5 +151,7 @@ public class MemberJpaRepoTest {
 		System.out.println("resultCount: " + resultCount);
 		assertThat(resultCount).isEqualTo(4);
 	}
+	*/
+	
 
 }
