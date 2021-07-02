@@ -363,7 +363,7 @@ public class MemberRepoTest {
 			System.out.println("member.team: " + m.getTeam().getName());
 		}
 	}
-	*/
+	
 	
 	@Test
 	public void queryHint() {
@@ -388,6 +388,12 @@ public class MemberRepoTest {
 		em.clear();
 		
 		List<Member> result = memberRepo.findLockByUsername("member1");
+	}
+	*/
+	
+	@Test
+	public void callCustom() {
+		List<Member> result = memberRepo.findMemberCuston();
 	}
 
 }

@@ -21,7 +21,7 @@ import org.springframework.data.repository.query.Param;
 import com.inflearn.jpa.dto.MemberDto;
 import com.inflearn.jpa.entity.Member;
 
-public interface MemberRepo extends JpaRepository<Member, Long> { // <Type, PK로 매핑된 타입>, 인터페이스가 인터페이스를 상속받을 때 extends
+public interface MemberRepo extends JpaRepository<Member, Long>, MemberRepoCustom { // <Type, PK로 매핑된 타입>, 인터페이스가 인터페이스를 상속받을 때 extends
 
 	// 1. 메서드 이름으로 쿼리 생성
 	List<Member> findByUsernameAndAgeGreaterThan(String username, int age);
