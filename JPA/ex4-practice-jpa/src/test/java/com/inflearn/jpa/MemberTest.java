@@ -57,7 +57,7 @@ public class MemberTest {
 			System.out.println("member Team = " + member.getTeam());
 		}
 	}
-	*/
+	
 	
 
 	@Test
@@ -81,4 +81,6 @@ public class MemberTest {
 		System.out.println("findMember.createdBy : " + findMember.getCreateBy());
 		System.out.println("findMember.modifiedBy : " + findMember.getLastModifiedBy());
 	}
+	
+	*/
 }

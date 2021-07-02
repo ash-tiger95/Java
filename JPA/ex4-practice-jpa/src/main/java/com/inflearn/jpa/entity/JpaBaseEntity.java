@@ -13,18 +13,18 @@ import lombok.Getter;
 @Getter
 @MappedSuperclass
 public class JpaBaseEntity {
-	
+
 	@Column(updatable = false)
 	private LocalDateTime createDate;
 	private LocalDateTime updateDate;
-	
+
 	@PrePersist // Persist 하기 전 이벤트 발생
 	public void prePersist() {
 		LocalDateTime now = LocalDateTime.now();
 		createDate = now;
 		updateDate = now;
 	}
-	
+
 	@PreUpdate
 	public void preUpdate() {
 		updateDate = LocalDateTime.now();
