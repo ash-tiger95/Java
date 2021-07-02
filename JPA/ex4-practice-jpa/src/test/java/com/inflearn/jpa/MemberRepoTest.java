@@ -336,7 +336,7 @@ public class MemberRepoTest {
 //		System.out.println("resultCount: " + resultCount);
 //		assertThat(resultCount).isEqualTo(4);
 	}
-	*/
+	
 	
 	@Test
 	public void findMemberLazy() {
@@ -362,6 +362,32 @@ public class MemberRepoTest {
 			System.out.println("member.teamClass: "+m.getTeam().getClass());
 			System.out.println("member.team: " + m.getTeam().getName());
 		}
+	}
+	*/
+	
+	@Test
+	public void queryHint() {
+		Member m1 = new Member("member1", 10);
+		memberRepo.save(m1);
+		
+		em.flush();
+		em.clear();
+		
+		Member findMember = memberRepo.findReadOnlyByUsername("member1");
+		findMember.setUsername("member2");
+		
+		em.flush(); // 변경 감지가 되어 Update 쿼리가 나간다.
+	}
+	
+	@Test
+	public void lock() {
+		Member m1 = new Member("member1", 10);
+		memberRepo.save(m1);
+		
+		em.flush();
+		em.clear();
+		
+		List<Member> result = memberRepo.findLockByUsername("member1");
 	}
 
 }
